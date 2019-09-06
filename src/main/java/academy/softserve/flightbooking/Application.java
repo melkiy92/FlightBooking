@@ -1,4 +1,4 @@
-package academy.softserve.flightbooking.hello;
+package academy.softserve.flightbooking;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
