@@ -17,12 +17,24 @@ public class SearchParamsIntoRapidApiConverter {
         Map<String, String> response = new HashMap<>();
         for (Map.Entry<String, String> entry : searchCriteria.entrySet()) {
             String key = entry.getKey();
+
+            if(entry.getKey() == "date_from") {
+                String date = entry.getValue();
+                String day = date.substring(0,2);
+                String month = date.substring(3,5);
+                String year = date.substring(6);
+                StringBuilder newDate = new StringBuilder();
+                newDate.append(year).append("-").append(month).append("-").append(day);
+                entry.setValue(newDate.toString());
+            }
+
             if(correspondenceMap.containsKey(key)) {
                 String correspondenceKeyValue = correspondenceMap.get(key);
                 response.put(correspondenceKeyValue, entry.getValue());
             } else {
                 response.put(entry.getKey(), entry.getValue());
             }
+
         }
         return response;
     }

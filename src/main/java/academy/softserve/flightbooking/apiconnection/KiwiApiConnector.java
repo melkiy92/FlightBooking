@@ -23,6 +23,8 @@ public class KiwiApiConnector {
 
         Map<String, String> parameters = converter.convertIntoRequest(searchParameters);
 
+        System.out.println(getParamsString(parameters));
+
         HttpResponse<String> response = Unirest.get("https://api.skypicker.com/flights?" + getParamsString(parameters))
                 .asString();
 

@@ -34,7 +34,7 @@ public class RapidApiConnector {
                 .asJson();
 
         if (sessionCreationResponse.getStatus() >= 300) {
-            return "Status = " + sessionCreationResponse.getStatus();
+            return "Status: " + sessionCreationResponse.getStatus() + "; message: " + sessionCreationResponse.getBody();
         }
 
         String locationValue = sessionCreationResponse.getHeaders().get("Location").get(0);

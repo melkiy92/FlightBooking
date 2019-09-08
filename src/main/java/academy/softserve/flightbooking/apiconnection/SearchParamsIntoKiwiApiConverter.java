@@ -25,6 +25,7 @@ public class SearchParamsIntoKiwiApiConverter {
                 response.put(entry.getKey(), entry.getValue());
             }
         }
+        response.put("partner", "picky");
         return response;
     }
 
