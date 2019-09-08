@@ -15,9 +15,11 @@ public class SearchParamsIntoRapidApiConverter {
 
     public Map<String, String> convertIntoRequest (Map<String, String> searchCriteria) {
         Map<String, String> response = new HashMap<>();
+
         for (Map.Entry<String, String> entry : searchCriteria.entrySet()) {
             String key = entry.getKey();
 
+            // converts date format dd/mm/yyyy into yyyy-mm-dd
             if(entry.getKey().equals("date_from")) {
                 String date = entry.getValue();
                 String day = date.substring(0,2);
@@ -47,6 +49,7 @@ public class SearchParamsIntoRapidApiConverter {
 
     private Map<String, String> initializeCorrespondenceMap() {
         Map<String, String> map = new HashMap<>();
+
         map.put("fly_from", "originPlace");
         map.put("fly_to", "destinationPlace");
         map.put("date_from", "outboundDate");
