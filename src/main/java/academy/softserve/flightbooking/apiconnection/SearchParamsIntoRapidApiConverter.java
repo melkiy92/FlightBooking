@@ -18,7 +18,7 @@ public class SearchParamsIntoRapidApiConverter {
         for (Map.Entry<String, String> entry : searchCriteria.entrySet()) {
             String key = entry.getKey();
 
-            if(entry.getKey() == "date_from") {
+            if(entry.getKey().equals("date_from")) {
                 String date = entry.getValue();
                 String day = date.substring(0,2);
                 String month = date.substring(3,5);
@@ -26,6 +26,12 @@ public class SearchParamsIntoRapidApiConverter {
                 StringBuilder newDate = new StringBuilder();
                 newDate.append(year).append("-").append(month).append("-").append(day);
                 entry.setValue(newDate.toString());
+            }
+
+            if(entry.getKey().equals("fly_from") | entry.getKey().equals("fly_to")) {
+                String airportSignature = entry.getValue();
+                String newAirportSignature = airportSignature + "-sky";
+                entry.setValue(newAirportSignature);
             }
 
             if(correspondenceMap.containsKey(key)) {
