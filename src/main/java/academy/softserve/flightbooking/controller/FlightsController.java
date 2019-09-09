@@ -1,7 +1,6 @@
 package academy.softserve.flightbooking.controller;
 
 import academy.softserve.flightbooking.apiconnection.KiwiApiConnector;
-import academy.softserve.flightbooking.apiconnection.RapidApiConnector;
 import com.mashape.unirest.http.exceptions.UnirestException;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -14,7 +13,6 @@ import java.util.Map;
 public class FlightsController {
 
     private KiwiApiConnector kiwiApiConnector;
-    private RapidApiConnector rapidApiConnector;
     private Map<String, String> testSearchParameters;
 
     private static Map<String, String> getMap() {
@@ -30,9 +28,8 @@ public class FlightsController {
         return parameters;
     }
 
-    public FlightsController(KiwiApiConnector kiwiApiConnector, RapidApiConnector rapidApiConnector) {
+    public FlightsController(KiwiApiConnector kiwiApiConnector) {
         this.kiwiApiConnector = kiwiApiConnector;
-        this.rapidApiConnector = rapidApiConnector;
         testSearchParameters = getMap();
     }
 
@@ -40,11 +37,5 @@ public class FlightsController {
     public String getKiwiData(Map<String, String> searchParameters) throws UnsupportedEncodingException, UnirestException {
         searchParameters = testSearchParameters;
         return kiwiApiConnector.getFlightData(searchParameters);
-    }
-
-    @GetMapping("/test/rapid")
-    public String getRapidData(Map<String, String> searchParameters) throws UnirestException, UnsupportedEncodingException {
-        searchParameters = testSearchParameters;
-        return rapidApiConnector.getFlightData(searchParameters);
     }
 }
