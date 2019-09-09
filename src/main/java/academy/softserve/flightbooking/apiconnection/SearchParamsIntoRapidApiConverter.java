@@ -21,19 +21,25 @@ public class SearchParamsIntoRapidApiConverter {
 
             // converts date format dd/mm/yyyy into yyyy-mm-dd
             if(entry.getKey().equals("date_from")) {
+                System.out.println(entry.getValue());
                 String date = entry.getValue();
                 String day = date.substring(0,2);
                 String month = date.substring(3,5);
                 String year = date.substring(6);
                 StringBuilder newDate = new StringBuilder();
                 newDate.append(year).append("-").append(month).append("-").append(day);
-                entry.setValue(newDate.toString());
+
+                System.out.println(correspondenceMap.get(entry.getKey()));
+                response.put(correspondenceMap.get(entry.getKey()), newDate.toString());
+//                entry.setValue(newDate.toString());
             }
 
             if(entry.getKey().equals("fly_from") | entry.getKey().equals("fly_to")) {
+                System.out.println(entry.getValue());
                 String airportSignature = entry.getValue();
                 String newAirportSignature = airportSignature + "-sky";
-                entry.setValue(newAirportSignature);
+                response.put(correspondenceMap.get(entry.getKey()), newAirportSignature);
+//                entry.setValue(newAirportSignature);
             }
 
             if(correspondenceMap.containsKey(key)) {
@@ -43,6 +49,10 @@ public class SearchParamsIntoRapidApiConverter {
                 response.put(entry.getKey(), entry.getValue());
             }
 
+        }
+
+        for(Map.Entry<String, String> entry : response.entrySet()) {
+            System.out.println("\"" + entry.getKey() + "\" : \"" + entry.getValue() + "\"");
         }
         return response;
     }
