@@ -1,12 +1,10 @@
 package academy.softserve.flightbooking.dto;
 
-import academy.softserve.flightbooking.models.entities.CabinClass;
-import academy.softserve.flightbooking.models.entities.Currency;
-import academy.softserve.flightbooking.models.entities.TicketType;
+import academy.softserve.flightbooking.models.components.CabinClass;
+import academy.softserve.flightbooking.models.components.TicketType;
 import lombok.*;
 
 import java.time.LocalDate;
-import java.util.Date;
 
 @Getter
 @Setter

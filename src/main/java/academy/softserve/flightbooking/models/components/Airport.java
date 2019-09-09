@@ -1,25 +1,22 @@
-package academy.softserve.flightbooking.models.entities;
+package academy.softserve.flightbooking.models.components;
 
 import lombok.*;
 
 import javax.persistence.*;
-import java.util.Set;
 
 @Getter
 @Setter
 @Entity
-@Table(name = "cities")
+@Table(name = "currencies")
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode
-public class City {
+public class Airport {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String code;
     private String name;
     @ManyToOne
-    private Country country;
-    @OneToMany(mappedBy = "city", cascade = CascadeType.ALL, orphanRemoval = true)
-    private Set<Airport> airports;
+    private City city;
 }

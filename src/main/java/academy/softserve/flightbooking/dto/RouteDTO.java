@@ -1,13 +1,7 @@
 package academy.softserve.flightbooking.dto;
 
-import academy.softserve.flightbooking.models.entities.City;
-import academy.softserve.flightbooking.models.tickets.Flight;
-import academy.softserve.flightbooking.models.tickets.Ticket;
 import lombok.*;
 
-import javax.persistence.CascadeType;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
 import java.time.Duration;
 import java.util.List;
 

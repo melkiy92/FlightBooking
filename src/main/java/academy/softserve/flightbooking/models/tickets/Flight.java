@@ -1,8 +1,8 @@
 package academy.softserve.flightbooking.models.tickets;
 
-import academy.softserve.flightbooking.models.entities.Airline;
-import academy.softserve.flightbooking.models.entities.Airport;
-import academy.softserve.flightbooking.models.entities.City;
+import academy.softserve.flightbooking.models.components.Airline;
+import academy.softserve.flightbooking.models.components.Airport;
+import academy.softserve.flightbooking.models.components.City;
 import lombok.*;
 
 import javax.persistence.*;
@@ -23,13 +23,23 @@ public class Flight {
     private Long id;
     private String flightNumber;
     private LocalDate departDate;
+    @OneToOne
+    @JoinColumn(name = "airline_name")
     private Airline airline;
     private Duration duration;
     private LocalTime departTime;
+    @OneToOne
+    @JoinColumn(name = "departAirport_code")
     private Airport departAirport;
+    @OneToOne
+    @JoinColumn(name = "departCity_name")
     private City departCity;
     private LocalTime arrivalTime;
+    @OneToOne
+    @JoinColumn(name = "arrivalAirport_code")
     private Airport arrivalAirport;
+    @OneToOne
+    @JoinColumn(name = "arrivalCity_name")
     private City arrivalCity;
     @ManyToOne
     private Route route;

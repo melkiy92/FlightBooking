@@ -1,6 +1,6 @@
 package academy.softserve.flightbooking.models.tickets;
 
-import academy.softserve.flightbooking.models.entities.City;
+import academy.softserve.flightbooking.models.components.City;
 import lombok.*;
 
 import javax.persistence.*;
@@ -18,8 +18,12 @@ public class Route {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private City cityFrom;
-    private City cityTo;
+    @OneToOne
+    @JoinColumn(name = "fromCity_name")
+    private City fromCity;
+    @OneToOne
+    @JoinColumn(name = "toCity_name")
+    private City toCity;
     private Duration duration;
     @OneToMany(mappedBy = "route", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Flight> flights;

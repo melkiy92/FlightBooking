@@ -1,4 +1,4 @@
-package academy.softserve.flightbooking.models.entities;
+package academy.softserve.flightbooking.models.components;
 
 public enum TicketType {
     ONEWAY,

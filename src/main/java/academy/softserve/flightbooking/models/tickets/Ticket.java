@@ -1,6 +1,6 @@
 package academy.softserve.flightbooking.models.tickets;
 
-import academy.softserve.flightbooking.models.entities.Provider;
+import academy.softserve.flightbooking.models.components.Provider;
 import lombok.*;
 
 import javax.persistence.*;
@@ -19,6 +19,8 @@ public class Ticket {
     private Long id;
     private Double price;
     private String bookingToken; // link to buy ticket
+    @OneToOne
+    @JoinColumn(name = "provider_name")
     private Provider ticketProvider;
     @OneToMany(mappedBy = "ticket", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Route> routes;
