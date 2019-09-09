@@ -26,8 +26,8 @@ public class TicketController {
     private final TicketService ticketService;
     private static final ModelMapper modelMapper = new ModelMapper();
 
-    @GetMapping("/flightsearch")
-    public ResponseEntity<List<TicketDTO>> giveCard(@RequestBody SearchCriterionDTO searchCriterionDTO) {
+    @GetMapping("/flights")
+    public ResponseEntity<List<TicketDTO>> getTickets(@RequestBody SearchCriterionDTO searchCriterionDTO) {
         SearchCriterion searchCriterion = modelMapper.map(searchCriterionDTO, SearchCriterion.class);
         List<Ticket> tickets = ticketService.getTickets(searchCriterion);
         TicketDTO ticketDTO;
