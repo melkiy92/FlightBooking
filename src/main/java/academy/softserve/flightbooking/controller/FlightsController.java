@@ -1,12 +1,15 @@
 package academy.softserve.flightbooking.controller;
 
 import academy.softserve.flightbooking.apiconnection.KiwiApiConnector;
+import academy.softserve.flightbooking.dto.TicketDTO;
 import com.mashape.unirest.http.exceptions.UnirestException;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 @RestController
@@ -34,7 +37,7 @@ public class FlightsController {
     }
 
     @GetMapping("/test/kiwi")
-    public String getKiwiData(Map<String, String> searchParameters) throws UnsupportedEncodingException, UnirestException {
+    public String getKiwiData(Map<String, String> searchParameters) throws IOException, UnirestException {
         searchParameters = testSearchParameters;
         return kiwiApiConnector.getFlightData(searchParameters);
     }
