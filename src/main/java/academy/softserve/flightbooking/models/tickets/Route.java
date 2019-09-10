@@ -24,7 +24,7 @@ public class Route {
     @OneToOne
     @JoinColumn(name = "toCity_name")
     private City toCity;
-    private Duration duration;
+    private Long duration;
     @OneToMany(mappedBy = "route", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Flight> flights;
     @ManyToOne

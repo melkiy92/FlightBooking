@@ -20,6 +20,6 @@ public class SearchCriterionDTO {
     private Integer children;
     private String fromLocation;
     private String toLocation;
-    private LocalDate DepartDate;
-    private LocalDate ReturnDate;
+    private Long DepartDate;
+    private Long ReturnDate;
 }

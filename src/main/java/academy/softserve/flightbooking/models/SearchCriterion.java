@@ -42,6 +42,6 @@ public class SearchCriterion {
     @OneToOne
     @JoinColumn(name = "toCountry_name")
     private Country toCountry;
-    private LocalDate DepartDate;
-    private LocalDate ReturnDate; //if the ticketType is RETURNED
+    private Long DepartDate;
+    private Long ReturnDate; //if the ticketType is RETURNED
 }

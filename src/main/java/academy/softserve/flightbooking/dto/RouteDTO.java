@@ -14,6 +14,6 @@ public class RouteDTO {
     private Long id;
     private String cityNameFrom;
     private String cityNameTo;
-    private Duration duration;
+    private Long duration;
     private List<FlightDTO> flights;
 }

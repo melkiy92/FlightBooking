@@ -22,19 +22,19 @@ public class Flight {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String flightNumber;
-    private LocalDate departDate;
+    private Long departDate;
     @OneToOne
     @JoinColumn(name = "airline_name")
     private Airline airline;
-    private Duration duration;
-    private LocalTime departTime;
+    private Long duration;
+    private Long departTime;
     @OneToOne
     @JoinColumn(name = "departAirport_code")
     private Airport departAirport;
     @OneToOne
     @JoinColumn(name = "departCity_name")
     private City departCity;
-    private LocalTime arrivalTime;
+    private Long arrivalTime;
     @OneToOne
     @JoinColumn(name = "arrivalAirport_code")
     private Airport arrivalAirport;

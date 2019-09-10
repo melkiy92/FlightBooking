@@ -14,13 +14,13 @@ import java.time.LocalTime;
 public class FlightDTO {
     private Long id;
     private String flightNumber;
-    private LocalDate departDate;
+    private Long departDate;
     private String airlineName;
-    private Duration duration;
-    private LocalTime departTime;
+    private Long duration;
+    private Long departTime;
     private String departAirportCode;
     private String departCityName;
-    private LocalTime arrivalTime;
+    private Long arrivalTime;
     private String arrivalAirportCode;
     private String arrivalCityName;
 }
