@@ -28,6 +28,6 @@ public class KiwiApiConnector {
         HttpResponse<String> response = Unirest.get("https://api.skypicker.com/flights?" + getParamsString(parameters))
                 .asString();
 
-        return response.getBody();
+        return response.toString();
     }
 }
