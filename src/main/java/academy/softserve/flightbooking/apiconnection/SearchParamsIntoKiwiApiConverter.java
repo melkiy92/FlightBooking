@@ -1,41 +1,24 @@
 package academy.softserve.flightbooking.apiconnection;
 
+import academy.softserve.flightbooking.dto.KiwiSearchCriterionDTO;
+import academy.softserve.flightbooking.dto.SearchCriterionDTO;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.stereotype.Component;
 
-import java.util.HashMap;
+import java.io.UnsupportedEncodingException;
 import java.util.Map;
+
+import static academy.softserve.flightbooking.apiconnection.ParametersStringBuilder.getParamsString;
 
 @Component
 public class SearchParamsIntoKiwiApiConverter {
 
-    private Map<String, String> correspondenceMap;
+    public static String convertIntoRequest (SearchCriterionDTO searchCriterionDTO) throws UnsupportedEncodingException {
 
-    public SearchParamsIntoKiwiApiConverter() {
-        correspondenceMap = initializeCorrespondenceMap();
-    }
+        KiwiSearchCriterionDTO kiwiSearchCriterionDTO = new KiwiSearchCriterionDTO(searchCriterionDTO);
+        ObjectMapper objectMapper = new ObjectMapper();
+        Map<String, String> result = objectMapper.convertValue(kiwiSearchCriterionDTO, Map.class);
 
-    public Map<String, String> convertIntoRequest (Map<String, String> searchCriteria) {
-        Map<String, String> response = new HashMap<>();
-        for (Map.Entry<String, String> entry : searchCriteria.entrySet()) {
-            String key = entry.getKey();
-            if(correspondenceMap.containsKey(key)) {
-                String correspondenceKeyValue = correspondenceMap.get(key);
-                response.put(correspondenceKeyValue, entry.getValue());
-            } else {
-                response.put(entry.getKey(), entry.getValue());
-            }
-        }
-        response.put("partner", "picky");
-        return response;
-    }
-
-    private Map<String, String> initializeCorrespondenceMap() {
-        Map<String, String> map = new HashMap<>();
-        map.put("fly_from", "fly_from");
-        map.put("fly_to", "fly_to");
-        map.put("date_from", "date_from");
-        map.put("date_to", "date_to");
-        map.put("adults", "adults");
-        return map;
+        return getParamsString(result);
     }
 }

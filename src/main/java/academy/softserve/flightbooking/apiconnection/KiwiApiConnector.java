@@ -1,45 +1,33 @@
 package academy.softserve.flightbooking.apiconnection;
 
+import academy.softserve.flightbooking.dto.SearchCriterionDTO;
 import academy.softserve.flightbooking.dto.TicketDTO;
 import com.mashape.unirest.http.HttpResponse;
-import com.mashape.unirest.http.JsonNode;
 import com.mashape.unirest.http.Unirest;
 import com.mashape.unirest.http.exceptions.UnirestException;
 import org.springframework.stereotype.Component;
 
 import java.io.IOException;
-import java.io.UnsupportedEncodingException;
 import java.util.List;
-import java.util.Map;
 
-import static academy.softserve.flightbooking.apiconnection.ParametersStringBuilder.getParamsString;
+import static academy.softserve.flightbooking.apiconnection.SearchParamsIntoKiwiApiConverter.convertIntoRequest;
 
 @Component
 public class KiwiApiConnector {
+    private final static String FLIGHTS_ENDPOINT = "https://api.skypicker.com/flights?";
 
-    private SearchParamsIntoKiwiApiConverter converter;
     private KiwiResponseDeserializer deserializer;
 
-    public KiwiApiConnector(SearchParamsIntoKiwiApiConverter converter, KiwiResponseDeserializer deserializer) {
-        this.converter = converter;
+    public KiwiApiConnector(KiwiResponseDeserializer deserializer) {
         this.deserializer = deserializer;
     }
 
-    public String getFlightData(Map<String, String> searchParameters) throws UnirestException, IOException {
+    public List<TicketDTO> getFlightData(SearchCriterionDTO searchCriterionDTO) throws UnirestException, IOException {
 
-        Map<String, String> parameters = converter.convertIntoRequest(searchParameters);
+        String parameters = convertIntoRequest(searchCriterionDTO);
 
-        System.out.println(getParamsString(parameters));
-
-        HttpResponse<String> response = Unirest.get("https://api.skypicker.com/flights?" + getParamsString(parameters))
+        HttpResponse<String> response = Unirest.get(FLIGHTS_ENDPOINT + parameters)
                 .asString();
-
-        System.out.println("response.getBody=");
-        System.out.println(response.getBody());
-
-
-
-
 
         return deserializer.deserialize(response.getBody());
     }
