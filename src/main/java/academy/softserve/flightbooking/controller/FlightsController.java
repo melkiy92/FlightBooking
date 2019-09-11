@@ -1,44 +1,50 @@
 package academy.softserve.flightbooking.controller;
 
 import academy.softserve.flightbooking.apiconnection.KiwiApiConnector;
+import academy.softserve.flightbooking.dto.SearchCriterionDTO;
 import academy.softserve.flightbooking.dto.TicketDTO;
+import academy.softserve.flightbooking.models.components.CabinClass;
+import academy.softserve.flightbooking.models.components.TicketType;
 import com.mashape.unirest.http.exceptions.UnirestException;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.io.IOException;
-import java.io.UnsupportedEncodingException;
+import java.time.LocalDate;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
+import static academy.softserve.flightbooking.models.components.CabinClass.ECONOMY;
+import static academy.softserve.flightbooking.models.components.TicketType.ONEWAY;
+import static java.time.LocalDate.of;
 
 @RestController
 public class FlightsController {
 
     private KiwiApiConnector kiwiApiConnector;
-    private Map<String, String> testSearchParameters;
 
-    private static Map<String, String> getMap() {
-        Map<String, String> parameters = new HashMap<>();
-        parameters.put("fly_from", "PRG");
-        parameters.put("fly_to", "LGW");
-        parameters.put("date_from", "18/11/2019");
-        parameters.put("date_to", "18/12/2019");
-        parameters.put("adults", "1");
-        parameters.put("country", "US");
-        parameters.put("currency", "USD");
-        parameters.put("locale", "en-US");
-        return parameters;
-    }
+    private SearchCriterionDTO searchCriterion;
 
     public FlightsController(KiwiApiConnector kiwiApiConnector) {
         this.kiwiApiConnector = kiwiApiConnector;
-        testSearchParameters = getMap();
+        searchCriterion = new SearchCriterionDTO();
+        searchCriterion.setId(1L);
+        searchCriterion.setCurrencyCode("USD");
+        searchCriterion.setTicketType(ONEWAY);
+        searchCriterion.setCabinClass(ECONOMY);
+        searchCriterion.setAdults(1);
+        searchCriterion.setChildren(0);
+        searchCriterion.setFromLocation("OZH");
+        searchCriterion.setToLocation("KBP");
+        searchCriterion.setDepartDate(of(2019, 11, 18));
+        searchCriterion.setReturnDate(of(2019, 12, 18));
     }
 
     @GetMapping("/test/kiwi")
-    public String getKiwiData(Map<String, String> searchParameters) throws IOException, UnirestException {
-        searchParameters = testSearchParameters;
-        return kiwiApiConnector.getFlightData(searchParameters);
+    public @ResponseBody List<TicketDTO> getKiwiData(SearchCriterionDTO searchCriterionDTO) throws IOException, UnirestException {
+        searchCriterionDTO = searchCriterion;
+        return kiwiApiConnector.getFlightData(searchCriterionDTO);
     }
 }
