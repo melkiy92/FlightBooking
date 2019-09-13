@@ -8,7 +8,7 @@ import java.util.Map;
 
 @Component
 public class ParametersStringBuilder {
-    public static String getParamsString(Map<String, String> params)
+    public String getParamsString(Map<String, String> params)
             throws UnsupportedEncodingException {
         StringBuilder result = new StringBuilder();
 

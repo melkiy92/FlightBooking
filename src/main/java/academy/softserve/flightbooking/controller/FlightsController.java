@@ -1,20 +1,19 @@
 package academy.softserve.flightbooking.controller;
 
+import academy.softserve.flightbooking.apiconnection.ApiErrorException;
+import academy.softserve.flightbooking.apiconnection.IllegalCabinClassException;
+import academy.softserve.flightbooking.apiconnection.IllegalDateException;
 import academy.softserve.flightbooking.apiconnection.KiwiApiConnector;
 import academy.softserve.flightbooking.dto.SearchCriterionDTO;
 import academy.softserve.flightbooking.dto.TicketDTO;
-import academy.softserve.flightbooking.models.components.CabinClass;
-import academy.softserve.flightbooking.models.components.TicketType;
 import com.mashape.unirest.http.exceptions.UnirestException;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.io.IOException;
-import java.time.LocalDate;
-import java.util.HashMap;
+import java.sql.Timestamp;
 import java.util.List;
-import java.util.Map;
 
 import static academy.softserve.flightbooking.models.components.CabinClass.ECONOMY;
 import static academy.softserve.flightbooking.models.components.TicketType.ONEWAY;
@@ -38,13 +37,14 @@ public class FlightsController {
         searchCriterion.setChildren(0);
         searchCriterion.setFromLocation("OZH");
         searchCriterion.setToLocation("KBP");
-        searchCriterion.setDepartDate(of(2019, 11, 18));
-        searchCriterion.setReturnDate(of(2019, 12, 18));
+        searchCriterion.setDepartDate(1574028000000L);
+        searchCriterion.setReturnDate(1576620000000L);
     }
 
     @GetMapping("/test/kiwi")
-    public @ResponseBody List<TicketDTO> getKiwiData(SearchCriterionDTO searchCriterionDTO) throws IOException, UnirestException {
+    public @ResponseBody List<TicketDTO> getKiwiData(SearchCriterionDTO searchCriterionDTO)
+            throws IOException, UnirestException, ApiErrorException, IllegalDateException, IllegalCabinClassException {
         searchCriterionDTO = searchCriterion;
-        return kiwiApiConnector.getFlightData(searchCriterionDTO);
+        return kiwiApiConnector.getFlightsData(searchCriterionDTO);
     }
 }
