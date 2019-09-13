@@ -7,14 +7,15 @@ import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
-@Service
+
 @RequiredArgsConstructor
+@Service
 public class SearchCriterionServiceImpl implements SearchCriterionService {
     @NonNull
     private final SearchCriterionRepository searchCriterionRepository;
 
     @Override
-    public SearchCriterion createSearchCriterion(){
+    public SearchCriterion createSearchCriterion() {
         return null;
     }
 }

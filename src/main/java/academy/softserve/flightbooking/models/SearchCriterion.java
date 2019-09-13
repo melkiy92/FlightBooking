@@ -1,18 +1,31 @@
 package academy.softserve.flightbooking.models;
 
-import academy.softserve.flightbooking.models.components.*;
-import lombok.*;
+import academy.softserve.flightbooking.models.components.Currency;
+import academy.softserve.flightbooking.models.components.City;
+import academy.softserve.flightbooking.models.components.Airport;
+import academy.softserve.flightbooking.models.components.Country;
+import academy.softserve.flightbooking.models.components.TicketType;
+import academy.softserve.flightbooking.models.components.CabinClass;
 
-import javax.persistence.*;
-import java.time.LocalDate;
 
-@Getter
-@Setter
-@Entity
-@Table(name = "search_criteria")
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.AllArgsConstructor;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+import javax.persistence.Id;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.OneToOne;
+import javax.persistence.JoinColumn;
+
+
+@Data
 @NoArgsConstructor
 @AllArgsConstructor
-@EqualsAndHashCode
+@Entity
+@Table(name = "search_criteria")
 public class SearchCriterion {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

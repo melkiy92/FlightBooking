@@ -4,8 +4,9 @@ import academy.softserve.flightbooking.services.SearchCriterionService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.RestController;
 
-@RestController
+
 @RequiredArgsConstructor
+@RestController
 public class SearchCriterionController {
     private final SearchCriterionService searchCriterionService;
 }

@@ -2,9 +2,11 @@ package academy.softserve.flightbooking.dto;
 
 import academy.softserve.flightbooking.models.components.CabinClass;
 import academy.softserve.flightbooking.models.components.TicketType;
-import lombok.*;
-
-import java.time.LocalDate;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.Builder;
+import lombok.NoArgsConstructor;
+import lombok.AllArgsConstructor;
 
 @Getter
 @Setter

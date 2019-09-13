@@ -1,10 +1,12 @@
 package academy.softserve.flightbooking.dto;
 
-import academy.softserve.flightbooking.models.tickets.Route;
-import lombok.*;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.Builder;
+import lombok.NoArgsConstructor;
+import lombok.AllArgsConstructor;
 
-import javax.persistence.CascadeType;
-import javax.persistence.OneToMany;
+
 import java.util.List;
 
 @Getter
@@ -18,4 +20,5 @@ public class TicketDTO {
     private String bookingToken; //buy ticket
     private String provider;     //kiwi or skyscanner
     private List<RouteDTO> routes;
+
 }
