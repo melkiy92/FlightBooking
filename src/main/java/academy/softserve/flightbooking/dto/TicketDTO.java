@@ -1,6 +1,11 @@
 package academy.softserve.flightbooking.dto;
 
-import lombok.*;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.Builder;
+import lombok.NoArgsConstructor;
+import lombok.AllArgsConstructor;
+
 
 import java.util.List;
 
@@ -15,4 +20,5 @@ public class TicketDTO {
     private String bookingToken; //buy ticket
     private String provider;     //kiwi or skyscanner
     private List<RouteDTO> routes;
+
 }
