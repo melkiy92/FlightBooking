@@ -22,6 +22,6 @@ public class SearchCriterionDTO {
     private Integer children;
     private String fromLocation;
     private String toLocation;
-    private Long DepartDate;
-    private Long ReturnDate;
+    private Long departDate;
+    private Long returnDate;
 }
