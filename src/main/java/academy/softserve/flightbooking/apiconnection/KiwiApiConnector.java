@@ -26,7 +26,7 @@ public class KiwiApiConnector implements IApiConnector {
 
     private SearchParamsIntoApiRequestConverter converter;
 
-    public List<TicketDTO> getFlightsData(SearchCriterionDTO searchCriterionDTO)
+    public List<TicketDTO> getTickets(SearchCriterionDTO searchCriterionDTO)
             throws IOException, UnirestException, ApiErrorException, IllegalDateException, IllegalCabinClassException {
         List<TicketDTO> result;
 
