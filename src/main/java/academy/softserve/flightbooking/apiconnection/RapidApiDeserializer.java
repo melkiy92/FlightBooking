@@ -22,8 +22,10 @@ public class RapidApiDeserializer {
         JsonNode itineraries = data.findValue("Itineraries");
         JsonNode legs = data.findValue("Legs");
         JsonNode segments = data.findValue("Segments");
-        JsonNode carriers = data.findValue("Carriers");
-        JsonNode agents = data.findValue("Agents");
+        List<JsonNode> carriersList = data.findValues("Carriers");
+        JsonNode carriers = carriersList.get(carriersList.size() - 1);
+        List<JsonNode> agentsList = data.findValues("Agents");
+        JsonNode agents = agentsList.get(agentsList.size() - 1);
         JsonNode places = data.findValue("Places");
 
         List<TicketDTO> tickets = new ArrayList<>();
@@ -108,12 +110,10 @@ public class RapidApiDeserializer {
         flight.setArrivalAirportCode(findById(places, segment.findValue("DestinationStation").asText()).findValue("Code").asText());
         flight.setDepartAirportCode(findById(places, segment.findValue("OriginStation").asText()).findValue("Code").asText());
         String departureTimeString = departureDateTime.substring(departureDateTime.indexOf("T") + 1);
-        System.out.println(departureTimeString);
         flight.setDepartTime(dateInMsFromDateString(departureTimeString, "hh:mm:ss"));
         String arrivalTimeString = arrivalDateTime.substring(arrivalDateTime.indexOf("T") + 1);
         flight.setArrivalTime(dateInMsFromDateString(arrivalTimeString, "hh:mm:ss"));
-//        System.out.println(findById(carriers, segment.findValue("Carrier").asText()));
-//        flight.setAirlineName(findById(carriers, segment.findValue("Carrier").asText()).findValue("Name").asText());
+        flight.setAirlineName(findById(carriers, segment.findValue("Carrier").asText()).findValue("Name").asText());
         return flight;
     }
 }

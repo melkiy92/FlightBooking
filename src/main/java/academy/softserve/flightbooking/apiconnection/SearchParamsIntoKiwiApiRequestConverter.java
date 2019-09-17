@@ -7,6 +7,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.io.UnsupportedEncodingException;
@@ -20,6 +21,7 @@ import java.util.Map;
 @Component
 public class SearchParamsIntoKiwiApiRequestConverter {
 
+    @Autowired
     private ParametersStringBuilder parametersStringBuilder;
 
     public String convertIntoRequestString(SearchCriterionDTO searchCriterionDTO)

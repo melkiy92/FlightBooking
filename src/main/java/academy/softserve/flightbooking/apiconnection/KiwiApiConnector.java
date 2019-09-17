@@ -5,9 +5,11 @@ import academy.softserve.flightbooking.dto.TicketDTO;
 import com.mashape.unirest.http.HttpResponse;
 import com.mashape.unirest.http.Unirest;
 import com.mashape.unirest.http.exceptions.UnirestException;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 
@@ -18,13 +20,14 @@ import static academy.softserve.flightbooking.apiconnection.KiwiResponseDeserial
 
 @Getter
 @Setter
-@RequiredArgsConstructor
+@AllArgsConstructor
 @Component
 public class KiwiApiConnector implements IApiConnector {
     private final static String FLIGHTS_ENDPOINT = "https://api.skypicker.com/flights?";
     private final static String MULTICITY_ENDPOINT = "https://api.skypicker.com/flights_multi?";
 
-    private SearchParamsIntoApiRequestConverter converter;
+    @Autowired
+    private SearchParamsIntoRapidApiRequestConverter converter;
 
     public List<TicketDTO> getTickets(SearchCriterionDTO searchCriterionDTO)
             throws IOException, UnirestException, ApiErrorException, IllegalDateException, IllegalCabinClassException {
