@@ -9,6 +9,6 @@ import java.util.List;
 
 public interface IApiConnector {
 
-    List<TicketDTO> getFlightsData(SearchCriterionDTO searchCriterionDTO)
+    List<TicketDTO> getTickets(SearchCriterionDTO searchCriterionDTO)
             throws IOException, UnirestException, ApiErrorException, IllegalDateException, IllegalCabinClassException;
 }

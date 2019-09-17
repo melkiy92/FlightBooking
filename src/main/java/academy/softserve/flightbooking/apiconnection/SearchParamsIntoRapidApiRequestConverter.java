@@ -18,7 +18,7 @@ import java.util.Map;
 @Setter
 @AllArgsConstructor
 @Component
-public class SearchParamsIntoApiRequestConverter {
+public class SearchParamsIntoRapidApiRequestConverter {
 
     private ParametersStringBuilder parametersStringBuilder;
 
@@ -47,34 +47,34 @@ public class SearchParamsIntoApiRequestConverter {
         RapidSearchCriterion rapidSearchCriterion = new RapidSearchCriterion();
 
         rapidSearchCriterion.setCountry("US");
-        System.out.println(rapidSearchCriterion.getCountry());
+//        System.out.println(rapidSearchCriterion.getCountry());
 
         rapidSearchCriterion.setCurrency(searchCriterionDTO.getCurrencyCode());
-        System.out.println(rapidSearchCriterion.getCurrency());
+//        System.out.println(rapidSearchCriterion.getCurrency());
 
         rapidSearchCriterion.setLocale("en-US");
-        System.out.println(rapidSearchCriterion.getLocale());
+//        System.out.println(rapidSearchCriterion.getLocale());
 
         rapidSearchCriterion.setOriginPlace(searchCriterionDTO.getFromLocation() + "-sky");
-        System.out.println(rapidSearchCriterion.getOriginPlace());
+//        System.out.println(rapidSearchCriterion.getOriginPlace());
 
         rapidSearchCriterion.setDestinationPlace(searchCriterionDTO.getToLocation() + "-sky");
-        System.out.println(rapidSearchCriterion.getDestinationPlace());
+//        System.out.println(rapidSearchCriterion.getDestinationPlace());
 
         rapidSearchCriterion.setOutboundDate(convertDate(searchCriterionDTO.getDepartDate(), "yyyy-MM-dd"));
-        System.out.println(rapidSearchCriterion.getOutboundDate());
+//        System.out.println(rapidSearchCriterion.getOutboundDate());
 
         rapidSearchCriterion.setInboundDate(convertDate(searchCriterionDTO.getReturnDate(), "yyyy-MM-dd"));
-        System.out.println(rapidSearchCriterion.getInboundDate());
+//        System.out.println(rapidSearchCriterion.getInboundDate());
 
         rapidSearchCriterion.setAdults("" + searchCriterionDTO.getAdults());
-        System.out.println(rapidSearchCriterion.getAdults());
+//        System.out.println(rapidSearchCriterion.getAdults());
 
         rapidSearchCriterion.setChildren("" + searchCriterionDTO.getChildren());
-        System.out.println(rapidSearchCriterion.getChildren());
+//        System.out.println(rapidSearchCriterion.getChildren());
 
         rapidSearchCriterion.setCabinClass(searchCriterionDTO.getCabinClass().toString());
-        System.out.println(rapidSearchCriterion.getCabinClass());
+//        System.out.println(rapidSearchCriterion.getCabinClass());
 
 
         ObjectMapper objectMapper = new ObjectMapper();

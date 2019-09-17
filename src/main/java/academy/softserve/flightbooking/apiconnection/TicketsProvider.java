@@ -12,14 +12,14 @@ import java.util.List;
 
 @Component
 @AllArgsConstructor
-public class ApiConnector {
+public class TicketsProvider {
     private KiwiApiConnector kiwiApiConnector;
     private RapidApiConnector rapidApiConnector;
 
     public List<TicketDTO> getTickets(SearchCriterionDTO searchCriterionDTO) throws IllegalCabinClassException, ApiErrorException, UnirestException, IllegalDateException, IOException {
         List<TicketDTO> result = new ArrayList<>();
-        result.addAll(kiwiApiConnector.getFlightsData(searchCriterionDTO));
-        //result.addAll(rapidApiConnector.getFlightsData(searchCriterionDTO));
+        result.addAll(kiwiApiConnector.getTickets(searchCriterionDTO));
+        result.addAll(rapidApiConnector.getTickets(searchCriterionDTO));
         return result;
     }
 }
