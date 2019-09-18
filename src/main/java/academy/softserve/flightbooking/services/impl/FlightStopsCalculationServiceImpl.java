@@ -1,4 +1,4 @@
-package academy.softserve.flightbooking.services.servicesImpl;
+package academy.softserve.flightbooking.services.impl;
 
 import academy.softserve.flightbooking.dto.FlightDTO;
 import academy.softserve.flightbooking.dto.StopDTO;
@@ -16,8 +16,6 @@ public class FlightStopsCalculationServiceImpl implements FlightStopsCalculation
     public List<StopDTO> calculateStopsBetweenFlights(List<FlightDTO> flightDTOList) {
 
         List<StopDTO> stopDTOList = new ArrayList<>();
-        long stopDuration = 0L;
-        String airportCode = "";
 
         if (flightDTOList.size() <= 1) {
             return stopDTOList;
@@ -27,18 +25,13 @@ public class FlightStopsCalculationServiceImpl implements FlightStopsCalculation
          * in other cases, if the "size" of the "flightDTOList" is equal "2" or more
          */
         for (int i = 0; i < flightDTOList.size() - 1; i++) {
-            if (flightDTOList.get(i).getArrivalCityName().equals(flightDTOList.get(i + 1).getDepartCityName())) {
-                stopDuration = flightDTOList.get(i + 1).getDepartTime() - flightDTOList.get(i).getArrivalTime();
-                airportCode = flightDTOList.get(i).getArrivalCityName() + " " + flightDTOList.get(i).getArrivalAirportCode();
-            }
-            createStopDTO(stopDTOList, stopDuration, airportCode);
+            Long stopDuration = flightDTOList.get(i + 1).getDepartTime() - flightDTOList.get(i).getArrivalTime();
+            String airportCode = flightDTOList.get(i).getArrivalAirportCode();
+            StopDTO stopDTO = new StopDTO(stopDuration, airportCode);
+            stopDTOList.add(stopDTO);
         }
 
         return stopDTOList;
     }
 
-    private void createStopDTO(List<StopDTO> stopDTOList, Long duration, String airportCode) {
-        StopDTO stopDTOForEmptyFlight = new StopDTO(duration, airportCode);
-        stopDTOList.add(stopDTOForEmptyFlight);
-    }
 }

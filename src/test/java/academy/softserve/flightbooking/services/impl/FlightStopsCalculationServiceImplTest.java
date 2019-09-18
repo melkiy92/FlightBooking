@@ -1,4 +1,4 @@
-package academy.softserve.flightbooking.services.servicesImpl;
+package academy.softserve.flightbooking.services.impl;
 
 import academy.softserve.flightbooking.dto.FlightDTO;
 import academy.softserve.flightbooking.dto.StopDTO;
@@ -49,7 +49,7 @@ public class FlightStopsCalculationServiceImplTest {
         flightDTOList.add(flightDTOFirst);
         flightDTOList.add(flightDTOSecond);
 
-        StopDTO stopDTO = new StopDTO(100L, "Kyiv KBP");
+        StopDTO stopDTO = new StopDTO(100L, "KBP");
         List<StopDTO> expectedStopList = new ArrayList<>();
         expectedStopList.add(stopDTO);
 
