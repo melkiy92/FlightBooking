@@ -2,11 +2,9 @@ package academy.softserve.flightbooking.apiconnection;
 
 import academy.softserve.flightbooking.dto.SearchCriterionDTO;
 import academy.softserve.flightbooking.models.components.CabinClass;
-import academy.softserve.flightbooking.models.components.TicketType;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 import org.springframework.stereotype.Component;
 
 import java.io.UnsupportedEncodingException;
@@ -14,8 +12,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Map;
 
-@Getter
-@Setter
+@Data
 @AllArgsConstructor
 @Component
 public class SearchParamsIntoKiwiApiRequestConverter {
@@ -27,7 +24,7 @@ public class SearchParamsIntoKiwiApiRequestConverter {
 
         KiwiSearchCriterionDto kiwiSearchCriterionDto = new KiwiSearchCriterionDto();
         kiwiSearchCriterionDto.setCurrency(searchCriterionDTO.getCurrencyCode());
-//        kiwiSearchCriterionDto.setMax_stopovers(getMaxStopoversByTicketType(searchCriterionDTO.getTicketType()));
+        kiwiSearchCriterionDto.setMax_stopovers("" + Integer.MAX_VALUE);
         kiwiSearchCriterionDto.setSelected_cabins(convertCabinClass(searchCriterionDTO.getCabinClass()));
         kiwiSearchCriterionDto.setAdults("" + searchCriterionDTO.getAdults());
         kiwiSearchCriterionDto.setChildren("" + searchCriterionDTO.getChildren());
@@ -43,14 +40,6 @@ public class SearchParamsIntoKiwiApiRequestConverter {
 
         return parametersStringBuilder.getParamsString(result);
     }
-
-//    private String getMaxStopoversByTicketType(TicketType ticketType) {
-//        if (ticketType.equals(TicketType.ONEWAY)) {
-//            return "" + 0;
-//        } else {
-//            return "" + Integer.MAX_VALUE;
-//        }
-//    }
 
     private String convertCabinClass(CabinClass cabinClass) throws IllegalCabinClassException {
         if (cabinClass.equals(CabinClass.FIRSTCLASS)) {

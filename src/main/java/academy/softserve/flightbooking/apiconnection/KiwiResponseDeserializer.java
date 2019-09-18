@@ -22,13 +22,21 @@ public class KiwiResponseDeserializer {
             ticket.setPrice(node.get("price").asDouble());
             ticket.setBookingToken(node.get("booking_token").asText());
             ticket.setProvider("Kiwi");
+
             List<RouteDTO> routes = new ArrayList<>();
-            RouteDTO routeDTO = new RouteDTO();
-            routeDTO.setCityNameFrom(node.get("cityFrom").asText());
-            routeDTO.setCityNameTo(node.get("cityTo").asText());
-            routeDTO.setDuration(node.findValue("duration").get("total").asLong());
+            RouteDTO straightRoute = new RouteDTO();
+            RouteDTO returnRoute = new RouteDTO();
+            JsonNode routesNode = node.findValue("routes");
+            straightRoute.setCityNameFrom(routesNode.get(0).get(0).asText());
+            straightRoute.setCityNameTo(routesNode.get(0).get(1).asText());
+            straightRoute.setDuration(node.findValue("duration").get("departure").asLong());
+            returnRoute.setCityNameFrom(routesNode.get(1).get(0).asText());
+            returnRoute.setCityNameTo(routesNode.get(1).get(1).asText());
+            returnRoute.setDuration(node.findValue("duration").get("return").asLong());
+
             JsonNode route = node.findValue("route");
-            List<FlightDTO> flights = new ArrayList<>();
+            List<FlightDTO> straightFlights = new ArrayList<>();
+            List<FlightDTO> returnFlights = new ArrayList<>();
             for(JsonNode nodeRoute: route) {
                 FlightDTO flight = new FlightDTO();
                 flight.setFlightNumber(nodeRoute.get("flight_no").asText());
@@ -42,10 +50,16 @@ public class KiwiResponseDeserializer {
                 flight.setArrivalCityName(nodeRoute.get("cityTo").asText());
                 flight.setArrivalTime(nodeRoute.get("aTime").asLong());
                 flight.setDuration((nodeRoute.get("aTime").asLong()) - (nodeRoute.get("dTime").asLong()));
-                flights.add(flight);
+                if (nodeRoute.get("return").asInt() == 0) {
+                    straightFlights.add(flight);
+                } else {
+                    returnFlights.add(flight);
+                }
             }
-            routeDTO.setFlights(flights);
-            routes.add(routeDTO);
+            straightRoute.setFlights(straightFlights);
+            returnRoute.setFlights(returnFlights);
+            routes.add(straightRoute);
+            routes.add(returnRoute);
             ticket.setRoutes(routes);
             tickets.add(ticket);
         }

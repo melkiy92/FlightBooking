@@ -9,7 +9,7 @@ import lombok.*;
 @ToString
 public class KiwiSearchCriterionDto {
     private String currency;
-//    private String max_stopovers;
+    private String max_stopovers;
     private String selected_cabins;
     private String adults;
     private String children;
