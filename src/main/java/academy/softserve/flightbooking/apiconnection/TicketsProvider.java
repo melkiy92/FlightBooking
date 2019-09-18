@@ -17,9 +17,10 @@ public class TicketsProvider {
     private RapidApiConnector rapidApiConnector;
 
     public List<TicketDTO> getTickets(SearchCriterionDTO searchCriterionDTO) throws IllegalCabinClassException, ApiErrorException, UnirestException, IllegalDateException, IOException {
-        List<TicketDTO> result = new ArrayList<>();
-        result.addAll(kiwiApiConnector.getTickets(searchCriterionDTO));
-        result.addAll(rapidApiConnector.getTickets(searchCriterionDTO));
-        return result;
+        List<TicketDTO> tickets = new ArrayList<>();
+        tickets.addAll(kiwiApiConnector.getTickets(searchCriterionDTO));
+        tickets.addAll(rapidApiConnector.getTickets(searchCriterionDTO));
+// add here a loop for calculating StopDTOs
+        return tickets;
     }
 }

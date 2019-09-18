@@ -22,63 +22,34 @@ public class SearchParamsIntoRapidApiRequestConverter {
 
     private ParametersStringBuilder parametersStringBuilder;
 
-    public String convertIntoKiwiRequestString(SearchCriterionDTO searchCriterionDTO)
+    public String convertIntoRequestString(SearchCriterionDTO searchCriterionDTO)
             throws IllegalDateException, IllegalCabinClassException, UnsupportedEncodingException {
-        KiwiSearchCriterion kiwiSearchCriterion = new KiwiSearchCriterion();
+        RapidSearchCriterionDto rapidSearchCriterionDto = new RapidSearchCriterionDto();
 
-        kiwiSearchCriterion.setCurrency(searchCriterionDTO.getCurrencyCode());
-        kiwiSearchCriterion.setMax_stopovers(getMaxStopoversByTicketType(searchCriterionDTO.getTicketType()));
-        kiwiSearchCriterion.setSelected_cabins(convertCabinClass(searchCriterionDTO.getCabinClass()));
-        kiwiSearchCriterion.setAdults("" + searchCriterionDTO.getAdults());
-        kiwiSearchCriterion.setChildren("" + searchCriterionDTO.getChildren());
-        kiwiSearchCriterion.setFly_from(searchCriterionDTO.getFromLocation());
-        kiwiSearchCriterion.setFly_to(searchCriterionDTO.getToLocation());
-        kiwiSearchCriterion.setDate_from(convertDate(searchCriterionDTO.getDepartDate(), "dd/MM/yyyy"));
-        kiwiSearchCriterion.setReturn_from(convertDate(searchCriterionDTO.getReturnDate(), "dd/MM/yyyy"));
+        rapidSearchCriterionDto.setCountry("US");
+        rapidSearchCriterionDto.setCurrency(searchCriterionDTO.getCurrencyCode());
+        rapidSearchCriterionDto.setLocale("en-US");
+        rapidSearchCriterionDto.setOriginPlace(searchCriterionDTO.getFromLocation() + "-sky");
+        rapidSearchCriterionDto.setDestinationPlace(searchCriterionDTO.getToLocation() + "-sky");
+        rapidSearchCriterionDto.setOutboundDate(convertDate(searchCriterionDTO.getDepartDate(), "yyyy-MM-dd"));
+        rapidSearchCriterionDto.setInboundDate(convertDate(searchCriterionDTO.getReturnDate(), "yyyy-MM-dd"));
+        rapidSearchCriterionDto.setAdults("" + searchCriterionDTO.getAdults());
+        rapidSearchCriterionDto.setChildren("" + searchCriterionDTO.getChildren());
+        rapidSearchCriterionDto.setCabinClass(searchCriterionDTO.getCabinClass().toString());
+
+//        System.out.println(rapidSearchCriterionDto.getCountry());
+//        System.out.println(rapidSearchCriterionDto.getCurrency());
+//        System.out.println(rapidSearchCriterionDto.getLocale());
+//        System.out.println(rapidSearchCriterionDto.getOriginPlace());
+//        System.out.println(rapidSearchCriterionDto.getDestinationPlace());
+//        System.out.println(rapidSearchCriterionDto.getOutboundDate());
+//        System.out.println(rapidSearchCriterionDto.getInboundDate());
+//        System.out.println(rapidSearchCriterionDto.getAdults());
+//        System.out.println(rapidSearchCriterionDto.getChildren());
+//        System.out.println(rapidSearchCriterionDto.getCabinClass());
 
         ObjectMapper objectMapper = new ObjectMapper();
-        Map<String, String> result = objectMapper.convertValue(kiwiSearchCriterion, Map.class);
-
-        return parametersStringBuilder.getParamsString(result);
-    }
-
-    public String convertIntoRapidRequestString(SearchCriterionDTO searchCriterionDTO)
-            throws IllegalDateException, IllegalCabinClassException, UnsupportedEncodingException {
-        RapidSearchCriterion rapidSearchCriterion = new RapidSearchCriterion();
-
-        rapidSearchCriterion.setCountry("US");
-//        System.out.println(rapidSearchCriterion.getCountry());
-
-        rapidSearchCriterion.setCurrency(searchCriterionDTO.getCurrencyCode());
-//        System.out.println(rapidSearchCriterion.getCurrency());
-
-        rapidSearchCriterion.setLocale("en-US");
-//        System.out.println(rapidSearchCriterion.getLocale());
-
-        rapidSearchCriterion.setOriginPlace(searchCriterionDTO.getFromLocation() + "-sky");
-//        System.out.println(rapidSearchCriterion.getOriginPlace());
-
-        rapidSearchCriterion.setDestinationPlace(searchCriterionDTO.getToLocation() + "-sky");
-//        System.out.println(rapidSearchCriterion.getDestinationPlace());
-
-        rapidSearchCriterion.setOutboundDate(convertDate(searchCriterionDTO.getDepartDate(), "yyyy-MM-dd"));
-//        System.out.println(rapidSearchCriterion.getOutboundDate());
-
-        rapidSearchCriterion.setInboundDate(convertDate(searchCriterionDTO.getReturnDate(), "yyyy-MM-dd"));
-//        System.out.println(rapidSearchCriterion.getInboundDate());
-
-        rapidSearchCriterion.setAdults("" + searchCriterionDTO.getAdults());
-//        System.out.println(rapidSearchCriterion.getAdults());
-
-        rapidSearchCriterion.setChildren("" + searchCriterionDTO.getChildren());
-//        System.out.println(rapidSearchCriterion.getChildren());
-
-        rapidSearchCriterion.setCabinClass(searchCriterionDTO.getCabinClass().toString());
-//        System.out.println(rapidSearchCriterion.getCabinClass());
-
-
-        ObjectMapper objectMapper = new ObjectMapper();
-        Map<String, String> result = objectMapper.convertValue(rapidSearchCriterion, Map.class);
+        Map<String, String> result = objectMapper.convertValue(rapidSearchCriterionDto, Map.class);
 
         return parametersStringBuilder.getParamsString(result);
     }

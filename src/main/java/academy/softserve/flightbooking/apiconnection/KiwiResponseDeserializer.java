@@ -22,16 +22,13 @@ public class KiwiResponseDeserializer {
             ticket.setPrice(node.get("price").asDouble());
             ticket.setBookingToken(node.get("booking_token").asText());
             ticket.setProvider("Kiwi");
-
             List<RouteDTO> routes = new ArrayList<>();
             RouteDTO routeDTO = new RouteDTO();
             routeDTO.setCityNameFrom(node.get("cityFrom").asText());
             routeDTO.setCityNameTo(node.get("cityTo").asText());
             routeDTO.setDuration(node.findValue("duration").get("total").asLong());
-
             JsonNode route = node.findValue("route");
             List<FlightDTO> flights = new ArrayList<>();
-
             for(JsonNode nodeRoute: route) {
                 FlightDTO flight = new FlightDTO();
                 flight.setFlightNumber(nodeRoute.get("flight_no").asText());
@@ -47,7 +44,6 @@ public class KiwiResponseDeserializer {
                 flight.setDuration((nodeRoute.get("aTime").asLong()) - (nodeRoute.get("dTime").asLong()));
                 flights.add(flight);
             }
-
             routeDTO.setFlights(flights);
             routes.add(routeDTO);
             ticket.setRoutes(routes);

@@ -6,6 +6,8 @@ import com.mashape.unirest.http.HttpResponse;
 import com.mashape.unirest.http.JsonNode;
 import com.mashape.unirest.http.Unirest;
 import com.mashape.unirest.http.exceptions.UnirestException;
+import lombok.AllArgsConstructor;
+import lombok.Data;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
@@ -17,9 +19,8 @@ import java.util.List;
 
 import static academy.softserve.flightbooking.apiconnection.RapidApiDeserializer.deserializeFlightsData;
 
-@Getter
-@Setter
-@RequiredArgsConstructor
+@Data
+@AllArgsConstructor
 @Component
 public class RapidApiConnector implements IApiConnector {
     private static final String POST_ENDPOINT = "https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/pricing/v1.0/";
@@ -28,15 +29,16 @@ public class RapidApiConnector implements IApiConnector {
     private static final String X_RAPIDAPI_KEY = "5ccd3b53abmshb992db8efa8fccep18a986jsn88569fa32f67";
     private static final String CONTENT_TYPE = "application/x-www-form-urlencoded";
 
-
-    @Autowired
     private SearchParamsIntoRapidApiRequestConverter converter;
+
 
     public List<TicketDTO> getTickets(SearchCriterionDTO searchCriterionDTO)
             throws IOException, UnirestException, ApiErrorException, IllegalDateException, IllegalCabinClassException {
         List<TicketDTO> result;
 
-        String parameters = converter.convertIntoRapidRequestString(searchCriterionDTO);
+        System.out.println("[RapidApiConnector] converter=" + converter);
+        String parameters = converter.convertIntoRequestString(searchCriterionDTO);
+        System.out.println(parameters);
         HttpResponse<JsonNode> sessionCreationResponse = Unirest.post(POST_ENDPOINT)
                 .header("X-RapidAPI-Host", X_RAPIDAPI_HOST)
                 .header("X-RapidAPI-Key", X_RAPIDAPI_KEY)

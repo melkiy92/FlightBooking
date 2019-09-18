@@ -7,7 +7,7 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-public class RapidSearchCriterion {
+public class RapidSearchCriterionDto {
     private String country;
     private String currency;
     private String locale;
