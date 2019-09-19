@@ -12,8 +12,8 @@ import org.springframework.stereotype.Component;
 import java.io.UnsupportedEncodingException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.HashMap;
 import java.util.Map;
+import java.util.TreeMap;
 
 @Slf4j
 @Data
@@ -26,7 +26,7 @@ public class SearchParamsIntoRapidApiRequestStringConverter {
     public String convertIntoRequestString(SearchCriterionDTO searchCriterionDTO)
             throws IllegalDateException, IllegalCabinClassException, UnsupportedEncodingException {
         String result;
-        Map<String, String> requestParamsMap = new HashMap<>();
+        Map<String, String> requestParamsMap = new TreeMap<>();
 
         requestParamsMap.put("country", "US");
         requestParamsMap.put("currency", searchCriterionDTO.getCurrencyCode());

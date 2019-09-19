@@ -5,6 +5,7 @@ import academy.softserve.flightbooking.apiconnection.converters.SearchParamsInto
 import academy.softserve.flightbooking.apiconnection.exceptions.IllegalCabinClassException;
 import academy.softserve.flightbooking.apiconnection.exceptions.IllegalDateException;
 import academy.softserve.flightbooking.dto.SearchCriterionDTO;
+import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
@@ -14,6 +15,7 @@ import static academy.softserve.flightbooking.models.components.CabinClass.ECONO
 import static academy.softserve.flightbooking.models.components.TicketType.ONEWAY;
 
 
+@Slf4j
 @SpringBootTest
 public class SearchParamsIntoRapidApiRequestStringConverterTest {
 
@@ -32,12 +34,14 @@ public class SearchParamsIntoRapidApiRequestStringConverterTest {
         searchCriterion.setDepartDate(1576620000000L);
         searchCriterion.setReturnDate(1576620000000L);
 
-        String expected = "country=US&currency=USD&locale=en-US&originPlace=OZH-sky&destinationPlace=KBP-sky&outboundDate=2019-12-18&adults=1&inboundDate=2019-12-18&cabinClass=ECONOMY&children=0";
+        String expected = "adults=1&cabinClass=economy&children=0&country=US&currency=USD&destinationPlace=KBP-sky&inboundDate=2019-12-18&locale=en-US&originPlace=OZH-sky&outboundDate=2019-12-18";
+        log.info("expected : " + expected);
 
         //When
         SearchParamsIntoRapidApiRequestStringConverter converter =
                 new SearchParamsIntoRapidApiRequestStringConverter(new ParametersStringBuilder());
         String actual = converter.convertIntoRequestString(searchCriterion);
+        log.info("actual : " + actual);
 
         //Then
         assert(actual.equals(expected));
