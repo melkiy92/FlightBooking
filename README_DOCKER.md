@@ -8,4 +8,4 @@
 6. Go to directory of the project
 7. Execute: "docker build -t fb .", that will create/update image with name fb (short from flight booking)
 8. Execute: "docker run --name fb -p *AnyFreeLocalPort*:8080 fb", that will create container "fb" and run it on your local port
-9. If having problems with 8th step make sure you've remover old container (to do this execute: "docker stop fb", "docker system prune", "y".
+9. If having problems with 8th step make sure you've removed old container (to do this execute: "docker stop fb", "docker system prune", "y".
