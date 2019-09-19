@@ -19,8 +19,7 @@ public class KiwiApiResponseDeserializer {
 
     private final static Integer STRAIGHT_FLIGHT_INDEX = 0;
     private final static Integer RETURN_FLIGHT_INDEX = 1;
-    private final static Integer CITY_NAME_FROM_INDEX = 0;
-    private final static Integer CITY_NAME_TO_INDEX = 1;
+
 
     public List<TicketDTO> deserializeFlightsData(String json) throws IOException {
         JsonNode data = new ObjectMapper().readTree(json).get("data");
@@ -40,7 +39,7 @@ public class KiwiApiResponseDeserializer {
 
         ticket.setProvider("Kiwi");
         ticket.setPrice(dataNode.get("price").asDouble());
-        ticket.setBookingToken(dataNode.get("booking_token").asText());
+        ticket.setBookingToken(dataNode.get("deep_link").asText());
 
         JsonNode route = dataNode.findValue("route");
         RouteDTO straightRoute = parseRoute(route, STRAIGHT_FLIGHT_INDEX);

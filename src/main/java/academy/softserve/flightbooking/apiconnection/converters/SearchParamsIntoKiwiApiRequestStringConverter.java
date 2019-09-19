@@ -1,12 +1,9 @@
 package academy.softserve.flightbooking.apiconnection.converters;
 
-import academy.softserve.flightbooking.apiconnection.KiwiSearchCriterionDto;
-import academy.softserve.flightbooking.apiconnection.ParametersStringBuilder;
 import academy.softserve.flightbooking.apiconnection.exceptions.IllegalCabinClassException;
 import academy.softserve.flightbooking.apiconnection.exceptions.IllegalDateException;
 import academy.softserve.flightbooking.dto.SearchCriterionDTO;
 import academy.softserve.flightbooking.models.components.CabinClass;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
@@ -15,6 +12,7 @@ import org.springframework.stereotype.Component;
 import java.io.UnsupportedEncodingException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.Map;
 
 @Slf4j
@@ -27,22 +25,22 @@ public class SearchParamsIntoKiwiApiRequestStringConverter {
     public String convertIntoRequestString(SearchCriterionDTO searchCriterionDTO)
             throws IllegalDateException, IllegalCabinClassException, UnsupportedEncodingException {
         String result;
+        Map<String, String> requestParamsMap = new HashMap<>();
 
-        KiwiSearchCriterionDto kiwiSearchCriterionDto = new KiwiSearchCriterionDto();
-        kiwiSearchCriterionDto.setCurrency(searchCriterionDTO.getCurrencyCode());
-        kiwiSearchCriterionDto.setMax_stopovers("" + Integer.MAX_VALUE);
-        kiwiSearchCriterionDto.setSelected_cabins(convertCabinClass(searchCriterionDTO.getCabinClass()));
-        kiwiSearchCriterionDto.setAdults("" + searchCriterionDTO.getAdults());
-        kiwiSearchCriterionDto.setChildren("" + searchCriterionDTO.getChildren());
-        kiwiSearchCriterionDto.setFly_from(searchCriterionDTO.getFromLocation());
-        kiwiSearchCriterionDto.setFly_to(searchCriterionDTO.getToLocation());
-        kiwiSearchCriterionDto.setDate_from(convertDate(searchCriterionDTO.getDepartDate()));
-        kiwiSearchCriterionDto.setDate_to(convertDate(searchCriterionDTO.getDepartDate()));
-        kiwiSearchCriterionDto.setReturn_from(convertDate(searchCriterionDTO.getReturnDate()));
-        kiwiSearchCriterionDto.setReturn_to(convertDate(searchCriterionDTO.getReturnDate()));
-        log.info("KiwiSearchCriterionDto : " + kiwiSearchCriterionDto.toString());
-        ObjectMapper objectMapper = new ObjectMapper();
-        Map<String, String> requestParamsMap = objectMapper.convertValue(kiwiSearchCriterionDto, Map.class);
+        requestParamsMap.put("currency", searchCriterionDTO.getCurrencyCode());
+        requestParamsMap.put("max_stopovers", "" + Integer.MAX_VALUE);
+        requestParamsMap.put("selected_cabins", convertCabinClass(searchCriterionDTO.getCabinClass()));
+        requestParamsMap.put("adults", ("" + searchCriterionDTO.getAdults()));
+        requestParamsMap.put("children", ("" + searchCriterionDTO.getChildren()));
+        requestParamsMap.put("fly_from", searchCriterionDTO.getFromLocation());
+        requestParamsMap.put("fly_to", searchCriterionDTO.getToLocation());
+        requestParamsMap.put("date_from", convertDate(searchCriterionDTO.getDepartDate(), "dd/MM/yyyy"));
+        requestParamsMap.put("date_to", convertDate(searchCriterionDTO.getDepartDate(), "dd/MM/yyyy"));
+        requestParamsMap.put("return_from", convertDate(searchCriterionDTO.getReturnDate(), "dd/MM/yyyy"));
+        requestParamsMap.put("return_to", convertDate(searchCriterionDTO.getReturnDate(), "dd/MM/yyyy"));
+        requestParamsMap.put("partner", "picky");
+        requestParamsMap.put("v","3");
+        log.info("KiwiSearchCriteria : " + requestParamsMap.toString());
         result = parametersStringBuilder.getParamsString(requestParamsMap);
 
         return result;
@@ -62,11 +60,11 @@ public class SearchParamsIntoKiwiApiRequestStringConverter {
         }
     }
 
-    private String convertDate(Long dateInMs) throws IllegalDateException {
+    private String convertDate(Long dateInMs, String pattern) throws IllegalDateException {
         if (dateInMs < System.currentTimeMillis()) {
             throw new IllegalDateException("Date is in the past");
         } else {
-            SimpleDateFormat dateFormatter = new SimpleDateFormat("dd/MM/yyyy");
+            SimpleDateFormat dateFormatter = new SimpleDateFormat(pattern);
             Date date = new Date(dateInMs);
             return dateFormatter.format(date);
         }

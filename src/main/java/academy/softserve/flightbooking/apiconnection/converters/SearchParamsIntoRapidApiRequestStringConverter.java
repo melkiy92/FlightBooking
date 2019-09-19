@@ -1,13 +1,9 @@
 package academy.softserve.flightbooking.apiconnection.converters;
 
-import academy.softserve.flightbooking.apiconnection.ParametersStringBuilder;
-import academy.softserve.flightbooking.apiconnection.RapidSearchCriterionDto;
 import academy.softserve.flightbooking.apiconnection.exceptions.IllegalCabinClassException;
 import academy.softserve.flightbooking.apiconnection.exceptions.IllegalDateException;
 import academy.softserve.flightbooking.dto.SearchCriterionDTO;
 import academy.softserve.flightbooking.models.components.CabinClass;
-import academy.softserve.flightbooking.models.components.TicketType;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
@@ -16,6 +12,7 @@ import org.springframework.stereotype.Component;
 import java.io.UnsupportedEncodingException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.Map;
 
 @Slf4j
@@ -28,23 +25,23 @@ public class SearchParamsIntoRapidApiRequestStringConverter {
 
     public String convertIntoRequestString(SearchCriterionDTO searchCriterionDTO)
             throws IllegalDateException, IllegalCabinClassException, UnsupportedEncodingException {
-        RapidSearchCriterionDto rapidSearchCriterionDto = new RapidSearchCriterionDto();
+        String result;
+        Map<String, String> requestParamsMap = new HashMap<>();
 
-        rapidSearchCriterionDto.setCountry("US");
-        rapidSearchCriterionDto.setCurrency(searchCriterionDTO.getCurrencyCode());
-        rapidSearchCriterionDto.setLocale("en-US");
-        rapidSearchCriterionDto.setOriginPlace(searchCriterionDTO.getFromLocation() + "-sky");
-        rapidSearchCriterionDto.setDestinationPlace(searchCriterionDTO.getToLocation() + "-sky");
-        rapidSearchCriterionDto.setOutboundDate(convertDate(searchCriterionDTO.getDepartDate(), "yyyy-MM-dd"));
-        rapidSearchCriterionDto.setInboundDate(convertDate(searchCriterionDTO.getReturnDate(), "yyyy-MM-dd"));
-        rapidSearchCriterionDto.setAdults("" + searchCriterionDTO.getAdults());
-        rapidSearchCriterionDto.setChildren("" + searchCriterionDTO.getChildren());
-        rapidSearchCriterionDto.setCabinClass(convertCabinClass(searchCriterionDTO.getCabinClass()));
-        log.info("RapidSearchCriterionDto : " + rapidSearchCriterionDto.toString());
-        ObjectMapper objectMapper = new ObjectMapper();
-        Map<String, String> result = objectMapper.convertValue(rapidSearchCriterionDto, Map.class);
+        requestParamsMap.put("country", "US");
+        requestParamsMap.put("currency", searchCriterionDTO.getCurrencyCode());
+        requestParamsMap.put("locale", "en-US");
+        requestParamsMap.put("originPlace", (searchCriterionDTO.getFromLocation() + "-sky"));
+        requestParamsMap.put("destinationPlace", (searchCriterionDTO.getToLocation() + "-sky"));
+        requestParamsMap.put("outboundDate", convertDate(searchCriterionDTO.getDepartDate(), "yyyy-MM-dd"));
+        requestParamsMap.put("inboundDate", convertDate(searchCriterionDTO.getReturnDate(), "yyyy-MM-dd"));
+        requestParamsMap.put("adults", ("" + searchCriterionDTO.getAdults()));
+        requestParamsMap.put("children", ("" + searchCriterionDTO.getChildren()));
+        requestParamsMap.put("cabinClass", convertCabinClass(searchCriterionDTO.getCabinClass()));
+        log.info("RapidSearchCriteria : " + requestParamsMap.toString());
+        result = parametersStringBuilder.getParamsString(requestParamsMap);
 
-        return parametersStringBuilder.getParamsString(result);
+        return result;
     }
 
     private String convertCabinClass(CabinClass cabinClass) throws IllegalCabinClassException {
