@@ -4,18 +4,11 @@ import academy.softserve.flightbooking.models.components.Airline;
 import academy.softserve.flightbooking.models.components.Airport;
 import academy.softserve.flightbooking.models.components.CabinClass;
 import academy.softserve.flightbooking.models.components.City;
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.AllArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
-import javax.persistence.Id;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.OneToOne;
-import javax.persistence.ManyToOne;
-import javax.persistence.JoinColumn;
+import javax.persistence.*;
 
 
 @Data
@@ -28,7 +21,6 @@ public class Flight {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String flightNumber;
-    private Long departDate;
     @OneToOne
     @JoinColumn(name = "airline_name")
     private Airline airline;

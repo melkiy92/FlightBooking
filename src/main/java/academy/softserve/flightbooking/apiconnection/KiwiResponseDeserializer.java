@@ -35,7 +35,6 @@ public class KiwiResponseDeserializer {
             for(JsonNode nodeRoute: route) {
                 FlightDTO flight = new FlightDTO();
                 flight.setFlightNumber(nodeRoute.get("flight_no").asText());
-                flight.setDepartDate(nodeRoute.get("dTime").asLong());
                 flight.setAirlineName(nodeRoute.get("airline").asText());
                 flight.setDepartTime(nodeRoute.get("dTime").asLong());
                 flight.setDepartAirportCode(nodeRoute.get("flyFrom").asText());
