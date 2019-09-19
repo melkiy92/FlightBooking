@@ -1,6 +1,8 @@
 package academy.softserve.flightbooking.apiconnection;
 
-
+import academy.softserve.flightbooking.apiconnection.converters.SearchParamsIntoRapidApiRequestStringConverter;
+import academy.softserve.flightbooking.apiconnection.exceptions.IllegalCabinClassException;
+import academy.softserve.flightbooking.apiconnection.exceptions.IllegalDateException;
 import academy.softserve.flightbooking.dto.SearchCriterionDTO;
 import org.junit.Test;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -12,10 +14,10 @@ import static academy.softserve.flightbooking.models.components.TicketType.ONEWA
 
 
 @SpringBootTest
-public class SearchParamsIntoKiwiApiRequestConverterTest {
+public class SearchParamsIntoRapidApiRequestStringConverterTest {
 
     @Test
-    public void convertIntoRequestStringSuccess() throws UnsupportedEncodingException, IllegalDateException, IllegalCabinClassException {
+    public void convertIntoRequestString() throws UnsupportedEncodingException, IllegalDateException, IllegalCabinClassException {
         //Given
         SearchCriterionDTO searchCriterion = new SearchCriterionDTO();
         searchCriterion.setId(1L);
@@ -29,13 +31,15 @@ public class SearchParamsIntoKiwiApiRequestConverterTest {
         searchCriterion.setDepartDate(1576620000000L);
         searchCriterion.setReturnDate(1576620000000L);
 
-        String expected = "currency=USD&max_stopovers=0&selected_cabins=M&adults=1&children=0&fly_from=OZH&fly_to=KBP&date_from=18%2F12%2F2019&return_from=18%2F12%2F2019&partner=picky&v=3";
+        String expected = "country=US&currency=USD&locale=en-US&originPlace=OZH-sky&destinationPlace=KBP-sky&outboundDate=2019-12-18&adults=1&inboundDate=2019-12-18&cabinClass=ECONOMY&children=0";
 
         //When
-        SearchParamsIntoKiwiApiRequestConverter converter = new SearchParamsIntoKiwiApiRequestConverter(new ParametersStringBuilder());
+        SearchParamsIntoRapidApiRequestStringConverter converter =
+                new SearchParamsIntoRapidApiRequestStringConverter(new ParametersStringBuilder());
         String actual = converter.convertIntoRequestString(searchCriterion);
 
         //Then
         assert(actual.equals(expected));
+
     }
 }

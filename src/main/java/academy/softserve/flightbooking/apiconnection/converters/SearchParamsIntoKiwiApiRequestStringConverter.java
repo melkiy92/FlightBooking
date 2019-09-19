@@ -1,5 +1,9 @@
-package academy.softserve.flightbooking.apiconnection;
+package academy.softserve.flightbooking.apiconnection.converters;
 
+import academy.softserve.flightbooking.apiconnection.KiwiSearchCriterionDto;
+import academy.softserve.flightbooking.apiconnection.ParametersStringBuilder;
+import academy.softserve.flightbooking.apiconnection.exceptions.IllegalCabinClassException;
+import academy.softserve.flightbooking.apiconnection.exceptions.IllegalDateException;
 import academy.softserve.flightbooking.dto.SearchCriterionDTO;
 import academy.softserve.flightbooking.models.components.CabinClass;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -15,7 +19,7 @@ import java.util.Map;
 @Data
 @AllArgsConstructor
 @Component
-public class SearchParamsIntoKiwiApiRequestConverter {
+public class SearchParamsIntoKiwiApiRequestStringConverter {
 
     private ParametersStringBuilder parametersStringBuilder;
 

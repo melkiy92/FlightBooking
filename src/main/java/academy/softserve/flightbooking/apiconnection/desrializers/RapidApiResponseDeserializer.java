@@ -1,10 +1,13 @@
-package academy.softserve.flightbooking.apiconnection;
+package academy.softserve.flightbooking.apiconnection.desrializers;
 
 import academy.softserve.flightbooking.dto.FlightDTO;
 import academy.softserve.flightbooking.dto.RouteDTO;
 import academy.softserve.flightbooking.dto.TicketDTO;
+import academy.softserve.flightbooking.services.FlightStopsCalculationService;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import lombok.AllArgsConstructor;
+import lombok.Data;
 import org.springframework.stereotype.Component;
 
 import java.io.IOException;
@@ -14,10 +17,14 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+@Data
+@AllArgsConstructor
 @Component
-public class RapidApiDeserializer {
+public class RapidApiResponseDeserializer {
 
-    public static List<TicketDTO> deserializeFlightsData(String json) throws IOException {
+    private FlightStopsCalculationService flightStopsCalculationService;
+
+    public List<TicketDTO> deserializeFlightsData(String json) throws IOException {
         JsonNode data = new ObjectMapper().readTree(json);
         JsonNode itineraries = data.findValue("Itineraries");
         JsonNode legs = data.findValue("Legs");
@@ -53,6 +60,7 @@ public class RapidApiDeserializer {
                 straightFlights.add(flight);
             }
             straightRoute.setFlights(straightFlights);
+            straightRoute.setStops(flightStopsCalculationService.calculateStopsBetweenFlights(straightFlights));
             routs.add(straightRoute);
 
             RouteDTO returnRoute = new RouteDTO();
@@ -66,6 +74,7 @@ public class RapidApiDeserializer {
                 returnFlights.add(flight);
             }
             returnRoute.setFlights(returnFlights);
+            returnRoute.setStops(flightStopsCalculationService.calculateStopsBetweenFlights(returnFlights));
             routs.add(returnRoute);
 
             ticket.setRoutes(routs);

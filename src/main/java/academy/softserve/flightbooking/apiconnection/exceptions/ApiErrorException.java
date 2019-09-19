@@ -1,4 +1,4 @@
-package academy.softserve.flightbooking.apiconnection;
+package academy.softserve.flightbooking.apiconnection.exceptions;
 
 public class ApiErrorException extends Exception {
     public ApiErrorException() {

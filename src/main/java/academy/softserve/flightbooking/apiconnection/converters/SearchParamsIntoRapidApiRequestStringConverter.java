@@ -1,12 +1,15 @@
-package academy.softserve.flightbooking.apiconnection;
+package academy.softserve.flightbooking.apiconnection.converters;
 
+import academy.softserve.flightbooking.apiconnection.ParametersStringBuilder;
+import academy.softserve.flightbooking.apiconnection.RapidSearchCriterionDto;
+import academy.softserve.flightbooking.apiconnection.exceptions.IllegalCabinClassException;
+import academy.softserve.flightbooking.apiconnection.exceptions.IllegalDateException;
 import academy.softserve.flightbooking.dto.SearchCriterionDTO;
 import academy.softserve.flightbooking.models.components.CabinClass;
 import academy.softserve.flightbooking.models.components.TicketType;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 import org.springframework.stereotype.Component;
 
 import java.io.UnsupportedEncodingException;
@@ -14,11 +17,10 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Map;
 
-@Getter
-@Setter
+@Data
 @AllArgsConstructor
 @Component
-public class SearchParamsIntoRapidApiRequestConverter {
+public class SearchParamsIntoRapidApiRequestStringConverter {
 
     private ParametersStringBuilder parametersStringBuilder;
 

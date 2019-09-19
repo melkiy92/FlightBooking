@@ -1,19 +1,24 @@
-package academy.softserve.flightbooking.apiconnection;
+package academy.softserve.flightbooking.apiconnection.desrializers;
 
 import academy.softserve.flightbooking.dto.FlightDTO;
 import academy.softserve.flightbooking.dto.RouteDTO;
 import academy.softserve.flightbooking.dto.TicketDTO;
+import academy.softserve.flightbooking.services.FlightStopsCalculationService;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Component;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+@AllArgsConstructor
 @Component
-public class KiwiResponseDeserializer {
+public class KiwiApiResponseDeserializer {
 
-    public static List<TicketDTO> deserializeFlightsData(String json) throws IOException {
+    private FlightStopsCalculationService flightStopsCalculationService;
+
+    public List<TicketDTO> deserializeFlightsData(String json) throws IOException {
         JsonNode data = new ObjectMapper().readTree(json).get("data");
         List<TicketDTO> tickets = new ArrayList<>();
 
@@ -57,7 +62,9 @@ public class KiwiResponseDeserializer {
                 }
             }
             straightRoute.setFlights(straightFlights);
+            straightRoute.setStops(flightStopsCalculationService.calculateStopsBetweenFlights(straightFlights));
             returnRoute.setFlights(returnFlights);
+            returnRoute.setStops(flightStopsCalculationService.calculateStopsBetweenFlights(returnFlights));
             routes.add(straightRoute);
             routes.add(returnRoute);
             ticket.setRoutes(routes);

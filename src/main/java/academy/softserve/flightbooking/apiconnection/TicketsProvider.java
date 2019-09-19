@@ -1,5 +1,10 @@
 package academy.softserve.flightbooking.apiconnection;
 
+import academy.softserve.flightbooking.apiconnection.connectors.KiwiApiConnector;
+import academy.softserve.flightbooking.apiconnection.connectors.RapidApiConnector;
+import academy.softserve.flightbooking.apiconnection.exceptions.ApiErrorException;
+import academy.softserve.flightbooking.apiconnection.exceptions.IllegalCabinClassException;
+import academy.softserve.flightbooking.apiconnection.exceptions.IllegalDateException;
 import academy.softserve.flightbooking.dto.SearchCriterionDTO;
 import academy.softserve.flightbooking.dto.TicketDTO;
 import com.mashape.unirest.http.exceptions.UnirestException;
