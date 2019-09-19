@@ -2,11 +2,9 @@ package academy.softserve.flightbooking.apiconnection;
 
 import lombok.*;
 
-@Getter
-@Setter
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
-@ToString
 public class KiwiSearchCriterionDto {
     private String currency;
     private String max_stopovers;

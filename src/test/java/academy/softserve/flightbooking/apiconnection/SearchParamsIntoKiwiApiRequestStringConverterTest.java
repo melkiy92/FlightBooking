@@ -32,7 +32,7 @@ public class SearchParamsIntoKiwiApiRequestStringConverterTest {
         searchCriterion.setDepartDate(1576620000000L);
         searchCriterion.setReturnDate(1576620000000L);
 
-        String expected = "currency=USD&max_stopovers=0&selected_cabins=M&adults=1&children=0&fly_from=OZH&fly_to=KBP&date_from=18%2F12%2F2019&return_from=18%2F12%2F2019&partner=picky&v=3";
+        String expected = "currency=USD&max_stopovers=2147483647&selected_cabins=M&adults=1&children=0&fly_from=OZH&fly_to=KBP&date_from=18%2F12%2F2019&date_to=18%2F12%2F2019&return_from=18%2F12%2F2019&return_to=18%2F12%2F2019&partner=picky&v=3";
 
         //When
         SearchParamsIntoKiwiApiRequestStringConverter converter = new SearchParamsIntoKiwiApiRequestStringConverter(new ParametersStringBuilder());

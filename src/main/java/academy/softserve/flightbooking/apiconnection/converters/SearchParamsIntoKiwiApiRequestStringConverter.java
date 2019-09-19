@@ -9,6 +9,7 @@ import academy.softserve.flightbooking.models.components.CabinClass;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 
 import java.io.UnsupportedEncodingException;
@@ -16,15 +17,16 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Map;
 
+@Slf4j
 @Data
 @AllArgsConstructor
 @Component
 public class SearchParamsIntoKiwiApiRequestStringConverter {
-
     private ParametersStringBuilder parametersStringBuilder;
 
     public String convertIntoRequestString(SearchCriterionDTO searchCriterionDTO)
             throws IllegalDateException, IllegalCabinClassException, UnsupportedEncodingException {
+        String result;
 
         KiwiSearchCriterionDto kiwiSearchCriterionDto = new KiwiSearchCriterionDto();
         kiwiSearchCriterionDto.setCurrency(searchCriterionDTO.getCurrencyCode());
@@ -38,11 +40,12 @@ public class SearchParamsIntoKiwiApiRequestStringConverter {
         kiwiSearchCriterionDto.setDate_to(convertDate(searchCriterionDTO.getDepartDate()));
         kiwiSearchCriterionDto.setReturn_from(convertDate(searchCriterionDTO.getReturnDate()));
         kiwiSearchCriterionDto.setReturn_to(convertDate(searchCriterionDTO.getReturnDate()));
-
+        log.info("KiwiSearchCriterionDto : " + kiwiSearchCriterionDto.toString());
         ObjectMapper objectMapper = new ObjectMapper();
-        Map<String, String> result = objectMapper.convertValue(kiwiSearchCriterionDto, Map.class);
+        Map<String, String> requestParamsMap = objectMapper.convertValue(kiwiSearchCriterionDto, Map.class);
+        result = parametersStringBuilder.getParamsString(requestParamsMap);
 
-        return parametersStringBuilder.getParamsString(result);
+        return result;
     }
 
     private String convertCabinClass(CabinClass cabinClass) throws IllegalCabinClassException {

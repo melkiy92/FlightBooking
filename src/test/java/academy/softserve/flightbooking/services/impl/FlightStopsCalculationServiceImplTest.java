@@ -21,7 +21,6 @@ public class FlightStopsCalculationServiceImplTest {
         FlightDTO flightDTOFirst = new FlightDTO(
                 1L,
                 "3",
-                2019L,
                 "MAU",
                 CabinClass.ECONOMY,
                 500L,
@@ -35,7 +34,6 @@ public class FlightStopsCalculationServiceImplTest {
         FlightDTO flightDTOSecond = new FlightDTO(
                 2L,
                 "5",
-                2019L,
                 "MAU",
                 CabinClass.ECONOMY,
                 1000L,
@@ -70,7 +68,6 @@ public class FlightStopsCalculationServiceImplTest {
         FlightDTO flightDTOFirst = new FlightDTO(
                 1L,
                 "3",
-                2019L,
                 "MAU",
                 CabinClass.ECONOMY,
                 500L,
