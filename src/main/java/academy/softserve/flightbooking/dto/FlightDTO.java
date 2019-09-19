@@ -1,11 +1,11 @@
 package academy.softserve.flightbooking.dto;
 
 import academy.softserve.flightbooking.models.components.CabinClass;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.Builder;
-import lombok.NoArgsConstructor;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 
 @Getter
@@ -16,7 +16,6 @@ import lombok.AllArgsConstructor;
 public class FlightDTO {
     private Long id;
     private String flightNumber;
-    private Long departDate;
     private String airlineName;
     private CabinClass cabinClass;
     private Long duration;

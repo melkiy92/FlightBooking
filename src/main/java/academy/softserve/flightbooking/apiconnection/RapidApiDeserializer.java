@@ -100,7 +100,6 @@ public class RapidApiDeserializer {
         flight.setFlightNumber(segment.findValue("FlightNumber").asText());
         String departureDateTime = segment.findValue("DepartureDateTime").asText();
         String departureDateString = departureDateTime.substring(0, departureDateTime.indexOf("T"));
-        flight.setDepartDate(dateInMsFromDateString(departureDateString, "yyyy-MM-dd"));
         String arrivalDateTime = segment.findValue("ArrivalDateTime").asText();
         String arrivalDateString = arrivalDateTime.substring(0, arrivalDateTime.indexOf("T"));
         //flight.setArrivalDate(dateInMsFromDateString(arrivalDateString, "yyyy-MM-dd"));
