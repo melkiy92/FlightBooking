@@ -1,4 +1,4 @@
-package academy.softserve.flightbooking.services.servicesImpl;
+package academy.softserve.flightbooking.services.impl;
 
 import org.junit.Test;
 import org.springframework.boot.test.context.SpringBootTest;

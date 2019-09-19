@@ -1,4 +1,4 @@
-package academy.softserve.flightbooking.services.servicesImpl;
+package academy.softserve.flightbooking.services.impl;
 
 import academy.softserve.flightbooking.models.SearchCriterion;
 import academy.softserve.flightbooking.models.tickets.Ticket;
