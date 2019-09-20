@@ -13,6 +13,12 @@ ADD Json.json Json.json
 #add script to run proxy and API's .jar
 ADD script.sh script.sh
 
+#DB username
+ENV POSTGRE_USERNAME = ${POSTGRE_USERNAME}
+
+#DB user password
+ENV POSTGRE_USER_PASSWORD = ${POSTGRE_USER_PASSWORD}
+
 # update apt-get and install wget to install cloud_sql_proxy
 RUN apt-get update; apt-get -y install wget
 
