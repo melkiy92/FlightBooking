@@ -40,7 +40,7 @@ public class SearchParamsIntoRapidApiRequestStringConverter {
         requestParamsMap.put("children", ("" + searchCriterionDTO.getChildren()));
         requestParamsMap.put("cabinClass", convertCabinClass(searchCriterionDTO.getCabinClass()));
         if(searchCriterionDTO.getTicketType().equals(TicketType.ONEWAY)){
-            requestParamsMap.put("inboundDate", new String());
+            requestParamsMap.put("inboundDate", "");
         } else {
             requestParamsMap.put("inboundDate", convertDate(searchCriterionDTO.getReturnDate(), DATE_PATTERN));
         }
