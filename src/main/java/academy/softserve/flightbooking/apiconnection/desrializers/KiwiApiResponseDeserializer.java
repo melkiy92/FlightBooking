@@ -7,11 +7,13 @@ import academy.softserve.flightbooking.services.FlightStopsCalculationService;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.AllArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+@Slf4j
 @AllArgsConstructor
 @Component
 public class KiwiApiResponseDeserializer {
@@ -25,10 +27,12 @@ public class KiwiApiResponseDeserializer {
         JsonNode data = new ObjectMapper().readTree(json).get("data");
         List<TicketDTO> tickets = new ArrayList<>();
 
+        log.info("Start deserialization");
         for (JsonNode node: data) {
             TicketDTO ticket = parseTicket(node);
             tickets.add(ticket);
         }
+        log.info("Deserialization successful");
 
         return tickets;
     }

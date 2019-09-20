@@ -8,6 +8,7 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 
 import java.io.IOException;
@@ -19,6 +20,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+@Slf4j
 @Data
 @AllArgsConstructor
 @Component
@@ -29,10 +31,12 @@ public class RapidApiResponseDeserializer {
         Map<String, JsonNode> nodes = parseJson(json);
         List<TicketDTO> tickets = new ArrayList<>();
 
+        log.info("Start deserialization");
         for(JsonNode itinerary : nodes.get("itineraries")) {
             TicketDTO ticket = parseTicket(nodes, itinerary);
             tickets.add(ticket);
         }
+        log.info("Deserialization successful");
 
         return tickets;
     }

@@ -34,16 +34,17 @@ public class KiwiApiConnector {
         List<TicketDTO> result;
 
         String parameters = converter.convertIntoRequestString(searchCriterionDTO);
-        log.info("Kiwi API request params : " + parameters);
+        log.info("Sending request to Kiwi API endpoint");
         HttpResponse<String> response = Unirest.get(FLIGHTS_ENDPOINT + parameters).asString();
         log.info("Kiwi API response status : " + response.getStatus());
         if (response.getStatus() < 300) {
-            log.info("Kiwi API response : " + response.getBody());
+            log.info("Received data from Kiwi API endpoint");
             result = deserializer.deserializeFlightsData(response.getBody());
         } else {
             log.error("Kiwi API connection error : " + response.getBody());
             throw new ApiErrorException(response.getBody());
         }
+        log.info("Tickets list ready");
 
         return result;
     }
