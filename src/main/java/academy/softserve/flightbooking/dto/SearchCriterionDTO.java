@@ -2,14 +2,12 @@ package academy.softserve.flightbooking.dto;
 
 import academy.softserve.flightbooking.models.components.CabinClass;
 import academy.softserve.flightbooking.models.components.TicketType;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 import lombok.Builder;
 import lombok.NoArgsConstructor;
 import lombok.AllArgsConstructor;
 
-@Getter
-@Setter
+@Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor

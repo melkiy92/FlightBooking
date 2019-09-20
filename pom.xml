@@ -56,7 +56,8 @@
 			<scope>test</scope>
 		</dependency>
 
-		<!-- https://mvnrepository.com/artifact/com.mashape.unirest/unirest-java -->
+		<!-- https://mvnrepository.com/artifact/com.mashape.unirest/unirest-java
+		for connecting apis-->
 		<dependency>
 			<groupId>com.mashape.unirest</groupId>
 			<artifactId>unirest-java</artifactId>

@@ -1,4 +1,4 @@
-package academy.softserve.flightbooking.apiconnection;
+package academy.softserve.flightbooking.apiconnection.converters;
 
 import org.springframework.stereotype.Component;
 
