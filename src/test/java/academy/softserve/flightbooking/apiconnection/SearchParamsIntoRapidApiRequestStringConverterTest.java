@@ -6,6 +6,7 @@ import academy.softserve.flightbooking.apiconnection.exceptions.IllegalCabinClas
 import academy.softserve.flightbooking.apiconnection.exceptions.IllegalDateException;
 import academy.softserve.flightbooking.dto.SearchCriterionDTO;
 import lombok.extern.slf4j.Slf4j;
+import org.junit.Assert;
 import org.junit.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
@@ -44,7 +45,6 @@ public class SearchParamsIntoRapidApiRequestStringConverterTest {
         log.info("actual : " + actual);
 
         //Then
-        assert(actual.equals(expected));
-
+        Assert.assertEquals(expected, actual);
     }
 }

@@ -4,6 +4,7 @@ import academy.softserve.flightbooking.apiconnection.exceptions.IllegalCabinClas
 import academy.softserve.flightbooking.apiconnection.exceptions.IllegalDateException;
 import academy.softserve.flightbooking.dto.SearchCriterionDTO;
 import academy.softserve.flightbooking.models.components.CabinClass;
+import academy.softserve.flightbooking.models.components.TicketType;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
@@ -20,8 +21,9 @@ import java.util.TreeMap;
 @AllArgsConstructor
 @Component
 public class SearchParamsIntoRapidApiRequestStringConverter {
-
     private ParametersStringBuilder parametersStringBuilder;
+
+    private static final String DATE_PATTERN = "yyyy-MM-dd";
 
     public String convertIntoRequestString(SearchCriterionDTO searchCriterionDTO)
             throws IllegalDateException, IllegalCabinClassException, UnsupportedEncodingException {
@@ -33,11 +35,15 @@ public class SearchParamsIntoRapidApiRequestStringConverter {
         requestParamsMap.put("locale", "en-US");
         requestParamsMap.put("originPlace", (searchCriterionDTO.getFromLocation() + "-sky"));
         requestParamsMap.put("destinationPlace", (searchCriterionDTO.getToLocation() + "-sky"));
-        requestParamsMap.put("outboundDate", convertDate(searchCriterionDTO.getDepartDate(), "yyyy-MM-dd"));
-        requestParamsMap.put("inboundDate", convertDate(searchCriterionDTO.getReturnDate(), "yyyy-MM-dd"));
+        requestParamsMap.put("outboundDate", convertDate(searchCriterionDTO.getDepartDate(), DATE_PATTERN));
         requestParamsMap.put("adults", ("" + searchCriterionDTO.getAdults()));
         requestParamsMap.put("children", ("" + searchCriterionDTO.getChildren()));
         requestParamsMap.put("cabinClass", convertCabinClass(searchCriterionDTO.getCabinClass()));
+        if(searchCriterionDTO.getTicketType().equals(TicketType.ONEWAY)){
+            requestParamsMap.put("inboundDate", new String());
+        } else {
+            requestParamsMap.put("inboundDate", convertDate(searchCriterionDTO.getReturnDate(), DATE_PATTERN));
+        }
         log.info("RapidSearchCriteria : " + requestParamsMap.toString());
         result = parametersStringBuilder.getParamsString(requestParamsMap);
 

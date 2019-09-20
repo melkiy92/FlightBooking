@@ -5,6 +5,7 @@ import academy.softserve.flightbooking.apiconnection.connectors.RapidApiConnecto
 import academy.softserve.flightbooking.apiconnection.exceptions.ApiErrorException;
 import academy.softserve.flightbooking.apiconnection.exceptions.IllegalCabinClassException;
 import academy.softserve.flightbooking.apiconnection.exceptions.IllegalDateException;
+import academy.softserve.flightbooking.apiconnection.exceptions.InvalidResponseJsonException;
 import academy.softserve.flightbooking.dto.SearchCriterionDTO;
 import academy.softserve.flightbooking.dto.TicketDTO;
 import academy.softserve.flightbooking.services.TicketService;
@@ -29,7 +30,7 @@ public class TicketServiceImpl implements TicketService {
     @Override
     public List<TicketDTO> getTickets(SearchCriterionDTO searchCriterionDTO)
             throws IllegalCabinClassException, ApiErrorException, UnirestException,
-                IllegalDateException, IOException {
+            IllegalDateException, IOException, InvalidResponseJsonException {
         List<TicketDTO> tickets = new ArrayList<>();
         tickets.addAll(kiwiApiConnector.getTickets(searchCriterionDTO));
         log.info("Received tickets list from Kiwi Api Connector");

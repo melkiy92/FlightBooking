@@ -1,8 +1,10 @@
 package academy.softserve.flightbooking.apiconnection.desrializers;
 
+import academy.softserve.flightbooking.apiconnection.exceptions.InvalidResponseJsonException;
 import academy.softserve.flightbooking.dto.FlightDTO;
 import academy.softserve.flightbooking.dto.RouteDTO;
 import academy.softserve.flightbooking.dto.TicketDTO;
+import academy.softserve.flightbooking.models.components.TicketType;
 import academy.softserve.flightbooking.services.FlightStopsCalculationService;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -27,13 +29,16 @@ import java.util.Map;
 public class RapidApiResponseDeserializer {
     private FlightStopsCalculationService flightStopsCalculationService;
 
-    public List<TicketDTO> deserializeFlightsData(String json) throws IOException {
+    private static final String DATE_TIME_PATTERN = "yyyy-MM-dd'T'hh:mm:ss";
+
+    public List<TicketDTO> deserializeFlightsData(String json, TicketType ticketType)
+            throws IOException, InvalidResponseJsonException {
         Map<String, JsonNode> nodes = parseJson(json);
         List<TicketDTO> tickets = new ArrayList<>();
 
         log.info("Start deserialization");
         for(JsonNode itinerary : nodes.get("itineraries")) {
-            TicketDTO ticket = parseTicket(nodes, itinerary);
+            TicketDTO ticket = parseTicket(nodes, itinerary, ticketType);
             tickets.add(ticket);
         }
         log.info("Deserialization successful");
@@ -60,7 +65,8 @@ public class RapidApiResponseDeserializer {
         return result;
     }
 
-    private TicketDTO parseTicket(Map<String, JsonNode> nodes, JsonNode itinerary) {
+    private TicketDTO parseTicket(Map<String, JsonNode> nodes, JsonNode itinerary, TicketType ticketType)
+            throws InvalidResponseJsonException {
         TicketDTO ticket = new TicketDTO();
         List<RouteDTO> routs = new ArrayList<>();
 
@@ -68,19 +74,21 @@ public class RapidApiResponseDeserializer {
         ticket.setBookingToken(itinerary.findValue("DeeplinkUrl").asText());
         ticket.setProvider("Skyscanner");
         String outboundLegId = itinerary.findValue("OutboundLegId").asText();
-        String inboundLegId = itinerary.findValue("InboundLegId").asText();
         JsonNode outboundLeg = findById(nodes.get("legs"), outboundLegId);
-        JsonNode inboundLeg = findById(nodes.get("legs"), inboundLegId);
         RouteDTO straightRoute = parseRout(nodes, outboundLeg);
-        RouteDTO returnRoute = parseRout(nodes, inboundLeg);
         routs.add(straightRoute);
-        routs.add(returnRoute);
+        if(ticketType.equals(TicketType.ROUNDTRIP)) {
+            String inboundLegId = itinerary.findValue("InboundLegId").asText();
+            JsonNode inboundLeg = findById(nodes.get("legs"), inboundLegId);
+            RouteDTO returnRoute = parseRout(nodes, inboundLeg);
+            routs.add(returnRoute);
+        }
         ticket.setRoutes(routs);
 
         return ticket;
     }
 
-    private RouteDTO parseRout(Map<String, JsonNode> nodes, JsonNode leg) {
+    private RouteDTO parseRout(Map<String, JsonNode> nodes, JsonNode leg) throws InvalidResponseJsonException {
         RouteDTO result = new RouteDTO();
 
         String originStationName = leg.findValue("OriginStation").asText();
@@ -104,21 +112,24 @@ public class RapidApiResponseDeserializer {
         return result;
     }
 
-    private FlightDTO parseFlight(Map<String, JsonNode> nodes, JsonNode segment) {
+    private FlightDTO parseFlight(Map<String, JsonNode> nodes, JsonNode segment) throws InvalidResponseJsonException {
         FlightDTO flight = new FlightDTO();
 
         flight.setFlightNumber(segment.findValue("FlightNumber").asText());
         String departureDateTime = segment.findValue("DepartureDateTime").asText();
         String arrivalDateTime = segment.findValue("ArrivalDateTime").asText();
         flight.setDuration(segment.findValue("Duration").asLong());
-        flight.setArrivalCityName(findById(nodes.get("places"), segment.findValue("DestinationStation").asText()).findValue("Name").asText());
-        flight.setDepartCityName(findById(nodes.get("places"), segment.findValue("OriginStation").asText()).findValue("Name").asText());
-        flight.setArrivalAirportCode(findById(nodes.get("places"), segment.findValue("DestinationStation").asText()).findValue("Code").asText());
-        flight.setDepartAirportCode(findById(nodes.get("places"), segment.findValue("OriginStation").asText()).findValue("Code").asText());
-        flight.setDepartTime(dateInMsFromDateString(departureDateTime, "yyyy-MM-dd'T'hh:mm:ss"));
-        flight.setArrivalTime(dateInMsFromDateString(arrivalDateTime, "yyyy-MM-dd'T'hh:mm:ss"));
-        flight.setAirlineName(findById(nodes.get("carriers"), segment.findValue("Carrier").asText()).findValue("Name").asText());
-
+        flight.setDepartTime(dateInMsFromDateString(departureDateTime, DATE_TIME_PATTERN));
+        flight.setArrivalTime(dateInMsFromDateString(arrivalDateTime, DATE_TIME_PATTERN));
+        try {
+            flight.setArrivalCityName(findById(nodes.get("places"), segment.findValue("DestinationStation").asText()).findValue("Name").asText());
+            flight.setDepartCityName(findById(nodes.get("places"), segment.findValue("OriginStation").asText()).findValue("Name").asText());
+            flight.setArrivalAirportCode(findById(nodes.get("places"), segment.findValue("DestinationStation").asText()).findValue("Code").asText());
+            flight.setDepartAirportCode(findById(nodes.get("places"), segment.findValue("OriginStation").asText()).findValue("Code").asText());
+            flight.setAirlineName(findById(nodes.get("carriers"), segment.findValue("Carrier").asText()).findValue("Name").asText());
+        } catch (NullPointerException e) {
+            throw new InvalidResponseJsonException("Missing data from Rapid API : " + e.getCause());
+        }
         return flight;
     }
 
