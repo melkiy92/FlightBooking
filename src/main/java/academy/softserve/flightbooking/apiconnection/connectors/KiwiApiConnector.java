@@ -25,8 +25,8 @@ public class KiwiApiConnector {
     private SearchParamsIntoKiwiApiRequestStringConverter converter;
     private KiwiApiResponseDeserializer deserializer;
 
-    private final static String FLIGHTS_ENDPOINT = "https://api.skypicker.com/flights?";
-    private final static String MULTICITY_ENDPOINT = "https://api.skypicker.com/flights_multi?";
+    private static final String FLIGHTS_ENDPOINT = "https://api.skypicker.com/flights?";
+    private static final String MULTICITY_ENDPOINT = "https://api.skypicker.com/flights_multi?";
 
 
     public List<TicketDTO> getTickets(SearchCriterionDTO searchCriterionDTO)
@@ -39,7 +39,7 @@ public class KiwiApiConnector {
         log.info("Kiwi API response status : " + response.getStatus());
         if (response.getStatus() < 300) {
             log.info("Received data from Kiwi API endpoint");
-            result = deserializer.deserializeFlightsData(response.getBody());
+            result = deserializer.deserializeFlightsData(response.getBody(), searchCriterionDTO.getTicketType());
         } else {
             log.error("Kiwi API connection error : " + response.getBody());
             throw new ApiErrorException(response.getBody());

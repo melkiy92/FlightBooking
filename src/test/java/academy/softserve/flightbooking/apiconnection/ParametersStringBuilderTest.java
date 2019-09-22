@@ -1,6 +1,7 @@
 package academy.softserve.flightbooking.apiconnection;
 
 import academy.softserve.flightbooking.apiconnection.converters.ParametersStringBuilder;
+import org.junit.Assert;
 import org.junit.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
@@ -26,6 +27,6 @@ public class ParametersStringBuilderTest {
         String actual = parametersStringBuilder.getParamsString(params);
 
         //Then
-        assert(actual.equals(expected));
+        Assert.assertEquals(expected, actual);
     }
 }

@@ -5,6 +5,7 @@ import academy.softserve.flightbooking.apiconnection.desrializers.RapidApiRespon
 import academy.softserve.flightbooking.apiconnection.exceptions.ApiErrorException;
 import academy.softserve.flightbooking.apiconnection.exceptions.IllegalCabinClassException;
 import academy.softserve.flightbooking.apiconnection.exceptions.IllegalDateException;
+import academy.softserve.flightbooking.apiconnection.exceptions.InvalidResponseJsonException;
 import academy.softserve.flightbooking.dto.SearchCriterionDTO;
 import academy.softserve.flightbooking.dto.TicketDTO;
 import com.mashape.unirest.http.HttpResponse;
@@ -35,7 +36,7 @@ public class RapidApiConnector {
 
 
     public List<TicketDTO> getTickets(SearchCriterionDTO searchCriterionDTO)
-            throws IOException, UnirestException, ApiErrorException, IllegalDateException, IllegalCabinClassException {
+            throws IOException, UnirestException, ApiErrorException, IllegalDateException, IllegalCabinClassException, InvalidResponseJsonException {
         List<TicketDTO> result;
 
         String parameters = converter.convertIntoRequestString(searchCriterionDTO);
@@ -46,28 +47,29 @@ public class RapidApiConnector {
                 .header("Content-Type", CONTENT_TYPE)
                 .body(parameters)
                 .asJson();
-        log.error("Rapid API session creation response status : " + sessionCreationResponse.getStatus());
-        if (sessionCreationResponse.getStatus() >= 300) {
+        log.info("Rapid API session creation response status : " + sessionCreationResponse.getStatus());
+        if (sessionCreationResponse.getStatus() < 300) {
+            String locationValue = sessionCreationResponse.getHeaders().get("Location").get(0);
+            String sessionKey = locationValue.substring(locationValue.lastIndexOf('/') + 1);
+            log.info("Sending request to Rapid API endpoint");
+            HttpResponse<String> response = Unirest.get(GET_ENDPOINT + sessionKey)
+                    .header("X-RapidAPI-Host", X_RAPIDAPI_HOST)
+                    .header("X-RapidAPI-Key", X_RAPIDAPI_KEY)
+                    .asString();
+            log.info("Rapid API response status : " + response.getStatus());
+            if (response.getStatus() < 300) {
+                log.info("Received data from Rapid API endpoint");
+                result = deserializer.deserializeFlightsData(response.getBody(), searchCriterionDTO.getTicketType());
+            } else {
+                log.error("Rapid API response error : " + response.getBody());
+                throw new ApiErrorException(response.getBody());
+            }
+            log.info("Tickets list ready");
+        } else {
             log.error("Session creation response error : " + sessionCreationResponse.getBody());
             throw new ApiErrorException("Status: " + sessionCreationResponse.getStatus() +
                     "; message: " + sessionCreationResponse.getBody());
         }
-        String locationValue = sessionCreationResponse.getHeaders().get("Location").get(0);
-        String sessionKey = locationValue.substring(locationValue.lastIndexOf('/') + 1);
-        log.info("Sending request to Rapid API endpoint");
-        HttpResponse<String> response = Unirest.get(GET_ENDPOINT + sessionKey)
-                .header("X-RapidAPI-Host", X_RAPIDAPI_HOST)
-                .header("X-RapidAPI-Key", X_RAPIDAPI_KEY)
-                .asString();
-        log.info("Rapid API response status : " + response.getStatus());
-        if (response.getStatus() < 300) {
-            log.info("Received data from Rapid API endpoint");
-            result = deserializer.deserializeFlightsData(response.getBody());
-        } else {
-            log.error("Rapid API response error : " + response.getBody());
-            throw new ApiErrorException(response.getBody());
-        }
-        log.info("Tickets list ready");
 
         return result;
     }

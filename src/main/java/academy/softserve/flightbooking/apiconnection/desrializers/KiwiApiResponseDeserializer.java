@@ -3,6 +3,7 @@ package academy.softserve.flightbooking.apiconnection.desrializers;
 import academy.softserve.flightbooking.dto.FlightDTO;
 import academy.softserve.flightbooking.dto.RouteDTO;
 import academy.softserve.flightbooking.dto.TicketDTO;
+import academy.softserve.flightbooking.models.components.TicketType;
 import academy.softserve.flightbooking.services.FlightStopsCalculationService;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -19,17 +20,17 @@ import java.util.List;
 public class KiwiApiResponseDeserializer {
     private FlightStopsCalculationService flightStopsCalculationService;
 
-    private final static Integer STRAIGHT_FLIGHT_INDEX = 0;
-    private final static Integer RETURN_FLIGHT_INDEX = 1;
+    private static final Integer STRAIGHT_FLIGHT_INDEX = 0;
+    private static final Integer RETURN_FLIGHT_INDEX = 1;
 
 
-    public List<TicketDTO> deserializeFlightsData(String json) throws IOException {
+    public List<TicketDTO> deserializeFlightsData(String json, TicketType ticketType) throws IOException {
         JsonNode data = new ObjectMapper().readTree(json).get("data");
         List<TicketDTO> tickets = new ArrayList<>();
 
         log.info("Start deserialization");
         for (JsonNode node: data) {
-            TicketDTO ticket = parseTicket(node);
+            TicketDTO ticket = parseTicket(node, ticketType);
             tickets.add(ticket);
         }
         log.info("Deserialization successful");
@@ -37,7 +38,7 @@ public class KiwiApiResponseDeserializer {
         return tickets;
     }
 
-    private TicketDTO parseTicket(JsonNode dataNode) {
+    private TicketDTO parseTicket(JsonNode dataNode, TicketType ticketType) {
         TicketDTO ticket = new TicketDTO();
         List<RouteDTO> routes = new ArrayList<>();
 
@@ -47,11 +48,13 @@ public class KiwiApiResponseDeserializer {
 
         JsonNode route = dataNode.findValue("route");
         RouteDTO straightRoute = parseRoute(route, STRAIGHT_FLIGHT_INDEX);
-        RouteDTO returnRoute = parseRoute(route, RETURN_FLIGHT_INDEX);
         straightRoute.setDuration(dataNode.findValue("duration").get("departure").asLong());
-        returnRoute.setDuration(dataNode.findValue("duration").get("return").asLong());
         routes.add(straightRoute);
-        routes.add(returnRoute);
+        if(ticketType.equals(TicketType.ROUNDTRIP)) {
+            RouteDTO returnRoute = parseRoute(route, RETURN_FLIGHT_INDEX);
+            returnRoute.setDuration(dataNode.findValue("duration").get("return").asLong());
+            routes.add(returnRoute);
+        }
         ticket.setRoutes(routes);
 
         return ticket;

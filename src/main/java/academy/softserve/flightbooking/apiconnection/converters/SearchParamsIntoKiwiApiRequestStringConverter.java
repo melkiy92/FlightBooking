@@ -4,6 +4,7 @@ import academy.softserve.flightbooking.apiconnection.exceptions.IllegalCabinClas
 import academy.softserve.flightbooking.apiconnection.exceptions.IllegalDateException;
 import academy.softserve.flightbooking.dto.SearchCriterionDTO;
 import academy.softserve.flightbooking.models.components.CabinClass;
+import academy.softserve.flightbooking.models.components.TicketType;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
@@ -22,6 +23,8 @@ import java.util.TreeMap;
 public class SearchParamsIntoKiwiApiRequestStringConverter {
     private ParametersStringBuilder parametersStringBuilder;
 
+    private static final String DATE_PATTERN = "dd/MM/yyyy";
+
     public String convertIntoRequestString(SearchCriterionDTO searchCriterionDTO)
             throws IllegalDateException, IllegalCabinClassException, UnsupportedEncodingException {
         String result;
@@ -34,12 +37,17 @@ public class SearchParamsIntoKiwiApiRequestStringConverter {
         requestParamsMap.put("children", ("" + searchCriterionDTO.getChildren()));
         requestParamsMap.put("fly_from", searchCriterionDTO.getFromLocation());
         requestParamsMap.put("fly_to", searchCriterionDTO.getToLocation());
-        requestParamsMap.put("date_from", convertDate(searchCriterionDTO.getDepartDate(), "dd/MM/yyyy"));
-        requestParamsMap.put("date_to", convertDate(searchCriterionDTO.getDepartDate(), "dd/MM/yyyy"));
-        requestParamsMap.put("return_from", convertDate(searchCriterionDTO.getReturnDate(), "dd/MM/yyyy"));
-        requestParamsMap.put("return_to", convertDate(searchCriterionDTO.getReturnDate(), "dd/MM/yyyy"));
         requestParamsMap.put("partner", "picky");
         requestParamsMap.put("v","3");
+        requestParamsMap.put("date_from", convertDate(searchCriterionDTO.getDepartDate(), DATE_PATTERN));
+        requestParamsMap.put("date_to", convertDate(searchCriterionDTO.getDepartDate(), DATE_PATTERN));
+        if(searchCriterionDTO.getTicketType().equals(TicketType.ONEWAY)) {
+            requestParamsMap.put("return_from", "");
+            requestParamsMap.put("return_to", "");
+        } else {
+            requestParamsMap.put("return_from", convertDate(searchCriterionDTO.getReturnDate(), DATE_PATTERN));
+            requestParamsMap.put("return_to", convertDate(searchCriterionDTO.getReturnDate(), DATE_PATTERN));
+        }
         log.info("KiwiSearchCriteria : " + requestParamsMap.toString());
         result = parametersStringBuilder.getParamsString(requestParamsMap);
 

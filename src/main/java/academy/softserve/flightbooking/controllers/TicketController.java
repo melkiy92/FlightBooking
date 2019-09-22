@@ -3,6 +3,7 @@ package academy.softserve.flightbooking.controllers;
 import academy.softserve.flightbooking.apiconnection.exceptions.ApiErrorException;
 import academy.softserve.flightbooking.apiconnection.exceptions.IllegalCabinClassException;
 import academy.softserve.flightbooking.apiconnection.exceptions.IllegalDateException;
+import academy.softserve.flightbooking.apiconnection.exceptions.InvalidResponseJsonException;
 import academy.softserve.flightbooking.dto.SearchCriterionDTO;
 import academy.softserve.flightbooking.dto.TicketDTO;
 import academy.softserve.flightbooking.models.SearchCriterion;
@@ -14,13 +15,11 @@ import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.io.IOException;
-import java.util.Collections;
 import java.util.List;
 
 
@@ -36,7 +35,7 @@ public class TicketController {
     */
     @PostMapping("/flights")
     public ResponseEntity<List<TicketDTO>> getTickets(@RequestBody SearchCriterionDTO searchCriterionDTO)
-            throws IllegalCabinClassException, IllegalDateException, ApiErrorException, IOException, UnirestException {
+            throws IllegalCabinClassException, IllegalDateException, ApiErrorException, IOException, UnirestException, InvalidResponseJsonException {
         //SearchCriterion searchCriterion = modelMapper.map(searchCriterionDTO, SearchCriterion.class);
         log.info("Received search criteria from UI : " + searchCriterionDTO.toString());
         List<TicketDTO> tickets = ticketService.getTickets(searchCriterionDTO);

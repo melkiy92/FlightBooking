@@ -6,13 +6,14 @@ import academy.softserve.flightbooking.apiconnection.exceptions.IllegalCabinClas
 import academy.softserve.flightbooking.apiconnection.exceptions.IllegalDateException;
 import academy.softserve.flightbooking.dto.SearchCriterionDTO;
 import lombok.extern.slf4j.Slf4j;
+import org.junit.Assert;
 import org.junit.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import java.io.UnsupportedEncodingException;
 
 import static academy.softserve.flightbooking.models.components.CabinClass.ECONOMY;
-import static academy.softserve.flightbooking.models.components.TicketType.ONEWAY;
+import static academy.softserve.flightbooking.models.components.TicketType.ROUNDTRIP;
 
 
 @Slf4j
@@ -25,7 +26,7 @@ public class SearchParamsIntoRapidApiRequestStringConverterTest {
         SearchCriterionDTO searchCriterion = new SearchCriterionDTO();
         searchCriterion.setId(1L);
         searchCriterion.setCurrencyCode("USD");
-        searchCriterion.setTicketType(ONEWAY);
+        searchCriterion.setTicketType(ROUNDTRIP);
         searchCriterion.setCabinClass(ECONOMY);
         searchCriterion.setAdults(1);
         searchCriterion.setChildren(0);
@@ -44,7 +45,6 @@ public class SearchParamsIntoRapidApiRequestStringConverterTest {
         log.info("actual : " + actual);
 
         //Then
-        assert(actual.equals(expected));
-
+        Assert.assertEquals(expected, actual);
     }
 }
