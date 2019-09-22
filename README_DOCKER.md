@@ -1,12 +1,14 @@
 ## How to run FlightBooking inside docker container
 
 1. Clone project
-2. Open branch you wnat to execute
-3. Create env variables POSTGRE_USERNAME=postgres and POSTGRE_USER_PASSWORD=postgres
+2. Open branch you want to execute
+3. Create env variables POSTGRE_USERNAME=******** and POSTGRE_USER_PASSWORD=********
 4. Clean and package project by maven
 5. Make sure that flight-booking.jar was created inside of the target directory
 6. Start docker
 7. Go to directory of the project
-8. Execute: "docker build -t fb .", that will create/update image with name fb (short from flight booking)
-9. Execute: "docker run --name fb -p *AnyFreeLocalPort*:8080 fb", that will create container "fb" and run it on your local port
-10. If having problems with 9th step make sure you've removed old container (to do this execute: "docker stop fb", "docker system prune", "y".
+8. Execute: "docker-compose build", that will create/update images
+9. Execute: "docker-compose up", that will create containers and run them on your local port
+10. Go to 192.168.99.100:8085 (on Windows) or localhost:8085 (on Unix)
+
+* to restart application go to console and press Ctrl+C to stop containers, write "docker-compose down" and repeat step 9

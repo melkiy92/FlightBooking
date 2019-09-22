@@ -24,3 +24,4 @@ RUN apt-get update; apt-get -y install wget
 
 # install cloud_sql_proxy give it 777 rights, ..., give 775 rights to script and run it
 CMD wget https://dl.google.com/cloudsql/cloud_sql_proxy.linux.amd64 -O cloud_sql_proxy; mkdir /cloudsql; chmod 777 /cloud_sql_proxy; chmod 777 /cloudsql; chmod 775 /script.sh; ./script.sh;
+#tail -f /dev/null
