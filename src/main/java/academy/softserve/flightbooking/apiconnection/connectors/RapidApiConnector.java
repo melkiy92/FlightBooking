@@ -32,7 +32,8 @@ public class RapidApiConnector {
 
 
     public List<TicketDTO> getTickets(SearchCriterionDTO searchCriterionDTO)
-            throws ApiErrorException, DeserializationException, UnirestException, UnsupportedEncodingException, IllegalDateException, IllegalCabinClassException {
+            throws ApiErrorException, DeserializationException, UnirestException,
+            UnsupportedEncodingException, IllegalDateException, IllegalCabinClassException {
         List<TicketDTO> result;
 
         String parameters = converter.convertIntoRequestString(searchCriterionDTO);

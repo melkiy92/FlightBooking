@@ -29,7 +29,8 @@ public class KiwiApiConnector {
 
 
     public List<TicketDTO> getTickets(SearchCriterionDTO searchCriterionDTO)
-            throws UnsupportedEncodingException, IllegalDateException, IllegalCabinClassException, DeserializationException, ApiErrorException, UnirestException {
+            throws UnsupportedEncodingException, IllegalDateException, IllegalCabinClassException,
+            DeserializationException, ApiErrorException, UnirestException {
         List<TicketDTO> result;
 
         String parameters = converter.convertIntoRequestString(searchCriterionDTO);

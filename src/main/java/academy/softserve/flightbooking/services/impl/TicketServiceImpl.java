@@ -40,18 +40,24 @@ public class TicketServiceImpl implements TicketService {
             log.info("Received tickets list from Kiwi Api Connector");
             success = true;
         } catch (UnsupportedEncodingException | IllegalDateException | IllegalCabinClassException e) {
+            log.error("Unable to get response due to bad request parameters : " + e.getMessage());
             requestExceptionMessage = e.getMessage();
         } catch (DeserializationException | ApiErrorException | UnirestException e) {
+            log.error("Aggregator server error : " + e.getMessage());
             responseExceptionMessage = e.getMessage();
         }
         try {
-        tickets.addAll(rapidApiConnector.getTickets(searchCriterionDTO));
-        log.info("Received tickets list from Rapid Api Connector");
+            tickets.addAll(rapidApiConnector.getTickets(searchCriterionDTO));
+            log.info("Received tickets list from Rapid Api Connector");
+            success = true;
         } catch (UnsupportedEncodingException | IllegalDateException | IllegalCabinClassException e) {
-            requestExceptionMessage = e.getMessage();
+            log.error("Unable to get response due to bad request parameters : " + e.getMessage());
+            requestExceptionMessage = requestExceptionMessage + e.getMessage();
         } catch (DeserializationException | ApiErrorException | UnirestException e) {
-            responseExceptionMessage = e.getMessage();
+            log.error("Aggregator server error : " + e.getMessage());
+            responseExceptionMessage = responseExceptionMessage + e.getMessage();
         }
+        log.info("success=" + success);
         if(!success) {
             if(requestExceptionMessage != null) {
                 throw new RequestException(requestExceptionMessage);
