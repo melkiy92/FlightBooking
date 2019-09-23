@@ -3,8 +3,8 @@ package academy.softserve.flightbooking.apiconnection;
 
 import academy.softserve.flightbooking.apiconnection.converters.ParametersStringBuilder;
 import academy.softserve.flightbooking.apiconnection.converters.SearchParamsIntoKiwiApiRequestStringConverter;
-import academy.softserve.flightbooking.apiconnection.exceptions.IllegalCabinClassException;
-import academy.softserve.flightbooking.apiconnection.exceptions.IllegalDateException;
+import academy.softserve.flightbooking.exceptions.IllegalCabinClassException;
+import academy.softserve.flightbooking.exceptions.IllegalDateException;
 import academy.softserve.flightbooking.dto.SearchCriterionDTO;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Assert;
@@ -22,7 +22,7 @@ import static academy.softserve.flightbooking.models.components.TicketType.ROUND
 public class SearchParamsIntoKiwiApiRequestStringConverterTest {
 
     @Test
-    public void convertIntoRequestStringSuccess() throws UnsupportedEncodingException, IllegalDateException, IllegalCabinClassException {
+    public void convertIntoRequestStringRoundtripSuccess() throws UnsupportedEncodingException, IllegalDateException, IllegalCabinClassException {
         //Given
         SearchCriterionDTO searchCriterion = new SearchCriterionDTO();
         searchCriterion.setId(1L);
@@ -47,4 +47,6 @@ public class SearchParamsIntoKiwiApiRequestStringConverterTest {
         //Then
         Assert.assertEquals(expected, actual);
     }
+
+
 }

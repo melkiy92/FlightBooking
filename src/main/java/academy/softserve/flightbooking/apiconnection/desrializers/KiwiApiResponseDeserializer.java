@@ -1,8 +1,12 @@
 package academy.softserve.flightbooking.apiconnection.desrializers;
 
+import academy.softserve.flightbooking.apiconnection.connectors.Providers;
+import academy.softserve.flightbooking.apiconnection.converters.CabinClassConverter;
 import academy.softserve.flightbooking.dto.FlightDTO;
 import academy.softserve.flightbooking.dto.RouteDTO;
 import academy.softserve.flightbooking.dto.TicketDTO;
+import academy.softserve.flightbooking.exceptions.DeserializationException;
+import academy.softserve.flightbooking.exceptions.IllegalCabinClassException;
 import academy.softserve.flightbooking.models.components.TicketType;
 import academy.softserve.flightbooking.services.FlightStopsCalculationService;
 import com.fasterxml.jackson.databind.JsonNode;
@@ -14,31 +18,46 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import static academy.softserve.flightbooking.constants.ApiConnectionConstants.KIWI_RESPONSE_JSON_RETURN_FLIGHT_INDEX;
+import static academy.softserve.flightbooking.constants.ApiConnectionConstants.KIWI_RESPONSE_JSON_STRAIGHT_FLIGHT_INDEX;
+
+
 @Slf4j
 @AllArgsConstructor
 @Component
 public class KiwiApiResponseDeserializer {
     private FlightStopsCalculationService flightStopsCalculationService;
 
-    private static final Integer STRAIGHT_FLIGHT_INDEX = 0;
-    private static final Integer RETURN_FLIGHT_INDEX = 1;
 
-
-    public List<TicketDTO> deserializeFlightsData(String json, TicketType ticketType) throws IOException {
-        JsonNode data = new ObjectMapper().readTree(json).get("data");
+    public List<TicketDTO> deserializeFlightsData(String json, TicketType ticketType) throws DeserializationException {
         List<TicketDTO> tickets = new ArrayList<>();
 
-        log.info("Start deserialization");
-        for (JsonNode node: data) {
-            TicketDTO ticket = parseTicket(node, ticketType);
-            tickets.add(ticket);
+        try {
+            JsonNode data = new ObjectMapper().readTree(json).get("data");
+
+            log.info("Start deserialization");
+            for (JsonNode node : data) {
+                try {
+                    TicketDTO ticket = parseTicket(node, ticketType);
+                    tickets.add(ticket);
+                } catch (IllegalCabinClassException e) {
+                    log.error(e.getMessage());
+                }
+            }
+        } catch (IOException e) {
+            log.error("Unable to deserialize api response");
+            throw new DeserializationException();
+        }
+        if(tickets.isEmpty()) {
+            log.error("Unable to deserialize api response");
+            throw new DeserializationException();
         }
         log.info("Deserialization successful");
 
         return tickets;
     }
 
-    private TicketDTO parseTicket(JsonNode dataNode, TicketType ticketType) {
+    private TicketDTO parseTicket(JsonNode dataNode, TicketType ticketType) throws IllegalCabinClassException {
         TicketDTO ticket = new TicketDTO();
         List<RouteDTO> routes = new ArrayList<>();
 
@@ -47,11 +66,11 @@ public class KiwiApiResponseDeserializer {
         ticket.setBookingToken(dataNode.get("deep_link").asText());
 
         JsonNode route = dataNode.findValue("route");
-        RouteDTO straightRoute = parseRoute(route, STRAIGHT_FLIGHT_INDEX);
+        RouteDTO straightRoute = parseRoute(route, KIWI_RESPONSE_JSON_STRAIGHT_FLIGHT_INDEX);
         straightRoute.setDuration(dataNode.findValue("duration").get("departure").asLong());
         routes.add(straightRoute);
         if(ticketType.equals(TicketType.ROUNDTRIP)) {
-            RouteDTO returnRoute = parseRoute(route, RETURN_FLIGHT_INDEX);
+            RouteDTO returnRoute = parseRoute(route, KIWI_RESPONSE_JSON_RETURN_FLIGHT_INDEX);
             returnRoute.setDuration(dataNode.findValue("duration").get("return").asLong());
             routes.add(returnRoute);
         }
@@ -60,7 +79,7 @@ public class KiwiApiResponseDeserializer {
         return ticket;
     }
 
-    private RouteDTO parseRoute(JsonNode routeNode, Integer directionFlightIndex) {
+    private RouteDTO parseRoute(JsonNode routeNode, Integer directionFlightIndex) throws IllegalCabinClassException {
         RouteDTO route = new RouteDTO();
         List<FlightDTO> flights = new ArrayList<>();
 
@@ -78,7 +97,7 @@ public class KiwiApiResponseDeserializer {
         return route;
     }
 
-    private FlightDTO parseFlight(JsonNode nodeRoute) {
+    private FlightDTO parseFlight(JsonNode nodeRoute) throws IllegalCabinClassException {
         FlightDTO flight = new FlightDTO();
 
         flight.setFlightNumber(nodeRoute.get("flight_no").asText());
@@ -91,6 +110,7 @@ public class KiwiApiResponseDeserializer {
         flight.setArrivalCityName(nodeRoute.get("cityTo").asText());
         flight.setArrivalTime(nodeRoute.get("aTime").asLong());
         flight.setDuration((nodeRoute.get("aTime").asLong()) - (nodeRoute.get("dTime").asLong()));
+        flight.setCabinClass(CabinClassConverter.convertStringIntoCabinClass(nodeRoute.findValue("fare_category").asText(), Providers.KIWI));
 
         return flight;
     }
