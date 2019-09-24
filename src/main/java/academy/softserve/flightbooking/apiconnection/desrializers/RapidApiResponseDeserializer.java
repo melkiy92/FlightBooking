@@ -1,7 +1,6 @@
 package academy.softserve.flightbooking.apiconnection.desrializers;
 
 import academy.softserve.flightbooking.apiconnection.connectors.Providers;
-import academy.softserve.flightbooking.apiconnection.converters.CabinClassConverter;
 import academy.softserve.flightbooking.exceptions.DeserializationException;
 import academy.softserve.flightbooking.exceptions.IllegalCabinClassException;
 import academy.softserve.flightbooking.exceptions.MissingNodeException;
@@ -9,6 +8,7 @@ import academy.softserve.flightbooking.constants.ApiConnectionConstants;
 import academy.softserve.flightbooking.dto.FlightDTO;
 import academy.softserve.flightbooking.dto.RouteDTO;
 import academy.softserve.flightbooking.dto.TicketDTO;
+import academy.softserve.flightbooking.exceptions.NoTicketsException;
 import academy.softserve.flightbooking.models.components.TicketType;
 import academy.softserve.flightbooking.services.FlightStopsCalculationService;
 import com.fasterxml.jackson.databind.JsonNode;
@@ -26,7 +26,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import static academy.softserve.flightbooking.apiconnection.converters.CabinClassConverter.*;
+import static academy.softserve.flightbooking.apiconnection.converters.CabinClassConverter.convertStringIntoCabinClass;
 
 @Slf4j
 @Data
@@ -37,7 +37,7 @@ public class RapidApiResponseDeserializer {
 
 
     public List<TicketDTO> deserializeFlightsData(String json, TicketType ticketType)
-            throws DeserializationException {
+            throws DeserializationException, NoTicketsException {
         List<TicketDTO> tickets = new ArrayList<>();
         try {
             Map<String, JsonNode> nodes = parseJson(json);
@@ -51,11 +51,12 @@ public class RapidApiResponseDeserializer {
                 }
             }
         } catch (IOException e) {
-            log.error("Unable to parse response json");
+            log.error("Broken json response");
+            throw new DeserializationException("Broken json response");
         }
         if(tickets.isEmpty()) {
-            log.error("Unable to deserialize api response");
-            throw new DeserializationException();
+            log.error("No tickets available");
+            throw new NoTicketsException("No tickets available");
         }
         log.info("Deserialization successful");
 

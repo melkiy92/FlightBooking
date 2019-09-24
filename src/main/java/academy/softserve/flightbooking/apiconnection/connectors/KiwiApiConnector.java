@@ -9,6 +9,7 @@ import academy.softserve.flightbooking.exceptions.IllegalDateException;
 import academy.softserve.flightbooking.constants.ApiConnectionConstants;
 import academy.softserve.flightbooking.dto.SearchCriterionDTO;
 import academy.softserve.flightbooking.dto.TicketDTO;
+import academy.softserve.flightbooking.exceptions.NoTicketsException;
 import com.mashape.unirest.http.HttpResponse;
 import com.mashape.unirest.http.Unirest;
 import com.mashape.unirest.http.exceptions.UnirestException;
@@ -30,11 +31,11 @@ public class KiwiApiConnector {
 
     public List<TicketDTO> getTickets(SearchCriterionDTO searchCriterionDTO)
             throws UnsupportedEncodingException, IllegalDateException, IllegalCabinClassException,
-            DeserializationException, ApiErrorException, UnirestException {
+            DeserializationException, ApiErrorException, UnirestException, NoTicketsException {
         List<TicketDTO> result;
 
         String parameters = converter.convertIntoRequestString(searchCriterionDTO);
-        log.info("Sending request to Kiwi API endpoint");
+        log.info("Sending request to Kiwi API endpoint : " + ApiConnectionConstants.KIWI_FLIGHTS_ENDPOINT + parameters);
         HttpResponse<String> response = Unirest.get(ApiConnectionConstants.KIWI_FLIGHTS_ENDPOINT + parameters).asString();
         log.info("Kiwi API response status : " + response.getStatus());
         if (response.getStatus() < 300) {

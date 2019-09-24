@@ -12,7 +12,6 @@ import lombok.AllArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class SearchCriterionDTO {
-    private Long id;
     private String currencyCode;
     private TicketType ticketType;
     private CabinClass cabinClass;

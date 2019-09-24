@@ -7,6 +7,7 @@ import academy.softserve.flightbooking.exceptions.IllegalDateException;
 import academy.softserve.flightbooking.exceptions.InvalidResponseJsonException;
 import academy.softserve.flightbooking.dto.SearchCriterionDTO;
 import academy.softserve.flightbooking.dto.TicketDTO;
+import academy.softserve.flightbooking.exceptions.NoTicketsException;
 import academy.softserve.flightbooking.exceptions.RequestException;
 import academy.softserve.flightbooking.exceptions.ResponseException;
 import academy.softserve.flightbooking.services.TicketService;
@@ -36,7 +37,7 @@ public class TicketController {
     */
     @PostMapping("/flights")
     public ResponseEntity<List<TicketDTO>> getTickets(@RequestBody SearchCriterionDTO searchCriterionDTO)
-            throws ResponseException, RequestException {
+            throws ResponseException, RequestException, NoTicketsException {
         //SearchCriterion searchCriterion = modelMapper.map(searchCriterionDTO, SearchCriterion.class);
         log.info("Received search criteria from UI : " + searchCriterionDTO.toString());
         List<TicketDTO> tickets = ticketService.getTickets(searchCriterionDTO);

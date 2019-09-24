@@ -7,6 +7,7 @@ import academy.softserve.flightbooking.dto.RouteDTO;
 import academy.softserve.flightbooking.dto.TicketDTO;
 import academy.softserve.flightbooking.exceptions.DeserializationException;
 import academy.softserve.flightbooking.exceptions.IllegalCabinClassException;
+import academy.softserve.flightbooking.exceptions.NoTicketsException;
 import academy.softserve.flightbooking.models.components.TicketType;
 import academy.softserve.flightbooking.services.FlightStopsCalculationService;
 import com.fasterxml.jackson.databind.JsonNode;
@@ -29,12 +30,11 @@ public class KiwiApiResponseDeserializer {
     private FlightStopsCalculationService flightStopsCalculationService;
 
 
-    public List<TicketDTO> deserializeFlightsData(String json, TicketType ticketType) throws DeserializationException {
+    public List<TicketDTO> deserializeFlightsData(String json, TicketType ticketType) throws DeserializationException, NoTicketsException {
         List<TicketDTO> tickets = new ArrayList<>();
 
         try {
             JsonNode data = new ObjectMapper().readTree(json).get("data");
-
             log.info("Start deserialization");
             for (JsonNode node : data) {
                 try {
@@ -45,12 +45,12 @@ public class KiwiApiResponseDeserializer {
                 }
             }
         } catch (IOException e) {
-            log.error("Unable to deserialize api response");
-            throw new DeserializationException();
+            log.error("Broken json response");
+            throw new DeserializationException("Broken json response");
         }
         if(tickets.isEmpty()) {
-            log.error("Unable to deserialize api response");
-            throw new DeserializationException();
+            log.error("No tickets available");
+            throw new NoTicketsException("No tickets available");
         }
         log.info("Deserialization successful");
 

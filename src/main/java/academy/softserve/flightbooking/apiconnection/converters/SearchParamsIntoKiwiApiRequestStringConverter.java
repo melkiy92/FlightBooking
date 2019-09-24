@@ -39,6 +39,7 @@ public class SearchParamsIntoKiwiApiRequestStringConverter {
         requestParamsMap.put("v","3");
         requestParamsMap.put("date_from", DateTimeConverter.convertDate(searchCriterionDTO.getDepartDate(), ApiConnectionConstants.KIWI_DATE_PATTERN));
         requestParamsMap.put("date_to", DateTimeConverter.convertDate(searchCriterionDTO.getDepartDate(), ApiConnectionConstants.KIWI_DATE_PATTERN));
+        requestParamsMap.put("limit", "5");
         if(searchCriterionDTO.getTicketType().equals(TicketType.ONEWAY)) {
             requestParamsMap.put("return_from", "");
             requestParamsMap.put("return_to", "");

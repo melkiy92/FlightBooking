@@ -9,6 +9,7 @@ import academy.softserve.flightbooking.exceptions.IllegalDateException;
 import academy.softserve.flightbooking.constants.ApiConnectionConstants;
 import academy.softserve.flightbooking.dto.SearchCriterionDTO;
 import academy.softserve.flightbooking.dto.TicketDTO;
+import academy.softserve.flightbooking.exceptions.NoTicketsException;
 import com.mashape.unirest.http.HttpResponse;
 import com.mashape.unirest.http.JsonNode;
 import com.mashape.unirest.http.Unirest;
@@ -33,7 +34,7 @@ public class RapidApiConnector {
 
     public List<TicketDTO> getTickets(SearchCriterionDTO searchCriterionDTO)
             throws ApiErrorException, DeserializationException, UnirestException,
-            UnsupportedEncodingException, IllegalDateException, IllegalCabinClassException {
+            UnsupportedEncodingException, IllegalDateException, IllegalCabinClassException, NoTicketsException {
         List<TicketDTO> result;
 
         String parameters = converter.convertIntoRequestString(searchCriterionDTO);
@@ -50,7 +51,7 @@ public class RapidApiConnector {
             String locationValue = sessionCreationResponse.getHeaders().get("Location").get(0);
             String sessionKey = locationValue.substring(locationValue.lastIndexOf('/') + 1);
             log.info("Sending request to Rapid API endpoint");
-            HttpResponse<String> response = Unirest.get(ApiConnectionConstants.RAPID_GET_ENDPOINT + sessionKey)
+            HttpResponse<String> response = Unirest.get(ApiConnectionConstants.RAPID_GET_ENDPOINT + sessionKey + "?pageIndex=0&pageSize=5")
                     .header("X-RapidAPI-Host", ApiConnectionConstants.RAPID_X_RAPIDAPI_HOST)
                     .header("X-RapidAPI-Key", ApiConnectionConstants.RAPID_X_RAPIDAPI_KEY)
                     .asString();

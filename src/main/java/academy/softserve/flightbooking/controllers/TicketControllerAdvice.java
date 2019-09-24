@@ -1,5 +1,6 @@
 package academy.softserve.flightbooking.controllers;
 
+import academy.softserve.flightbooking.exceptions.NoTicketsException;
 import academy.softserve.flightbooking.exceptions.RequestException;
 import academy.softserve.flightbooking.exceptions.ResponseException;
 import org.springframework.http.HttpStatus;
@@ -19,5 +20,10 @@ public class TicketControllerAdvice {
     @ExceptionHandler(ResponseException.class)
     @ResponseStatus(HttpStatus.BAD_GATEWAY)
     public String responseExceptionHandler(ResponseException e) { return e.getMessage(); }
+
+    @ResponseBody
+    @ExceptionHandler(NoTicketsException.class)
+    @ResponseStatus(HttpStatus.NOT_FOUND)
+    public String noTicketsExceptionHandler(NoTicketsException e) { return e.getMessage(); }
 }
 
