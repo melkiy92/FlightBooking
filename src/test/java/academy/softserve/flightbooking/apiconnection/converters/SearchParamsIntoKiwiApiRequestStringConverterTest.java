@@ -25,7 +25,6 @@ public class SearchParamsIntoKiwiApiRequestStringConverterTest {
     public void convertIntoRequestStringRoundtripSuccess() throws UnsupportedEncodingException, IllegalDateException, IllegalCabinClassException {
         //Given
         SearchCriterionDTO searchCriterion = new SearchCriterionDTO();
-        searchCriterion.setId(1L);
         searchCriterion.setCurrencyCode("USD");
         searchCriterion.setTicketType(ROUNDTRIP);
         searchCriterion.setCabinClass(ECONOMY);
@@ -36,7 +35,7 @@ public class SearchParamsIntoKiwiApiRequestStringConverterTest {
         searchCriterion.setDepartDate(1576620000000L);
         searchCriterion.setReturnDate(1576620000000L);
 
-        String expected = "adults=1&children=0&currency=USD&date_from=18%2F12%2F2019&date_to=18%2F12%2F2019&fly_from=OZH&fly_to=KBP&max_stopovers=2147483647&partner=picky&return_from=18%2F12%2F2019&return_to=18%2F12%2F2019&selected_cabins=M&v=3";
+        String expected = "adults=1&children=0&currency=USD&date_from=18%2F12%2F2019&date_to=18%2F12%2F2019&fly_from=OZH&fly_to=KBP&limit=5&max_stopovers=2147483647&partner=picky&return_from=18%2F12%2F2019&return_to=18%2F12%2F2019&selected_cabins=M&v=3";
         log.info("expected : " + expected);
 
         //When

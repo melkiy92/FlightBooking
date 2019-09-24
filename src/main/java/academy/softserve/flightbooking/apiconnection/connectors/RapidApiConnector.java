@@ -47,20 +47,21 @@ public class RapidApiConnector {
                 .body(parameters)
                 .asJson();
         log.info("Rapid API session creation response status : " + sessionCreationResponse.getStatus());
+
         if (sessionCreationResponse.getStatus() < 300) {
             String locationValue = sessionCreationResponse.getHeaders().get("Location").get(0);
             String sessionKey = locationValue.substring(locationValue.lastIndexOf('/') + 1);
+
             log.info("Sending request to Rapid API endpoint");
             HttpResponse<String> response = Unirest.get(ApiConnectionConstants.RAPID_GET_ENDPOINT + sessionKey + "?pageIndex=0&pageSize=5")
                     .header("X-RapidAPI-Host", ApiConnectionConstants.RAPID_X_RAPIDAPI_HOST)
                     .header("X-RapidAPI-Key", ApiConnectionConstants.RAPID_X_RAPIDAPI_KEY)
                     .asString();
+
             log.info("Rapid API response status : " + response.getStatus());
             if (response.getStatus() < 300) {
                 log.info("Received data from Rapid API endpoint");
-
-                    result = deserializer.deserializeFlightsData(response.getBody(), searchCriterionDTO.getTicketType());
-
+                result = deserializer.deserializeFlightsData(response.getBody(), searchCriterionDTO.getTicketType());
             } else {
                 log.error("Rapid API response error : " + response.getBody());
                 throw new ApiErrorException(response.getBody());
