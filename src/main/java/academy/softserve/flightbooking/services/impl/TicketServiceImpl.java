@@ -8,6 +8,7 @@ import academy.softserve.flightbooking.exceptions.IllegalCabinClassException;
 import academy.softserve.flightbooking.exceptions.IllegalDateException;
 import academy.softserve.flightbooking.dto.SearchCriterionDTO;
 import academy.softserve.flightbooking.dto.TicketDTO;
+import academy.softserve.flightbooking.exceptions.NoTicketsException;
 import academy.softserve.flightbooking.exceptions.RequestException;
 import academy.softserve.flightbooking.exceptions.ResponseException;
 import academy.softserve.flightbooking.services.TicketService;
@@ -29,37 +30,46 @@ public class TicketServiceImpl implements TicketService {
     private RapidApiConnector rapidApiConnector;
 
     @Override
-    public List<TicketDTO> getTickets(SearchCriterionDTO searchCriterionDTO) throws RequestException, ResponseException {
+    public List<TicketDTO> getTickets(SearchCriterionDTO searchCriterionDTO) throws RequestException, ResponseException, NoTicketsException {
         List<TicketDTO> tickets = new ArrayList<>();
         boolean success = false;
         String requestExceptionMessage = null;
         String responseExceptionMessage = null;
+        String noTicketsMessage = null;
 
         try {
             tickets.addAll(kiwiApiConnector.getTickets(searchCriterionDTO));
             log.info("Received tickets list from Kiwi Api Connector");
             success = true;
+        } catch (NoTicketsException e) {
+            log.info("No tickets available");
+            responseExceptionMessage = "Kiwi API : " + e.getMessage();
         } catch (UnsupportedEncodingException | IllegalDateException | IllegalCabinClassException e) {
             log.error("Unable to get response due to bad request parameters : " + e.getMessage());
-            requestExceptionMessage = e.getMessage();
+            requestExceptionMessage = "Unable to send request to Kiwi API server due to bad request parameters : " + e.getMessage();
         } catch (DeserializationException | ApiErrorException | UnirestException e) {
             log.error("Aggregator server error : " + e.getMessage());
-            responseExceptionMessage = e.getMessage();
+            responseExceptionMessage = "Kiwi API server error : " + e.getMessage();
         }
         try {
             tickets.addAll(rapidApiConnector.getTickets(searchCriterionDTO));
             log.info("Received tickets list from Rapid Api Connector");
             success = true;
+        } catch (NoTicketsException e) {
+            log.info("No tickets available");
+            responseExceptionMessage = responseExceptionMessage + " | Rapid API : " + e.getMessage();
         } catch (UnsupportedEncodingException | IllegalDateException | IllegalCabinClassException e) {
             log.error("Unable to get response due to bad request parameters : " + e.getMessage());
-            requestExceptionMessage = requestExceptionMessage + e.getMessage();
+            requestExceptionMessage = requestExceptionMessage + " | Unable to send request to Rapid API server due to bad request parameters : "  + e.getMessage();
         } catch (DeserializationException | ApiErrorException | UnirestException e) {
             log.error("Aggregator server error : " + e.getMessage());
-            responseExceptionMessage = responseExceptionMessage + e.getMessage();
+            responseExceptionMessage = responseExceptionMessage + " | Rapid API server error : " + e.getMessage();
         }
         log.info("success=" + success);
         if(!success) {
-            if(requestExceptionMessage != null) {
+            if (noTicketsMessage != null) {
+                throw new NoTicketsException("No tickets available");
+            } else if(requestExceptionMessage != null) {
                 throw new RequestException(requestExceptionMessage);
             } else if (responseExceptionMessage != null) {
                 throw new ResponseException(responseExceptionMessage);
