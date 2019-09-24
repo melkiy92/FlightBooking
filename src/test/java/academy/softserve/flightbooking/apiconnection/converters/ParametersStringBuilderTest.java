@@ -1,4 +1,4 @@
-package academy.softserve.flightbooking.apiconnection;
+package academy.softserve.flightbooking.apiconnection.converters;
 
 import academy.softserve.flightbooking.apiconnection.converters.ParametersStringBuilder;
 import org.junit.Assert;

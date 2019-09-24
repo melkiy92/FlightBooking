@@ -1,13 +1,14 @@
 package academy.softserve.flightbooking.controllers;
 
-import academy.softserve.flightbooking.apiconnection.exceptions.ApiErrorException;
-import academy.softserve.flightbooking.apiconnection.exceptions.IllegalCabinClassException;
-import academy.softserve.flightbooking.apiconnection.exceptions.IllegalDateException;
-import academy.softserve.flightbooking.apiconnection.exceptions.InvalidResponseJsonException;
+import academy.softserve.flightbooking.exceptions.ApiErrorException;
+import academy.softserve.flightbooking.exceptions.DeserializationException;
+import academy.softserve.flightbooking.exceptions.IllegalCabinClassException;
+import academy.softserve.flightbooking.exceptions.IllegalDateException;
+import academy.softserve.flightbooking.exceptions.InvalidResponseJsonException;
 import academy.softserve.flightbooking.dto.SearchCriterionDTO;
 import academy.softserve.flightbooking.dto.TicketDTO;
-import academy.softserve.flightbooking.models.SearchCriterion;
-import academy.softserve.flightbooking.models.tickets.Ticket;
+import academy.softserve.flightbooking.exceptions.RequestException;
+import academy.softserve.flightbooking.exceptions.ResponseException;
 import academy.softserve.flightbooking.services.TicketService;
 import com.mashape.unirest.http.exceptions.UnirestException;
 import lombok.RequiredArgsConstructor;
@@ -35,7 +36,7 @@ public class TicketController {
     */
     @PostMapping("/flights")
     public ResponseEntity<List<TicketDTO>> getTickets(@RequestBody SearchCriterionDTO searchCriterionDTO)
-            throws IllegalCabinClassException, IllegalDateException, ApiErrorException, IOException, UnirestException, InvalidResponseJsonException {
+            throws ResponseException, RequestException {
         //SearchCriterion searchCriterion = modelMapper.map(searchCriterionDTO, SearchCriterion.class);
         log.info("Received search criteria from UI : " + searchCriterionDTO.toString());
         List<TicketDTO> tickets = ticketService.getTickets(searchCriterionDTO);

@@ -1,9 +1,10 @@
 package academy.softserve.flightbooking.apiconnection.converters;
 
-import academy.softserve.flightbooking.apiconnection.exceptions.IllegalCabinClassException;
-import academy.softserve.flightbooking.apiconnection.exceptions.IllegalDateException;
+import academy.softserve.flightbooking.apiconnection.connectors.Providers;
+import academy.softserve.flightbooking.exceptions.IllegalCabinClassException;
+import academy.softserve.flightbooking.exceptions.IllegalDateException;
+import academy.softserve.flightbooking.constants.ApiConnectionConstants;
 import academy.softserve.flightbooking.dto.SearchCriterionDTO;
-import academy.softserve.flightbooking.models.components.CabinClass;
 import academy.softserve.flightbooking.models.components.TicketType;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -11,8 +12,6 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 
 import java.io.UnsupportedEncodingException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.Map;
 import java.util.TreeMap;
 
@@ -23,7 +22,6 @@ import java.util.TreeMap;
 public class SearchParamsIntoRapidApiRequestStringConverter {
     private ParametersStringBuilder parametersStringBuilder;
 
-    private static final String DATE_PATTERN = "yyyy-MM-dd";
 
     public String convertIntoRequestString(SearchCriterionDTO searchCriterionDTO)
             throws IllegalDateException, IllegalCabinClassException, UnsupportedEncodingException {
@@ -35,43 +33,18 @@ public class SearchParamsIntoRapidApiRequestStringConverter {
         requestParamsMap.put("locale", "en-US");
         requestParamsMap.put("originPlace", (searchCriterionDTO.getFromLocation() + "-sky"));
         requestParamsMap.put("destinationPlace", (searchCriterionDTO.getToLocation() + "-sky"));
-        requestParamsMap.put("outboundDate", convertDate(searchCriterionDTO.getDepartDate(), DATE_PATTERN));
+        requestParamsMap.put("outboundDate", DateTimeConverter.convertDate(searchCriterionDTO.getDepartDate(), ApiConnectionConstants.RAPID_DATE_PATTERN));
         requestParamsMap.put("adults", ("" + searchCriterionDTO.getAdults()));
         requestParamsMap.put("children", ("" + searchCriterionDTO.getChildren()));
-        requestParamsMap.put("cabinClass", convertCabinClass(searchCriterionDTO.getCabinClass()));
+        requestParamsMap.put("cabinClass", CabinClassConverter.convertCabinClassIntoString(searchCriterionDTO.getCabinClass(), Providers.RAPID));
         if(searchCriterionDTO.getTicketType().equals(TicketType.ONEWAY)){
             requestParamsMap.put("inboundDate", "");
         } else {
-            requestParamsMap.put("inboundDate", convertDate(searchCriterionDTO.getReturnDate(), DATE_PATTERN));
+            requestParamsMap.put("inboundDate", DateTimeConverter.convertDate(searchCriterionDTO.getReturnDate(), ApiConnectionConstants.RAPID_DATE_PATTERN));
         }
         log.info("RapidSearchCriteria : " + requestParamsMap.toString());
         result = parametersStringBuilder.getParamsString(requestParamsMap);
 
         return result;
     }
-
-    private String convertCabinClass(CabinClass cabinClass) throws IllegalCabinClassException {
-        if (cabinClass.equals(CabinClass.FIRSTCLASS)) {
-            return "first";
-        } else if (cabinClass.equals(CabinClass.PREMIUMECONOMY)) {
-            return "premiumeconomy";
-        } else if (cabinClass.equals(CabinClass.BUSINESSCLASS)) {
-            return "business";
-        } else if (cabinClass.equals(CabinClass.ECONOMY)) {
-            return "economy";
-        } else {
-            throw new IllegalCabinClassException();
-        }
-    }
-
-    private String convertDate(Long dateInMs, String pattern) throws IllegalDateException {
-        if (dateInMs < System.currentTimeMillis()) {
-            throw new IllegalDateException("Date is in the past");
-        } else {
-            SimpleDateFormat dateFormatter = new SimpleDateFormat(pattern);
-            Date date = new Date(dateInMs);
-            return dateFormatter.format(date);
-        }
-    }
-
 }
