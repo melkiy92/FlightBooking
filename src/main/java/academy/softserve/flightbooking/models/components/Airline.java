@@ -3,13 +3,9 @@ package academy.softserve.flightbooking.models.components;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.AllArgsConstructor;
+import org.hibernate.annotations.NaturalId;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
-import javax.persistence.Id;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
 
 @Data
 @NoArgsConstructor
@@ -20,9 +16,11 @@ public class Airline {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String code; //IATA code
+    @NaturalId
     private String callSign;
+    private String code;
     private String name;
     @ManyToOne
+    @JoinColumn(name = "country_name", referencedColumnName = "name")
     private Country country;
 }

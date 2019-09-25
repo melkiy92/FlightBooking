@@ -28,14 +28,15 @@ public class Route {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @OneToOne
-    @JoinColumn(name = "fromCity_name")
+    @JoinColumn(name = "fromCity_code", referencedColumnName = "code")
     private City fromCity;
     @OneToOne
-    @JoinColumn(name = "toCity_name")
+    @JoinColumn(name = "toCity_code", referencedColumnName = "code")
     private City toCity;
     private Long duration;
     @OneToMany(mappedBy = "route", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Flight> flights;
     @ManyToOne
+    @JoinColumn(name = "ticket_id")
     private Ticket ticket;
 }
