@@ -1,7 +1,5 @@
 package academy.softserve.flightbooking.apiconnection.converters;
 
-import academy.softserve.flightbooking.apiconnection.converters.ParametersStringBuilder;
-import academy.softserve.flightbooking.apiconnection.converters.SearchParamsIntoRapidApiRequestStringConverter;
 import academy.softserve.flightbooking.exceptions.IllegalCabinClassException;
 import academy.softserve.flightbooking.exceptions.IllegalDateException;
 import academy.softserve.flightbooking.dto.SearchCriterionDTO;
@@ -24,7 +22,6 @@ public class SearchParamsIntoRapidApiRequestStringConverterTest {
     public void convertIntoRequestStringRoundtripSuccess() throws UnsupportedEncodingException, IllegalDateException, IllegalCabinClassException {
         //Given
         SearchCriterionDTO searchCriterion = new SearchCriterionDTO();
-        searchCriterion.setId(1L);
         searchCriterion.setCurrencyCode("USD");
         searchCriterion.setTicketType(ROUNDTRIP);
         searchCriterion.setCabinClass(ECONOMY);
