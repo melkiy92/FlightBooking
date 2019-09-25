@@ -29,24 +29,25 @@ public class Flight {
     private Long id;
     private String flightNumber;
     @OneToOne
-    @JoinColumn(name = "airline_name")
+    @JoinColumn(name = "airline_name", referencedColumnName = "callSign")
     private Airline airline;
     private CabinClass cabinClass;
     private Long duration;
     private Long departTime;
     @OneToOne
-    @JoinColumn(name = "departAirport_code")
+    @JoinColumn(name = "departAirport_code", referencedColumnName = "code")
     private Airport departAirport;
     @OneToOne
-    @JoinColumn(name = "departCity_name")
+    @JoinColumn(name = "departCity_code", referencedColumnName = "code")
     private City departCity;
     private Long arrivalTime;
     @OneToOne
-    @JoinColumn(name = "arrivalAirport_code")
+    @JoinColumn(name = "arrivalAirport_code", referencedColumnName = "code")
     private Airport arrivalAirport;
     @OneToOne
-    @JoinColumn(name = "arrivalCity_name")
+    @JoinColumn(name = "arrivalCity_code", referencedColumnName = "code")
     private City arrivalCity;
     @ManyToOne
+    @JoinColumn(name = "route_id")
     private Route route;
 }

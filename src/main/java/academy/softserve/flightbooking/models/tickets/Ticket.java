@@ -28,7 +28,7 @@ public class Ticket {
     private Double price;
     private String bookingToken; // link to buy ticket
     @OneToOne
-    @JoinColumn(name = "provider_name")
+    @JoinColumn(name = "provider_name", referencedColumnName = "name")
     private Provider ticketProvider;
     @OneToMany(mappedBy = "ticket", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Route> routes;

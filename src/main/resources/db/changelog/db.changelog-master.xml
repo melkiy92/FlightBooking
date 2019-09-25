@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <changeSet id="1" author="fb">
+        <sqlFile path="init.sql" relativeToChangelogFile="true"/>
+    </changeSet>
+    <changeSet id="2" author="fb">
+        <sqlFile path="insert_currencies.sql" relativeToChangelogFile="true"/>
+    </changeSet>
+    <changeSet id="3" author="fb">
+        <sqlFile path="insert_countries.sql" relativeToChangelogFile="true"/>
+    </changeSet>
+    <changeSet id="4" author="fb">
+        <sqlFile path="insert_cities.sql" relativeToChangelogFile="true"/>
+    </changeSet>
+    <changeSet id="5" author="fb">
+        <sqlFile path="insert_airports.sql" relativeToChangelogFile="true"/>
+    </changeSet>
+    <changeSet id="6" author="fb">
+        <sqlFile path="insert_airlines.sql" relativeToChangelogFile="true"/>
+    </changeSet>
+
+
+
+</databaseChangeLog>
