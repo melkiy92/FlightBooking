@@ -25,7 +25,7 @@ public class KiwiApiResponseDeserializer {
 
 
     public List<TicketDTO> deserializeFlightsData(String json, TicketType ticketType) throws IOException {
-        JsonNode data = new ObjectMapper().readTree(json).get("data");
+        JsonNode data = new ObjectMapper().readTree(json).get("db/data/csv");
         List<TicketDTO> tickets = new ArrayList<>();
 
         log.info("Start deserialization");

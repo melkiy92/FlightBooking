@@ -16,7 +16,6 @@ import java.io.UnsupportedEncodingException;
 import static academy.softserve.flightbooking.models.components.CabinClass.ECONOMY;
 import static academy.softserve.flightbooking.models.components.TicketType.ROUNDTRIP;
 
-
 @Slf4j
 @SpringBootTest
 public class SearchParamsIntoKiwiApiRequestStringConverterTest {

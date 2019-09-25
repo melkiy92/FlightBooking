@@ -1,0 +1,3753 @@
+id,code,name,country_code
+1,AD-02,Canillo,AD
+2,AD-03,Encamp,AD
+3,AD-04,La Massana,AD
+4,AD-05,Ordino,AD
+5,AD-06,Sant Julià de Lòria,AD
+6,AD-07,Andorra la Vella,AD
+7,AD-08,Escaldes-Engordany,AD
+8,AE-AJ,Ajman Emirate,AE
+9,AE-AZ,Abu Dhabi Emirate,AE
+10,AE-DU,Dubai Emirate,AE
+11,AE-FU,Fujairah Emirate,AE
+12,AE-RK,Ras al-Khaimah Emirate,AE
+13,AE-SH,Sharjah Emirate,AE
+14,AE-UQ,Umm al-Quwain Emirate,AE
+15,AF-BAL,Balkh Province,AF
+16,AF-BAM,Bamiyan Province,AF
+17,AF-BDG,Badghis Province,AF
+18,AF-BDS,Badakhshan Province,AF
+19,AF-BGL,Baghlan Province,AF
+20,AF-DAY,Daykundi Province,AF
+21,AF-FRA,Farah Province,AF
+22,AF-FYB,Faryab Province,AF
+23,AF-GHA,Ghazni Province,AF
+24,AF-GHO,Ghōr Province,AF
+25,AF-HEL,Helmand Province,AF
+26,AF-HER,Herat Province,AF
+27,AF-JOW,Jowzjan Province,AF
+28,AF-KAB,Kabul Province,AF
+29,AF-KAN,Kandahar Province,AF
+30,AF-KAP,Kapisa Province,AF
+31,AF-KDZ,Kunduz Province,AF
+32,AF-KHO,Khost Province,AF
+33,AF-KNR,Kunar Province,AF
+34,AF-LAG,Laghman Province,AF
+35,AF-LOW,Logar Province,AF
+36,AF-NAN,Nangarhar Province,AF
+37,AF-NIM,Nimruz Province,AF
+38,AF-NUR,Nurestan Province,AF
+39,AF-ORU,Orūzgān Province,AF
+40,AF-PAN,Panjshir Province,AF
+41,AF-PAR,Parwan Province,AF
+42,AF-PIA,Paktia Province,AF
+43,AF-PKA,Paktika Province,AF
+44,AF-SAM,Samangan Province,AF
+45,AF-SAR,Sar-e Pol Province,AF
+46,AF-TAK,Takhar Province,AF
+47,AF-WAR,Wardak Province,AF
+48,AF-ZAB,Zabul Province,AF
+49,AG-03,Saint George,AG
+50,AG-04,Saint John,AG
+51,AG-05,Saint Mary,AG
+52,AG-06,Saint Paul,AG
+53,AG-07,Saint Peter,AG
+54,AG-08,Saint Philip,AG
+55,AG-10,Barbuda,AG
+56,AL-01,Berat County,AL
+57,AL-02,Durrës County,AL
+58,AL-03,Elbasan County,AL
+59,AL-04,Fier County,AL
+60,AL-05,Gjirokastër County,AL
+61,AL-06,Korçë County,AL
+62,AL-07,Kukës County,AL
+63,AL-08,Lezhë County,AL
+64,AL-09,Dibër County,AL
+65,AL-10,Shkodër County,AL
+66,AL-11,Tirana County,AL
+67,AL-12,Vlorë County,AL
+68,AM-AG,Aragatsotn Province,AM
+69,AM-AR,Ararat Province,AM
+70,AM-AV,Armavir Province,AM
+71,AM-ER,Yerevan (capital district),AM
+72,AM-GR,Gegharkunik Province,AM
+73,AM-KT,Kotayk Province,AM
+74,AM-LO,Lori Province,AM
+75,AM-SH,Shirak Province,AM
+76,AM-SU,Syunik Province,AM
+77,AM-TV,Tavush Province,AM
+78,AM-VD,Vayots Dzor Province,AM
+79,AO-BGO,Bengo Province,AO
+80,AO-BGU,Benguela Province,AO
+81,AO-BIE,Bié Province,AO
+82,AO-CAB,Cabinda Province,AO
+83,AO-CCU,Cuando Cubango Province,AO
+84,AO-CNN,Cunene Province,AO
+85,AO-CNO,Cuanza Norte Province,AO
+86,AO-CUS,Cuanza Sul Province,AO
+87,AO-HUA,Huambo Province,AO
+88,AO-HUI,Huíla Province,AO
+89,AO-LNO,Lunda Norte Province,AO
+90,AO-LSU,Lunda Sul Province,AO
+91,AO-LUA,Luanda Province,AO
+92,AO-MAL,Malanje Province,AO
+93,AO-MOX,Moxico Province,AO
+94,AO-NAM,Namibe Province,AO
+95,AO-UIG,Uíge Province,AO
+96,AO-ZAI,Zaire Province,AO
+97,AR-A,Salta Province,AR
+98,AR-B,Buenos Aires Province,AR
+99,AR-C,Capital federal,AR
+100,AR-D,San Luis Province,AR
+101,AR-E,Entre Ríos Province,AR
+102,AR-F,La Rioja Province,AR
+103,AR-G,Santiago del Estero Province,AR
+104,AR-H,Chaco Province,AR
+105,AR-J,San Juan Province,AR
+106,AR-K,Catamarca Province,AR
+107,AR-L,La Pampa Province,AR
+108,AR-M,Mendoza Province,AR
+109,AR-N,Misiones Province,AR
+110,AR-P,Formosa Province,AR
+111,AR-Q,Neuquén Province,AR
+112,AR-R,Río Negro Province,AR
+113,AR-S,Santa Fe Province,AR
+114,AR-T,Tucumán Province,AR
+115,AR-U,Chubut Province,AR
+116,AR-V,Tierra del Fuego Province,AR
+117,AR-W,Corrientes Province,AR
+118,AR-X,Córdoba Province,AR
+119,AR-Y,Jujuy Province,AR
+120,AR-Z,Santa Cruz Province,AR
+121,AT-1,Burgenland,AT
+122,AT-2,Carinthia,AT
+123,AT-3,Lower Austria,AT
+124,AT-4,Upper Austria,AT
+125,AT-5,Salzburg,AT
+126,AT-6,Styria,AT
+127,AT-7,Tyrol,AT
+128,AT-8,Vorarlberg,AT
+129,AT-9,Vienna,AT
+130,AU-AAT,Australian Antarctic Territory,AU
+131,AU-ACT,Australian Capital Territory,AU
+132,AU-NSW,New South Wales,AU
+133,AU-NT,Northern Territory,AU
+134,AU-QLD,Queensland,AU
+135,AU-SA,South Australia,AU
+136,AU-TAS,Tasmania,AU
+137,AU-VIC,Victoria,AU
+138,AU-WA,Western Australia,AU
+139,AZ-AB,Ali Bayramli,AZ
+140,AZ-ABS,Abseron,AZ
+141,AZ-AGA,Agstafa,AZ
+142,AZ-AGC,Agcabadi,AZ
+143,AZ-AGM,Agdam,AZ
+144,AZ-AGS,Agdas,AZ
+145,AZ-AGU,Agsu,AZ
+146,AZ-AST,Astara,AZ
+147,AZ-BA,Baki,AZ
+148,AZ-BAB,Babak,AZ
+149,AZ-BAL,Balakan,AZ
+150,AZ-BAR,Barda,AZ
+151,AZ-BEY,Beylagan,AZ
+152,AZ-BIL,Bilasuvar,AZ
+153,AZ-CAB,Cabrayll,AZ
+154,AZ-CAL,Calilabad,AZ
+155,AZ-CUL,Culfa,AZ
+156,AZ-DAS,Daskasan,AZ
+157,AZ-DAV,Davaci,AZ
+158,AZ-FUZ,Fuzuli,AZ
+159,AZ-GA,Ganca,AZ
+160,AZ-GAD,Gadabay,AZ
+161,AZ-GOR,Goranboy,AZ
+162,AZ-GOY,Goycay,AZ
+163,AZ-HAC,Haciqabul,AZ
+164,AZ-IMI,Imisli,AZ
+165,AZ-ISM,Ismayilli,AZ
+166,AZ-KAL,Kalbacar,AZ
+167,AZ-KUR,Kurdamir,AZ
+168,AZ-LA,Lankaran,AZ
+169,AZ-LAC,Lacin,AZ
+170,AZ-LER,Lerik,AZ
+171,AZ-MAS,Masalli,AZ
+172,AZ-MI,Mingacevir,AZ
+173,AZ-NA,Naftalan,AZ
+174,AZ-NEF,Neftcala,AZ
+175,AZ-NX,Naxcivan,AZ
+176,AZ-OGU,Oguz,AZ
+177,AZ-ORD,Ordubad,AZ
+178,AZ-QAB,Qabala,AZ
+179,AZ-QAX,Qax,AZ
+180,AZ-QAZ,Qazax,AZ
+181,AZ-QBA,Quba,AZ
+182,AZ-QBI,Qubadli,AZ
+183,AZ-QOB,Qobustan,AZ
+184,AZ-QUS,Qusar,AZ
+185,AZ-SA,Saki,AZ
+186,AZ-SAB,Sabirabad,AZ
+187,AZ-SAD,Sadarak,AZ
+188,AZ-SAH,Sahbuz,AZ
+189,AZ-SAL,Salyan,AZ
+190,AZ-SAR,Sarur,AZ
+191,AZ-SAT,Saatli,AZ
+192,AZ-SIY,Siyazan,AZ
+193,AZ-SKR,Samkir,AZ
+194,AZ-SM,Sumqayit,AZ
+195,AZ-SMI,Samaxi,AZ
+196,AZ-SMX,Samux,AZ
+197,AZ-SS,Susa,AZ
+198,AZ-TAR,Tartar,AZ
+199,AZ-TOV,Tovuz,AZ
+200,AZ-UCA,Ucar,AZ
+201,AZ-XA,Xankandi,AZ
+202,AZ-XAC,Xacmaz,AZ
+203,AZ-XAN,Xanlar,AZ
+204,AZ-XCI,Xocali,AZ
+205,AZ-XIZ,Xizi,AZ
+206,AZ-XVD,Xocavand,AZ
+207,AZ-YAR,Yardimli,AZ
+208,AZ-YE,Yevlax,AZ
+209,AZ-ZAN,Zangilan,AZ
+210,AZ-ZAQ,Zaqatala,AZ
+211,AZ-ZAR,Zardab,AZ
+212,BA-BIH,Federacija Bosna i Hercegovina,BA
+213,BA-SRP,Republika Srpska,BA
+214,BB-01,Christ Church,BB
+215,BB-02,Saint Andrew,BB
+216,BB-03,Saint George,BB
+217,BB-04,Saint James,BB
+218,BB-05,Saint John,BB
+219,BB-06,Saint Joseph,BB
+220,BB-07,Saint Lucy,BB
+221,BB-08,Saint Michael,BB
+222,BB-09,Saint Peter,BB
+223,BB-10,Saint Philip,BB
+224,BB-11,Saint Thomas,BB
+225,BD-1,Barisal Division,BD
+226,BD-2,Chittagong Division,BD
+227,BD-3,Dhaka Division,BD
+228,BD-4,Khulna Division,BD
+229,BD-5,Rajshahi Division,BD
+230,BD-6,Sylhet Division,BD
+231,BE-BRU,Brussels-Capital Region,BE
+232,BE-VAN,Antwerp,BE
+233,BE-VBR,Flemish Brabant,BE
+234,BE-VLI,Limburg,BE
+235,BE-VOV,East Flanders,BE
+236,BE-VWV,West Flanders,BE
+237,BE-WBR,Walloon Brabant,BE
+238,BE-WHT,Hainaut,BE
+239,BE-WLG,Liège,BE
+240,BE-WLX,Luxembourg,BE
+241,BE-WNA,Namur,BE
+242,BF-BAL,Bale,BF
+243,BF-BAM,Bam,BF
+244,BF-BAN,Banwa,BF
+245,BF-BAZ,Bazega,BF
+246,BF-BGR,Bougouriba,BF
+247,BF-BLG,Boulgou,BF
+248,BF-BLK,Boulkiemde,BF
+249,BF-COM,Comoe,BF
+250,BF-GAN,Ganzourgou,BF
+251,BF-GNA,Gnagna,BF
+252,BF-GOU,Gourma,BF
+253,BF-HOU,Houet,BF
+254,BF-IOB,Ioba,BF
+255,BF-KAD,Kadiogo,BF
+256,BF-KEN,Kenedougou,BF
+257,BF-KMD,Komondjari,BF
+258,BF-KMP,Kompienga,BF
+259,BF-KOP,Koulpulogo,BF
+260,BF-KOS,Kossi,BF
+261,BF-KOT,Kouritenga,BF
+262,BF-KOW,Kourweogo,BF
+263,BF-LER,Leraba,BF
+264,BF-LOR,Loroum,BF
+265,BF-MOU,Mouhoun,BF
+266,BF-NAM,Namentenga,BF
+267,BF-NAO,Nahouri,BF
+268,BF-NAY,Nayala,BF
+269,BF-NOU,Noumbiel,BF
+270,BF-OUB,Oubritenga,BF
+271,BF-OUD,Oudalan,BF
+272,BF-PAS,Passore,BF
+273,BF-PON,Poni,BF
+274,BF-SEN,Seno,BF
+275,BF-SIS,Siasili,BF
+276,BF-SMT,Sanmatenga,BF
+277,BF-SNG,Sanguie,BF
+278,BF-SOM,Soum,BF
+279,BF-SOR,Sourou,BF
+280,BF-TAP,Tapoa,BF
+281,BF-TUI,Tui,BF
+282,BF-YAG,Yagha,BF
+283,BF-YAT,Yatenga,BF
+284,BF-ZIR,Ziro,BF
+285,BF-ZON,Zondoma,BF
+286,BF-ZOU,Zoundweogo,BF
+287,BG-01,Blagoevgrad Province,BG
+288,BG-02,Burgas Province,BG
+289,BG-03,Varna Province,BG
+290,BG-04,Veliko Tarnovo Province,BG
+291,BG-05,Vidin Province,BG
+292,BG-06,Vraca Province,BG
+293,BG-07,Gabrovo Province,BG
+294,BG-08,Dobric Province,BG
+295,BG-09,Kardzali Province,BG
+296,BG-10,Kyustendil Province,BG
+297,BG-11,Lovec Province,BG
+298,BG-12,Montana Province,BG
+299,BG-13,Pazardzhik Province,BG
+300,BG-14,Pernik Province,BG
+301,BG-15,Pleven Province,BG
+302,BG-16,Plovdiv Province,BG
+303,BG-17,Razgrad Province,BG
+304,BG-18,Ruse Province,BG
+305,BG-19,Silistra Province,BG
+306,BG-20,Sliven Province,BG
+307,BG-21,Smoljan Province,BG
+308,BG-23,Sofia Province,BG
+309,BG-24,Stara Zagora Province,BG
+310,BG-25,Targovishte Province,BG
+311,BG-26,Haskovo Province,BG
+312,BG-27,Sumen Province,BG
+313,BG-28,Jambol Province,BG
+314,BH-13,Capital Governorate,BH
+315,BH-14,Southern Governorate,BH
+316,BH-15,Muharraq Governorate,BH
+317,BH-16,Central Governorate,BH
+318,BH-17,Northern Governorate,BH
+319,BI-BB,Bubanza,BI
+320,BI-BJ,Bujumbura,BI
+321,BI-BR,Bururi,BI
+322,BI-CA,Cankuzo,BI
+323,BI-CI,Cibitoke,BI
+324,BI-GI,Gitega,BI
+325,BI-KR,Karuzi,BI
+326,BI-KY,Kayanza,BI
+327,BI-MA,Makamba,BI
+328,BI-MU,Muramvya,BI
+329,BI-MW,Mwaro,BI
+330,BI-NG,Ngozi,BI
+331,BI-RT,Rutana,BI
+332,BI-RY,Ruyigi,BI
+333,BJ-AK,Atakora,BJ
+334,BJ-AL,Alibori,BJ
+335,BJ-AQ,Atlantique,BJ
+336,BJ-BO,Borgou,BJ
+337,BJ-CO,Collines,BJ
+338,BJ-DO,Donga,BJ
+339,BJ-KO,Kouffo,BJ
+340,BJ-LI,Littoral,BJ
+341,BJ-MO,Mono,BJ
+342,BJ-OU,Oueme,BJ
+343,BJ-PL,Plateau,BJ
+344,BJ-ZO,Zou,BJ
+345,BN-BE,Belait District,BN
+346,BN-BM,Brunei-Muara District,BN
+347,BN-TE,Temburong District,BN
+348,BN-TU,Tutong District,BN
+349,BO-B,El Beni Department,BO
+350,BO-C,Cochabamba Department,BO
+351,BO-H,Chuquisaca Department,BO
+352,BO-L,La Paz Department,BO
+353,BO-N,Pando Department,BO
+354,BO-O,Oruro Department,BO
+355,BO-P,Potosí Department,BO
+356,BO-S,Santa Cruz Department,BO
+357,BO-T,Tarija Department,BO
+358,BR-AC,Acre,BR
+359,BR-AL,Alagoas,BR
+360,BR-AM,Amazonas,BR
+361,BR-AP,Amapá,BR
+362,BR-BA,Bahia,BR
+363,BR-CE,Ceará,BR
+364,BR-DF,Distrito Federal,BR
+365,BR-ES,Espírito Santo,BR
+366,BR-GO,Goiás,BR
+367,BR-MA,Maranhão,BR
+368,BR-MG,Minas Gerais,BR
+369,BR-MS,Mato Grosso do Sul,BR
+370,BR-MT,Mato Grosso,BR
+371,BR-PA,Pará,BR
+372,BR-PB,Paraíba,BR
+373,BR-PE,Pernambuco,BR
+374,BR-PI,Piauí,BR
+375,BR-PR,Paraná,BR
+376,BR-RJ,Rio de Janeiro,BR
+377,BR-RN,Rio Grande do Norte,BR
+378,BR-RO,Rondônia,BR
+379,BR-RR,Roraima,BR
+380,BR-RS,Rio Grande do Sul,BR
+381,BR-SC,Santa Catarina,BR
+382,BR-SE,Sergipe,BR
+383,BR-SP,São Paulo,BR
+384,BR-TO,Tocatins,BR
+385,BS-AC,Acklins and Crooked Islands,BS
+386,BS-BI,Bimini,BS
+387,BS-CI,Cat Island,BS
+388,BS-EX,Exuma,BS
+389,BS-FC,Fresh Creek,BS
+390,BS-FP,Freeport,BS
+391,BS-GH,Governor's Harbour,BS
+392,BS-GT,Green Turtle Cay,BS
+393,BS-HI,Harbour Island,BS
+394,BS-HR,High Rock,BS
+395,BS-IN,Inagua,BS
+396,BS-KB,Kemps Bay,BS
+397,BS-LI,Long Island,BS
+398,BS-MG,Mayaguana,BS
+399,BS-MH,Marsh Harbour,BS
+400,BS-NB,Nicholls Town and Berry Islands,BS
+401,BS-NP,New Providence,BS
+402,BS-RI,Ragged Island,BS
+403,BS-RS,Rock Sound,BS
+404,BS-SP,Sandy Point,BS
+405,BS-SR,San Salvador and Rum Cay,BS
+406,BT-11,Paro,BT
+407,BT-12,Chhukha,BT
+408,BT-13,Ha,BT
+409,BT-14,Samtee,BT
+410,BT-15,Thimphu,BT
+411,BT-21,Tsirang,BT
+412,BT-22,Dagana,BT
+413,BT-23,Punakha,BT
+414,BT-24,Wangdue Phodrang,BT
+415,BT-31,Sarpang,BT
+416,BT-32,Trongsa,BT
+417,BT-33,Bumthang,BT
+418,BT-34,Zhemgang,BT
+419,BT-41,Trashigang,BT
+420,BT-42,Monggar,BT
+421,BT-43,Pemagatshel,BT
+422,BT-44,Lhuentse,BT
+423,BT-45,Samdrup Jongkha,BT
+424,BT-GA,Gasa,BT
+425,BT-TY,Trashi Yangtse,BT
+426,BW-CE,Central District,BW
+427,BW-GH,Ghanzi District,BW
+428,BW-KG,Kgalagadi District,BW
+429,BW-KL,Kgatleng District,BW
+430,BW-KW,Kweneng District,BW
+431,BW-NE,North-East District,BW
+432,BW-NW,North-West District,BW
+433,BW-SE,South-East District,BW
+434,BW-SO,Southern District,BW
+435,BY-BR,Brest Voblast,BY
+436,BY-HO,Homiel Voblast,BY
+437,BY-HR,Hrodna Voblast,BY
+438,BY-MA,Mahilyow Voblast,BY
+439,BY-MI,Minsk Voblast,BY
+440,BY-VI,Vitsebsk Voblast,BY
+441,BZ-BZ,Belize District,BZ
+442,BZ-CY,Cayo District,BZ
+443,BZ-CZL,Corozal District,BZ
+444,BZ-OW,Orange Walk District,BZ
+445,BZ-SC,Stann Creek District,BZ
+446,BZ-TOL,Toledo District,BZ
+447,CA-AB,Alberta,CA
+448,CA-BC,British Columbia,CA
+449,CA-MB,Manitoba,CA
+450,CA-NB,New Brunswick,CA
+451,CA-NL,Newfoundland and Labrador,CA
+452,CA-NS,Nova Scotia,CA
+453,CA-NT,Northwest Territories,CA
+454,CA-NU,Nunavut,CA
+455,CA-ON,Ontario,CA
+456,CA-PE,Prince Edward Island,CA
+457,CA-QC,Quebec,CA
+458,CA-SK,Saskatchewan,CA
+459,CA-YT,Yukon Territory,CA
+460,CD-BC,Bas-Congo Province,CD
+461,CD-BN,Bandundu Province,CD
+462,CD-EQ,Equateur Province,CD
+463,CD-HC,Haut-Congo Province,CD
+464,CD-KA,Katanga Province,CD
+465,CD-KE,Kasai-Oriental Province,CD
+466,CD-KN,Kinshasa Province,CD
+467,CD-KW,Kasai-Occidental Province,CD
+468,CD-MA,Maniema Province,CD
+469,CD-NK,Nord-Kivu Province,CD
+470,CD-OR,Orientale Province,CD
+471,CD-SK,Sud-Kivu Province,CD
+472,CF-AC,Ouham,CF
+473,CF-BB,Bamingui-Bangoran,CF
+474,CF-BGF,Bangui,CF
+475,CF-BK,Basse-Kotto,CF
+476,CF-HK,Haute-Kotto,CF
+477,CF-HM,Haut-Mbomou,CF
+478,CF-HS,Mambéré-Kadéï,CF
+479,CF-KB,Nana-Grébizi,CF
+480,CF-KG,Kémo,CF
+481,CF-LB,Lobaye,CF
+482,CF-MB,Mbomou,CF
+483,CF-MP,Ombella-M'Poko,CF
+484,CF-NM,Nana-Mambéré,CF
+485,CF-OP,Ouham-Pendé,CF
+486,CF-SE,Sangha-Mbaéré,CF
+487,CF-UK,Ouaka,CF
+488,CF-VR,Vakaga,CF
+489,CG-11,Bouenza Department,CG
+490,CG-12,Pool Department,CG
+491,CG-13,Sangha Department,CG
+492,CG-14,Plateaux Department,CG
+493,CG-15,Cuvette-Ouest Department,CG
+494,CG-2,Lékoumou Department,CG
+495,CG-5,Kouilou Department,CG
+496,CG-7,Likouala Department,CG
+497,CG-8,Cuvette Department,CG
+498,CG-9,Niari Department,CG
+499,CG-BZV,Brazzaville Department,CG
+500,CH-AG,Canton of Aargau,CH
+501,CH-AI,Canton of Appenzell Innerrhoden,CH
+502,CH-AR,Canton of Appenzell Ausserrhoden,CH
+503,CH-BE,Canton of Berne,CH
+504,CH-BL,Canton of Basel-Country,CH
+505,CH-BS,Canton of Basel-City,CH
+506,CH-FR,Canton of Fribourg,CH
+507,CH-GE,Canton of Geneva,CH
+508,CH-GL,Canton of Glarus,CH
+509,CH-GR,Canton of Grisons,CH
+510,CH-JU,Canton of Jura,CH
+511,CH-LU,Canton of Lucerne,CH
+512,CH-NE,Canton of Neuchâtel,CH
+513,CH-NW,Canton of Nidwalden,CH
+514,CH-OW,Canton of Obwalden,CH
+515,CH-SG,Canton of St. Gallen,CH
+516,CH-SH,Canton of Schaffhausen,CH
+517,CH-SO,Canton of Solothurn,CH
+518,CH-SZ,Canton of Schwyz,CH
+519,CH-TG,Canton of Thurgau,CH
+520,CH-TI,Canton of Ticino,CH
+521,CH-UR,Canton of Uri,CH
+522,CH-VD,Canton of Vaud,CH
+523,CH-VS,Canton of Valais,CH
+524,CH-ZG,Canton of Zug,CH
+525,CH-ZH,Canton of Zurich,CH
+526,CI-01,Lagunes,CI
+527,CI-02,Haut-Sassandra,CI
+528,CI-03,Savanes,CI
+529,CI-04,Vallée du Bandama,CI
+530,CI-05,Moyen-Comoé,CI
+531,CI-06,Dix-Huit Montagnes,CI
+532,CI-07,Lacs,CI
+533,CI-08,Zanzan,CI
+534,CI-09,Bas-Sassandra,CI
+535,CI-10,Denguélé,CI
+536,CI-11,N'zi-Comoé,CI
+537,CI-12,Marahoué,CI
+538,CI-13,Sud-Comoé,CI
+539,CI-14,Worodouqou,CI
+540,CI-15,Sud-Bandama,CI
+541,CI-16,Agnéby,CI
+542,CI-17,Bafing,CI
+543,CI-18,Fromager,CI
+544,CI-19,Moyen-Cavally,CI
+545,CL-AI,Aysén Region,CL
+546,CL-AN,Antofagasta Region,CL
+547,CL-AP,Arica and Parinacota Region,CL
+548,CL-AR,Araucanía Region,CL
+549,CL-AT,Atacama Region,CL
+550,CL-BI,Bío-Bío Region,CL
+551,CL-CO,Coquimbo Region,CL
+552,CL-LI,O'Higgins Region,CL
+553,CL-LL,Los Lagos Region,CL
+554,CL-LR,Los Ríos Region,CL
+555,CL-MA,Magallanes Region,CL
+556,CL-ML,Maule Region,CL
+557,CL-RM,Santiago Metropolitan Region,CL
+558,CL-TA,Tarapacá Region,CL
+559,CL-VS,Valparaíso Region,CL
+560,CM-AD,Adamaoua Region,CM
+561,CM-CE,Centre Region,CM
+562,CM-EN,Far North Region,CM
+563,CM-ES,East Region,CM
+564,CM-LT,Littoral Region,CM
+565,CM-NO,North Region,CM
+566,CM-NW,North-West Region,CM
+567,CM-OU,West Region,CM
+568,CM-SU,South Region,CM
+569,CM-SW,South-West Region,CM
+570,CN-11,Beijing Municipality,CN
+571,CN-12,Tianjin Municipality,CN
+572,CN-13,Hebei Province,CN
+573,CN-14,Shanxi Province,CN
+574,CN-15,Inner Mongolia Autonomous Region,CN
+575,CN-21,Liaoning Province,CN
+576,CN-22,Jilin Province,CN
+577,CN-23,Heilongjiang Province,CN
+578,CN-31,Shanghai Municipality,CN
+579,CN-32,Jiangsu Province,CN
+580,CN-33,Zhejiang Province,CN
+581,CN-34,Anhui Province,CN
+582,CN-35,Fujian Province,CN
+583,CN-36,Jiangxi Province,CN
+584,CN-37,Shandong Province,CN
+585,CN-41,Henan Province,CN
+586,CN-42,Hubei Province,CN
+587,CN-43,Hunan Province,CN
+588,CN-44,Guangdong Province,CN
+589,CN-45,Guangxi Autonomous Region,CN
+590,CN-46,Hainan Province,CN
+591,CN-50,Chongqing Municipality,CN
+592,CN-51,Sichuan Province,CN
+593,CN-52,Guizhou Province,CN
+594,CN-53,Yunnan Province,CN
+595,CN-54,Tibet Autonomous Region,CN
+596,CN-61,Shaanxi Province,CN
+597,CN-62,Gansu Province,CN
+598,CN-63,Qinghai Province,CN
+599,CN-64,Ningxia Autonomous Region,CN
+600,CN-65,Xinjiang Autonomous Region,CN
+601,CN-71,Taiwan (disputed),CN
+602,CN-91,Hong Kong Special Administrative Region,CN
+603,CN-92,Macau Special Administrative Region,CN
+604,CO-AMA,Amazonas Department,CO
+605,CO-ANT,Antioquía Department,CO
+606,CO-ARA,Arauca Department,CO
+607,CO-ATL,Atlántico Department,CO
+608,CO-BOL,Bolívar Department,CO
+609,CO-BOY,Boyacá Department,CO
+610,CO-CAL,Caldas Department,CO
+611,CO-CAQ,Caquetá Department,CO
+612,CO-CAS,Casanare Department,CO
+613,CO-CAU,Cauca Department,CO
+614,CO-CES,César Department,CO
+615,CO-CHO,Chocó Department,CO
+616,CO-COR,Córdoba Department,CO
+617,CO-CUN,Cundinamarca Department,CO
+618,CO-DC,Distrito Capital de Bogotá Department,CO
+619,CO-GUA,Guainía Department,CO
+620,CO-GUV,Guaviare Department,CO
+621,CO-HUI,Huila Department,CO
+622,CO-LAG,La Guajira Department,CO
+623,CO-MAG,Magdalena Department,CO
+624,CO-MET,Meta Department,CO
+625,CO-NAR,Nariño Department,CO
+626,CO-NSA,Norte de Santander Department,CO
+627,CO-PUT,Putumayo Department,CO
+628,CO-QUI,Quindio Department,CO
+629,CO-RIS,Risaralda Department,CO
+630,CO-SAN,Santander Department,CO
+631,CO-SAP,"San Andrés, Providencia y Santa Catalina Department",CO
+632,CO-SUC,Sucre Department,CO
+633,CO-TOL,Tolima Department,CO
+634,CO-VAC,Valle del Cauca Department,CO
+635,CO-VAU,Vaupés Department,CO
+636,CO-VID,Vichada Department,CO
+637,CR-A,Alajuela,CR
+638,CR-C,Cartago,CR
+639,CR-G,Guanacaste,CR
+640,CR-H,Heredia,CR
+641,CR-L,Limon,CR
+642,CR-P,Puntarenas,CR
+643,CR-SJ,San Jose,CR
+644,CU-01,Pinar del Río,CU
+645,CU-02,La Habana,CU
+646,CU-03,Ciudad de la Habana,CU
+647,CU-04,Matanzas,CU
+648,CU-05,Villa Clara,CU
+649,CU-06,Cienfuegos,CU
+650,CU-07,Sancti Spíritus,CU
+651,CU-08,Ciego de Ávila,CU
+652,CU-09,Camagüey,CU
+653,CU-10,Las Tunas,CU
+654,CU-11,Holguín,CU
+655,CU-12,Granma,CU
+656,CU-13,Santiago de Cuba,CU
+657,CU-14,Guantánamo,CU
+658,CU-99,Isla de la Juventud,CU
+659,CU-CA,Ciego de Avila,CU
+660,CU-CG,Camagoey,CU
+661,CU-HO,Holgun,CU
+662,CU-IJ,Municipio Especial Isla de la Juventud,CU
+663,CU-PR,Pinar del Roo,CU
+664,CU-SS,Sancti Spritus,CU
+665,CV-B,Barlavento Islands,CV
+666,CV-S,Sotavento Islands,CV
+667,CY-01,Kyrenia District,CY
+668,CY-02,Nicosia District,CY
+669,CY-03,Famagusta District,CY
+670,CY-04,Larnarca District,CY
+671,CY-05,Limassol District,CY
+672,CY-06,Paphos District,CY
+673,CZ-JC,South Bohemian Region,CZ
+674,CZ-JM,South Moravian Region,CZ
+675,CZ-KA,Carlsbad Region,CZ
+676,CZ-KR,Hradec Králové Region,CZ
+677,CZ-LI,Liberec Region,CZ
+678,CZ-MO,Moravian-Silesian Region,CZ
+679,CZ-OL,Olomouc Region,CZ
+680,CZ-PA,Pardubice Region,CZ
+681,CZ-PL,Plzeň Region,CZ
+682,CZ-PR,Prague (capital city),CZ
+683,CZ-ST,Central Bohemian Region,CZ
+684,CZ-US,Ústí nad Labem Region,CZ
+685,CZ-VY,Vysočina Region,CZ
+686,CZ-ZL,Zlin Region,CZ
+687,DE-BE,Berlin,DE
+688,DE-BR,Brandenburg,DE
+689,DE-BW,Baden-Württemberg,DE
+690,DE-BY,Bavaria,DE
+691,DE-HB,Bremen,DE
+692,DE-HE,Hesse,DE
+693,DE-HH,Hamburg,DE
+694,DE-MV,Mecklenburg-Vorpommern,DE
+695,DE-NI,Lower Saxony,DE
+696,DE-NW,North Rhine-Westphalia,DE
+697,DE-RP,Rhineland-Palatinate,DE
+698,DE-SH,Schleswig-Holstein,DE
+699,DE-SL,Saarland,DE
+700,DE-SN,Saxony,DE
+701,DE-ST,Saxony-Anhalt,DE
+702,DE-TH,Thuringia,DE
+703,DJ-AR,Arta,DJ
+704,DJ-AS,Ali Sabiah,DJ
+705,DJ-DI,Dikhil,DJ
+706,DJ-DJ,Djibouti,DJ
+707,DJ-OB,Obock,DJ
+708,DJ-TA,Tadjoura,DJ
+709,DK-81,North Jutland,DK
+710,DK-82,Central Jutland,DK
+711,DK-83,South Denmark,DK
+712,DK-84,Capital Region,DK
+713,DK-85,Zealand,DK
+714,DM-02,Saint Andrew Parish,DM
+715,DM-03,Saint David Parish,DM
+716,DM-04,Saint George Parish,DM
+717,DM-05,Saint John Parish,DM
+718,DM-06,Saint Joseph Parish,DM
+719,DM-07,Saint Luke Parish,DM
+720,DM-08,Saint Mark Parish,DM
+721,DM-09,Saint Patrick Parish,DM
+722,DM-10,Saint Paul Parish,DM
+723,DM-11,Saint Peter Parish,DM
+724,DO-01,Distrito Nacional,DO
+725,DO-02,Azua Province,DO
+726,DO-03,Baoruco Province,DO
+727,DO-04,Barahona Province,DO
+728,DO-05,Dajabón Province,DO
+729,DO-06,Duarte Province,DO
+730,DO-07,Elías Piña Province,DO
+731,DO-08,El Seybo Province,DO
+732,DO-09,Espaillat Province,DO
+733,DO-10,Independencia Province,DO
+734,DO-11,La Altagracia Province,DO
+735,DO-12,La Romana Province,DO
+736,DO-13,La Vega Province,DO
+737,DO-14,María Trinidad Sánchez Province,DO
+738,DO-15,Monte Cristi Province,DO
+739,DO-16,Pedernales Province,DO
+740,DO-17,Peravia Province,DO
+741,DO-18,Puerto Plata Province,DO
+742,DO-19,Hermanas Mirabal Province,DO
+743,DO-20,Samaná Province,DO
+744,DO-21,San Cristóbal Province,DO
+745,DO-22,San Juan Province,DO
+746,DO-23,San Pedro de Macorís Province,DO
+747,DO-24,Sánchez Ramírez Province,DO
+748,DO-25,Santiago de los Caballeros Province,DO
+749,DO-26,Santiago Rodríguez Province,DO
+750,DO-27,Valverde Province,DO
+751,DO-28,Monseñor Nouel Province,DO
+752,DO-29,Monte Plata Province,DO
+753,DO-30,Hato Mayor Province,DO
+754,DZ-01,Adrar Province,DZ
+755,DZ-02,Chlef Province,DZ
+756,DZ-03,Laghouat Province,DZ
+757,DZ-04,Oum el Bouaghi Province,DZ
+758,DZ-05,Batna Province,DZ
+759,DZ-06,Béjaïa Province,DZ
+760,DZ-07,Biskra Province,DZ
+761,DZ-08,Béchar Province,DZ
+762,DZ-09,Blida Province,DZ
+763,DZ-10,Bouira Province,DZ
+764,DZ-11,Tamanghasset Province,DZ
+765,DZ-12,Tébessa Province,DZ
+766,DZ-13,Tlemcen Province,DZ
+767,DZ-14,Tiaret Province,DZ
+768,DZ-15,Tizi Ouzou Province,DZ
+769,DZ-16,Algiers Province,DZ
+770,DZ-17,Djelfa Province,DZ
+771,DZ-18,Jijel Province,DZ
+772,DZ-19,Sétif Province,DZ
+773,DZ-20,Saïda Province,DZ
+774,DZ-21,Skikda Province,DZ
+775,DZ-22,Sidi Bel Abbes Province,DZ
+776,DZ-23,Annaba Province,DZ
+777,DZ-24,Guelma Province,DZ
+778,DZ-25,Constantine Province,DZ
+779,DZ-26,Médéa Province,DZ
+780,DZ-27,Mostaganem Province,DZ
+781,DZ-28,M'Sila Province,DZ
+782,DZ-29,Mascara Province,DZ
+783,DZ-30,Ouargla Province,DZ
+784,DZ-31,Oran Province,DZ
+785,DZ-32,El Bayadh Province,DZ
+786,DZ-33,Illizi Province,DZ
+787,DZ-34,Bordj Bou Arréridj Province,DZ
+788,DZ-35,Boumerdès Province,DZ
+789,DZ-36,El Tarf Province,DZ
+790,DZ-37,Tindouf Province,DZ
+791,DZ-38,Tissemsilt Province,DZ
+792,DZ-39,El Oued Province,DZ
+793,DZ-40,Khenchela Province,DZ
+794,DZ-41,Souk Ahras Province,DZ
+795,DZ-42,Tipaza Province,DZ
+796,DZ-43,Mila Province,DZ
+797,DZ-44,Aïn Defla Province,DZ
+798,DZ-45,Naama Province,DZ
+799,DZ-46,Aïn Témouchent Province,DZ
+800,DZ-47,Ghardaïa Province,DZ
+801,DZ-48,Relizane Province,DZ
+802,EC-A,Azuay Province,EC
+803,EC-B,Bolivar Province,EC
+804,EC-C,Carchi Province,EC
+805,EC-D,Orellana Province,EC
+806,EC-E,Esmeraldas Province,EC
+807,EC-F,Canar Province,EC
+808,EC-G,Guayas Province,EC
+809,EC-H,Chimborazo Province,EC
+810,EC-I,Imbabura Province,EC
+811,EC-L,Loja Province,EC
+812,EC-M,Manabi Province,EC
+813,EC-N,Napo Province,EC
+814,EC-O,El Oro Province,EC
+815,EC-P,Pichincha Province,EC
+816,EC-R,Los Rios Province,EC
+817,EC-S,Morona-Santiago Province,EC
+818,EC-T,Tungurahua Province,EC
+819,EC-U,Sucumbios Province,EC
+820,EC-W,Galapagos Province,EC
+821,EC-X,Cotopaxi Province,EC
+822,EC-Y,Pastaza Province,EC
+823,EC-Z,Zamora-Chinchipe Province,EC
+824,EE-37,Harju County,EE
+825,EE-39,Hiiu County,EE
+826,EE-44,Ida-Viru County,EE
+827,EE-49,Jõgeva County,EE
+828,EE-51,Järva County,EE
+829,EE-57,Lääne County,EE
+830,EE-59,Lääne-Viru County,EE
+831,EE-65,Põlva County,EE
+832,EE-67,Pärnu County,EE
+833,EE-70,Rapla County,EE
+834,EE-74,Saare County,EE
+835,EE-7B,Tartu County,EE
+836,EE-82,Valga County,EE
+837,EE-84,Viljandi County,EE
+838,EE-86,Võru County,EE
+839,EG-ALX,Alexandria Governorate,EG
+840,EG-ASN,Aswan Governorate,EG
+841,EG-AST,Asyut Governorate,EG
+842,EG-BA,Red Sea Governorate,EG
+843,EG-BH,Beheira Governorate,EG
+844,EG-BNS,Beni Suef Governorate,EG
+845,EG-C,Cairo Governorate,EG
+846,EG-DK,Dakahlia Governorate,EG
+847,EG-DT,Damietta Governorate,EG
+848,EG-FYM,Faiyum Governorate,EG
+849,EG-GH,Gharbia Governorate,EG
+850,EG-GZ,Giza Governorate,EG
+851,EG-IS,Ismailia Governorate,EG
+852,EG-JS,South Sinai Governorate,EG
+853,EG-KB,Qalyubia Governorate,EG
+854,EG-KFS,Kafr el-Sheikh Governorate,EG
+855,EG-KN,Qena Governorate,EG
+856,EG-MN,Minya Governorate,EG
+857,EG-MNF,Monufia Governorate,EG
+858,EG-MT,Matruh Governorate,EG
+859,EG-PTS,Port Said Governorate,EG
+860,EG-SHG,Sohag Governorate,EG
+861,EG-SHR,Sharqia Governorate,EG
+862,EG-SIN,North Sinai Governorate,EG
+863,EG-SUZ,Suez Governorate,EG
+864,EG-WAD,New Valley Governorate,EG
+865,ER-AN,Anseba,ER
+866,ER-DK,Debubawi Keyih Bahri,ER
+867,ER-DU,Debub,ER
+868,ER-GB,Gash-Barka,ER
+869,ER-MA,Maakel,ER
+870,ER-SK,Semenawi Keyih Bahri,ER
+871,ES-A,Alicante,ES
+872,ES-AB,Albacete,ES
+873,ES-AL,Almería,ES
+874,ES-AN,Andalucía,ES
+875,ES-AR,Aragón,ES
+876,ES-AV,Ávila,ES
+877,ES-B,Barcelona,ES
+878,ES-BA,Badajoz,ES
+879,ES-BI,Vizcaya,ES
+880,ES-BU,Burgos,ES
+881,ES-C,La Coruña,ES
+882,ES-CA,Cádiz,ES
+883,ES-CC,Cáceres,ES
+884,ES-CE,Ceuta,ES
+885,ES-CL,Castilla y León,ES
+886,ES-CM,Castilla-La Mancha,ES
+887,ES-CN,Canary Islands,ES
+888,ES-CR,Ciudad Real,ES
+889,ES-CS,Castellón,ES
+890,ES-CT,Catalonia,ES
+891,ES-CU,Cuenca,ES
+892,ES-EX,Extremadura,ES
+893,ES-GA,Galicia,ES
+894,ES-GC,Las Palmas,ES
+895,ES-GE,Girona,ES
+896,ES-GR,Granada,ES
+897,ES-GU,Guadalajara,ES
+898,ES-H,Huelva,ES
+899,ES-HU,Huesca,ES
+900,ES-IB,Baleares,ES
+901,ES-J,Jaén,ES
+902,ES-L,Lleida,ES
+903,ES-LE,León,ES
+904,ES-LO,La Rioja,ES
+905,ES-LU,Lugo,ES
+906,ES-M,Madrid,ES
+907,ES-MA,Málaga,ES
+908,ES-ML,Melilla,ES
+909,ES-MU,Murcia,ES
+910,ES-NA,Navarra,ES
+911,ES-O,Asturias,ES
+912,ES-OR,Ourense,ES
+913,ES-P,Palencia,ES
+914,ES-PM,Baleares,ES
+915,ES-PO,Pontevedra,ES
+916,ES-PV,Basque Country,ES
+917,ES-S,Cantabria,ES
+918,ES-SA,Salamanca,ES
+919,ES-SE,Sevilla,ES
+920,ES-SG,Segovia,ES
+921,ES-SO,Soria,ES
+922,ES-SS,Guipúzcoa,ES
+923,ES-T,Tarragona,ES
+924,ES-TE,Teruel,ES
+925,ES-TF,Santa Cruz de Tenerife,ES
+926,ES-V,Valencia,ES
+927,ES-VA,Valladolid,ES
+928,ES-VI,Álava,ES
+929,ES-Z,Zaragoza,ES
+930,ES-ZA,Zamora,ES
+931,ET-AA,Addis Ababa,ET
+932,ET-AF,Afar,ET
+933,ET-AM,Amara,ET
+934,ET-BE,Benshangul-Gumaz,ET
+935,ET-DD,Dire Dawa,ET
+936,ET-GA,Gambela Peoples,ET
+937,ET-HA,Harari People,ET
+938,ET-OR,Oromia,ET
+939,ET-SN,"Southern Nations, Nationalities and Peoples",ET
+940,ET-SO,Somali,ET
+941,ET-TI,Tigrai,ET
+942,FI-AL,Åland Islands,FI
+943,FI-ES,Southern Finland,FI
+944,FI-IS,Eastern Finland,FI
+945,FI-LL,Lapland,FI
+946,FI-LS,Western Finland,FI
+947,FI-OL,Oulu,FI
+948,FJ-C,Central,FJ
+949,FJ-E,Eastern,FJ
+950,FJ-N,Northern,FJ
+951,FJ-R,Rotuma,FJ
+952,FJ-W,Western,FJ
+953,FM-KSA,Kosrae State,FM
+954,FM-PNI,Pohnpei State,FM
+955,FM-TRK,Chuuk State,FM
+956,FM-YAP,Yap State,FM
+957,FR-A,Alsace,FR
+958,FR-B,Aquitaine,FR
+959,FR-C,Auvergne,FR
+960,FR-D,Burgundy,FR
+961,FR-E,Brittany,FR
+962,FR-F,Centre,FR
+963,FR-G,Champagne-Ardenne,FR
+964,FR-H,Corsica,FR
+965,FR-I,Franche-Comté,FR
+966,FR-J,Île-de-France,FR
+967,FR-K,Languedoc-Roussillon,FR
+968,FR-L,Limousin,FR
+969,FR-M,Lorraine,FR
+970,FR-N,Midi-Pyrénées,FR
+971,FR-O,Nord-Pas-de-Calais,FR
+972,FR-P,Lower Normandy,FR
+973,FR-Q,Upper Normandy,FR
+974,FR-R,Pays-de-la-Loire,FR
+975,FR-S,Picardie,FR
+976,FR-T,Poitou-Charentes,FR
+977,FR-U,Provence-Alpes-Côte-d'Azur,FR
+978,FR-V,Rhône Alpes,FR
+979,GA-1,Estuaire Province,GA
+980,GA-2,Haut-Ogooué Province,GA
+981,GA-3,Moyen-Ogooué Province,GA
+982,GA-4,Ngounié Province,GA
+983,GA-5,Nyanga Province,GA
+984,GA-6,Ogooué-Ivindo Province,GA
+985,GA-7,Ogooué-Lolo Province,GA
+986,GA-8,Ogooué-Maritime Province,GA
+987,GA-9,Woleu-Ntem Province,GA
+988,GB-ENG,England,GB
+989,GB-NIR,Northern Ireland,GB
+990,GB-SCT,Scotland,GB
+991,GB-WLS,Wales,GB
+992,GD-AN,Saint Andrew,GD
+993,GD-DA,Saint David,GD
+994,GD-GE,Saint George,GD
+995,GD-JO,Saint John,GD
+996,GD-MA,Saint Mark,GD
+997,GD-PA,Saint Patrick,GD
+998,GE-AB,Autonomous Republic of Abkhazia,GE
+999,GE-AJ,Autonomous Republic of Adjara,GE
+1000,GE-GU,Guria,GE
+1001,GE-IM,Imereti,GE
+1002,GE-KA,Kakheti,GE
+1003,GE-KK,Kvemo Kartli,GE
+1004,GE-MM,Mtskheta-Mtianeti,GE
+1005,GE-RL,Racha-Lechkhumi and Kvemo Svaneti,GE
+1006,GE-SJ,Samtskhe-Javakheti,GE
+1007,GE-SK,Shida Kartli,GE
+1008,GE-SZ,Samegrelo-Zemo Svaneti,GE
+1009,GE-TB,Tbilisi,GE
+1010,GF-CY,Cayenne,GF
+1011,GF-SL,Saint-Laurent-du-Maroni,GF
+1012,GH-AA,Greater Accra Region,GH
+1013,GH-AH,Ashanti Region,GH
+1014,GH-BA,Brong-Ahafo Region,GH
+1015,GH-CP,Central Region,GH
+1016,GH-EP,Eastern Region,GH
+1017,GH-NP,Northern Region,GH
+1018,GH-TV,Volta Region,GH
+1019,GH-UE,Upper East Region,GH
+1020,GH-UW,Upper West Region,GH
+1021,GH-WP,Western Region,GH
+1022,GM-B,Banjul,GM
+1023,GM-C,Central River,GM
+1024,GM-L,Lower River,GM
+1025,GM-M,MacCarthy Island,GM
+1026,GM-N,North Bank,GM
+1027,GM-U,Upper River,GM
+1028,GM-W,Western,GM
+1029,GN-B,Boké Region,GN
+1030,GN-C,Conakry Special Zone,GN
+1031,GN-D,Kindia Region,GN
+1032,GN-F,Faranah Region,GN
+1033,GN-K,Kankan Region,GN
+1034,GN-L,Labé Region,GN
+1035,GN-M,Mamou Region,GN
+1036,GN-N,Nzérékoré Region,GN
+1037,GQ-AN,Annobon,GQ
+1038,GQ-BN,Bioko Norte,GQ
+1039,GQ-BS,Bioko Sur,GQ
+1040,GQ-C,Region Continental,GQ
+1041,GQ-CS,Centro Sur,GQ
+1042,GQ-I,Region Insular,GQ
+1043,GQ-KN,Kie-Ntem,GQ
+1044,GQ-LI,Litoral,GQ
+1045,GQ-WN,Wele-Nzas,GQ
+1046,GR-01,Aetolia-Acarnania,GR
+1047,GR-03,Boeotia,GR
+1048,GR-04,Euboea,GR
+1049,GR-05,Evrytania,GR
+1050,GR-06,Phthiotis,GR
+1051,GR-07,Phocis,GR
+1052,GR-11,Argolis,GR
+1053,GR-12,Arcadia,GR
+1054,GR-13,Achaea,GR
+1055,GR-14,Ilia,GR
+1056,GR-15,Corinthia,GR
+1057,GR-16,Laconia,GR
+1058,GR-17,Messinia,GR
+1059,GR-21,Zakynthos,GR
+1060,GR-22,Corfu,GR
+1061,GR-23,Kefallinia,GR
+1062,GR-24,Lefkada,GR
+1063,GR-31,Arta,GR
+1064,GR-32,Thesprotia,GR
+1065,GR-33,Ioannina,GR
+1066,GR-34,Preveza,GR
+1067,GR-41,Karditsa,GR
+1068,GR-42,Larissa,GR
+1069,GR-43,Magnesia,GR
+1070,GR-44,Trikala,GR
+1071,GR-51,Grevena,GR
+1072,GR-52,Drama,GR
+1073,GR-53,Imathia,GR
+1074,GR-54,Thessaloniki,GR
+1075,GR-55,Kavala,GR
+1076,GR-56,Kastoria,GR
+1077,GR-57,Kilkis,GR
+1078,GR-58,Kozani,GR
+1079,GR-59,Pella,GR
+1080,GR-62,Serres,GR
+1081,GR-63,Florina,GR
+1082,GR-64,Chalcidice,GR
+1083,GR-69,Mount Athos,GR
+1084,GR-71,Evros,GR
+1085,GR-72,Xanthi,GR
+1086,GR-73,Rhodope,GR
+1087,GR-81,Dodecanese,GR
+1088,GR-82,Cyclades,GR
+1089,GR-83,Lesbos,GR
+1090,GR-84,Samos,GR
+1091,GR-85,Chios,GR
+1092,GR-91,Irakleion,GR
+1093,GR-92,Lasithion,GR
+1094,GR-93,Rethymnon,GR
+1095,GR-94,Chania,GR
+1096,GR-A1,Attica,GR
+1097,GT-AV,Alta Verapez,GT
+1098,GT-BV,Baja Verapez,GT
+1099,GT-CM,Chimaltenango,GT
+1100,GT-CQ,Chiquimula,GT
+1101,GT-ES,Escuintla,GT
+1102,GT-GU,Guatemala,GT
+1103,GT-HU,Huehuetenango,GT
+1104,GT-IZ,Izabal,GT
+1105,GT-JA,Jalapa,GT
+1106,GT-JU,Jutiapa,GT
+1107,GT-PE,Peten,GT
+1108,GT-PR,El Progreso,GT
+1109,GT-QC,Quiche,GT
+1110,GT-QZ,Quetzaltenango,GT
+1111,GT-RE,Reta.thuleu,GT
+1112,GT-SA,Sacatepequez,GT
+1113,GT-SM,San Marcos,GT
+1114,GT-SO,Solol6,GT
+1115,GT-SR,Santa Rosa,GT
+1116,GT-SU,Suchitepequez,GT
+1117,GT-TO,Totonicapan,GT
+1118,GT-ZA,Zacapa,GT
+1119,GW-BA,Bafatá Region,GW
+1120,GW-BL,Bolama Region,GW
+1121,GW-BM,Biombo Region,GW
+1122,GW-BS,Bissau Autonomous Sector,GW
+1123,GW-CA,Cacheu Region,GW
+1124,GW-GA,Gabu Region,GW
+1125,GW-OI,Oio Region,GW
+1126,GW-QU,Quloara Region,GW
+1127,GW-TO,Tombali Region,GW
+1128,GY-BA,Barima-Waini,GY
+1129,GY-CU,Cuyuni-Mazaruni,GY
+1130,GY-DE,Demerara-Mahaica,GY
+1131,GY-EB,East Berbice-Corentyne,GY
+1132,GY-ES,Essequibo Islands-West Demerara,GY
+1133,GY-MA,Mahaica-Berbice,GY
+1134,GY-PM,Pomeroon-Supenaam,GY
+1135,GY-PT,Potaro-Siparuni,GY
+1136,GY-UD,Upper Demerara-Berbice,GY
+1137,GY-UT,Upper Takutu-Upper Essequibo,GY
+1138,HN-AT,Atlantida,HN
+1139,HN-CH,Choluteca,HN
+1140,HN-CL,Colon,HN
+1141,HN-CM,Comayagua,HN
+1142,HN-CP,Copan,HN
+1143,HN-CR,Cortes,HN
+1144,HN-EP,El Paraiso,HN
+1145,HN-FM,Francisco Morazan,HN
+1146,HN-GD,Gracias a Dios,HN
+1147,HN-IB,Islas de la Bahia,HN
+1148,HN-IN,Intibuca,HN
+1149,HN-LE,Lempira,HN
+1150,HN-LP,La Paz,HN
+1151,HN-OC,Ocotepeque,HN
+1152,HN-OL,Olancho,HN
+1153,HN-SB,Santa Barbara,HN
+1154,HN-VA,Valle,HN
+1155,HN-YO,Yoro,HN
+1156,HR-01,Zagreb County,HR
+1157,HR-02,Krapina-Zagorje County,HR
+1158,HR-03,Sisak-Moslavina County,HR
+1159,HR-04,Karlovac County,HR
+1160,HR-05,Varaždin County,HR
+1161,HR-06,Koprivnica-Križevci County,HR
+1162,HR-07,Bjelovar-Bilogora County,HR
+1163,HR-08,Primorje-Gorski Kotar County,HR
+1164,HR-09,Lika-Senj County,HR
+1165,HR-10,Virovitica-Podravina County,HR
+1166,HR-11,Požega-Slavonia County,HR
+1167,HR-12,Brod-Posavina County,HR
+1168,HR-13,Zadar County,HR
+1169,HR-14,Osijek-Baranja County,HR
+1170,HR-15,Šibenik-Knin County,HR
+1171,HR-16,Vukovar-Srijem County,HR
+1172,HR-17,Split-Dalmatia County,HR
+1173,HR-18,Istria County,HR
+1174,HR-19,Dubrovnik-Neretva County,HR
+1175,HR-20,Međimurje County,HR
+1176,HR-21,Zagreb (city),HR
+1177,HT-AR,Artibonite Department,HT
+1178,HT-CE,Centre Department,HT
+1179,HT-GA,Grande'Anse Department,HT
+1180,HT-ND,Nord Department,HT
+1181,HT-NE,Nord-Est Department,HT
+1182,HT-NI,Nippes Department,HT
+1183,HT-NO,Nord-Ouest Department,HT
+1184,HT-OU,Ouest Department,HT
+1185,HT-SD,Sud Department,HT
+1186,HT-SE,Sud-Est Department,HT
+1187,HU-BA,Baranya,HU
+1188,HU-BC,Békéscsaba,HU
+1189,HU-BE,Békés,HU
+1190,HU-BK,Bács-Kiskun,HU
+1191,HU-BU,Budapest,HU
+1192,HU-BZ,Borsod-Abaúj-Zemplén,HU
+1193,HU-CS,Csongrád,HU
+1194,HU-DE,Debrecen,HU
+1195,HU-DU,Dunaújváros,HU
+1196,HU-EG,Eger,HU
+1197,HU-FE,Fejér,HU
+1198,HU-GS,Győr-Moson-Sopron,HU
+1199,HU-GY,Győr,HU
+1200,HU-HB,Hajdu-Bihar,HU
+1201,HU-HE,Heves,HU
+1202,HU-HV,Hódmezővásárhely,HU
+1203,HU-JN,Jász-Nagykun-Szolnok,HU
+1204,HU-KE,Komárom-Esztergom,HU
+1205,HU-KM,Kecskemét,HU
+1206,HU-KV,Kaposvár,HU
+1207,HU-MI,Miskolc,HU
+1208,HU-NK,Nagykanizsa,HU
+1209,HU-NO,Nográd,HU
+1210,HU-NY,Nyiregyháza,HU
+1211,HU-PE,Pest,HU
+1212,HU-PS,Pécs,HU
+1213,HU-SD,Szeged,HU
+1214,HU-SF,Székesfehérvár,HU
+1215,HU-SH,Szombathely,HU
+1216,HU-SK,Szolnok,HU
+1217,HU-SN,Sopron,HU
+1218,HU-SO,Somogy,HU
+1219,HU-SS,Szekszárd,HU
+1220,HU-ST,Salgótarján,HU
+1221,HU-SZ,Szabolcs-Szatmár-Bereg,HU
+1222,HU-TB,Tatabánya,HU
+1223,HU-TO,Tolna,HU
+1224,HU-VA,Vas,HU
+1225,HU-VE,Veszprém,HU
+1226,HU-ZA,Zala,HU
+1227,HU-ZE,Zalaegerszeg,HU
+1228,ID-AC,Aceh,ID
+1229,ID-BA,Bali,ID
+1230,ID-BB,Bangka Belitung,ID
+1231,ID-BE,Bengkulu,ID
+1232,ID-BT,Banten,ID
+1233,ID-GO,Gorontalo,ID
+1234,ID-JA,Jambi,ID
+1235,ID-JB,Jawa Barat,ID
+1236,ID-JI,Jawa Timur,ID
+1237,ID-JK,Jakarta Raya,ID
+1238,ID-JT,Jawa Tengah,ID
+1239,ID-KB,Kalimantan Barat,ID
+1240,ID-KI,East Kalimantan,ID
+1241,ID-KR,Kepulauan Riau,ID
+1242,ID-KS,Kalimantan Selatan,ID
+1243,ID-KT,Central Kalimantan,ID
+1244,ID-KU,North Kalimantan,ID
+1245,ID-LA,Lampung,ID
+1246,ID-MA,Maluku,ID
+1247,ID-MU,Maluku Utara,ID
+1248,ID-NB,Nusa Tenggara Barat,ID
+1249,ID-NT,Nusa Tenggara Timur,ID
+1250,ID-PA,Papua,ID
+1251,ID-PB,West Papua,ID
+1252,ID-RI,Riau,ID
+1253,ID-SA,Sulawesi Utara,ID
+1254,ID-SB,Sumatra Barat,ID
+1255,ID-SG,Sulawesi Tenggara,ID
+1256,ID-SN,Sulawesi Selatan,ID
+1257,ID-SS,Sumatra Selatan,ID
+1258,ID-ST,Sulawesi Tengah,ID
+1259,ID-SU,Sumatera Utara,ID
+1260,ID-YO,Yogyakarta,ID
+1261,IE-C,County Cork,IE
+1262,IE-CE,County Clare,IE
+1263,IE-CN,County Cavan,IE
+1264,IE-CW,County Carlow,IE
+1265,IE-D,County Dublin,IE
+1266,IE-DL,County Donegal,IE
+1267,IE-G,County Galway,IE
+1268,IE-KE,County Kildare,IE
+1269,IE-KK,County Kilkenny,IE
+1270,IE-KY,County Kerry,IE
+1271,IE-LD,County Longford,IE
+1272,IE-LH,County Louth,IE
+1273,IE-LK,County Limerick,IE
+1274,IE-LM,County Leitrim,IE
+1275,IE-LS,County Laois,IE
+1276,IE-MH,County Meath,IE
+1277,IE-MN,County Monaghan,IE
+1278,IE-MO,County Mayo,IE
+1279,IE-OY,County Offaly,IE
+1280,IE-RN,County Roscommon,IE
+1281,IE-SO,County Sligo,IE
+1282,IE-TA,County Tipperary,IE
+1283,IE-WD,County Waterford,IE
+1284,IE-WH,County Westmeath,IE
+1285,IE-WW,County Wicklow,IE
+1286,IE-WX,County Wexford,IE
+1287,IL-D,Southern District,IL
+1288,IL-HA,Haifa District,IL
+1289,IL-JM,Jerusalem District,IL
+1290,IL-M,Central District,IL
+1291,IL-TA,Tel Aviv District,IL
+1292,IL-Z,Northern District,IL
+1293,IN-AN,Andaman and Nicobar Islands,IN
+1294,IN-AP,Andhra Pradesh,IN
+1295,IN-AR,Arunachal Pradesh,IN
+1296,IN-AS,Assam,IN
+1297,IN-BR,Bihar,IN
+1298,IN-CH,Chandigarh,IN
+1299,IN-CT,Chhattisgarh,IN
+1300,IN-DD,Daman and Diu,IN
+1301,IN-DL,Delhi,IN
+1302,IN-DN,Dadra and Nagar Haveli,IN
+1303,IN-GA,Goa,IN
+1304,IN-GJ,Gujarat,IN
+1305,IN-HP,Himachal Pradesh,IN
+1306,IN-HR,Haryana,IN
+1307,IN-JH,Jharkhand,IN
+1308,IN-JK,Jammu and Kashmir,IN
+1309,IN-KA,Karnataka,IN
+1310,IN-KL,Kerala,IN
+1311,IN-LD,Lakshadweep,IN
+1312,IN-ML,Meghalaya,IN
+1313,IN-MM,Maharashtra,IN
+1314,IN-MN,Manipur,IN
+1315,IN-MP,Madhya Pradesh,IN
+1316,IN-MZ,Mizoram,IN
+1317,IN-NL,Nagaland,IN
+1318,IN-OR,Odisha,IN
+1319,IN-PB,Punjab,IN
+1320,IN-PY,Pondicherry,IN
+1321,IN-RJ,Rajasthan,IN
+1322,IN-SK,Sikkim,IN
+1323,IN-TG,Telangana,IN
+1324,IN-TN,Tamil Nadu,IN
+1325,IN-TR,Tripura,IN
+1326,IN-UL,Uttaranchal,IN
+1327,IN-UP,Uttar Pradesh,IN
+1328,IN-WB,West Bengal,IN
+1329,IQ-AN,Al-Anbar Governorate,IQ
+1330,IQ-AR,Arbil Governorate,IQ
+1331,IQ-BA,Basra Governorate,IQ
+1332,IQ-BB,Babil Governorate,IQ
+1333,IQ-BG,Baghdad Governorate,IQ
+1334,IQ-DA,Duhok Governorate,IQ
+1335,IQ-DI,Diyala Governorate,IQ
+1336,IQ-DQ,Dhi Qar Governorate,IQ
+1337,IQ-KA,Karbala Governorate,IQ
+1338,IQ-MA,Maysan Governorate,IQ
+1339,IQ-MU,Al-Muthanna Governorate,IQ
+1340,IQ-NA,Najaf Governorate,IQ
+1341,IQ-NI,Ninawa Governorate,IQ
+1342,IQ-QA,Al-Qadisiyyah Governorate,IQ
+1343,IQ-SD,Salah ad Din Governorate,IQ
+1344,IQ-SW,As-Sulaymaniyyah Governorate,IQ
+1345,IQ-TS,Kirkuk Governorate,IQ
+1346,IQ-WA,Wasit Governorate,IQ
+1347,IR-01,East Azarbaijan Province,IR
+1348,IR-02,West Azarbaijan Province,IR
+1349,IR-03,Ardabil Province,IR
+1350,IR-04,Esfahan Province,IR
+1351,IR-05,Iiam Province,IR
+1352,IR-06,Bushehr Province,IR
+1353,IR-07,Tehran Province,IR
+1354,IR-08,Chaharmahal and Bakhtiari Province,IR
+1355,IR-10,Khuzestan Province,IR
+1356,IR-11,Zanjan Province,IR
+1357,IR-12,Semnan Province,IR
+1358,IR-13,Sistan and Baluchestan Province,IR
+1359,IR-14,Fars Province,IR
+1360,IR-15,Kerman Province,IR
+1361,IR-16,Kordestan Province,IR
+1362,IR-17,Kermanshah Province,IR
+1363,IR-18,Kohgiluyeh and Boyer-Ahmad Province,IR
+1364,IR-19,Gilan Province,IR
+1365,IR-20,Lorestan Province,IR
+1366,IR-21,Mazandaran Province,IR
+1367,IR-22,Markazi Province,IR
+1368,IR-23,Hormozgan Province,IR
+1369,IR-24,Hamadan Province,IR
+1370,IR-25,Yazd Province,IR
+1371,IR-26,Qom Province,IR
+1372,IR-27,Golestan Province,IR
+1373,IR-28,Qazvin Province,IR
+1374,IR-29,South Khorasan Province,IR
+1375,IR-30,Razavi Khorasan Province,IR
+1376,IR-31,North Khorasan Province,IR
+1377,IS-1,Capital Region,IS
+1378,IS-2,Southern Peninsula,IS
+1379,IS-3,Western Region,IS
+1380,IS-4,Westfjords,IS
+1381,IS-5,Northwestern Region,IS
+1382,IS-6,Northeastern Region,IS
+1383,IS-7,Eastern Region,IS
+1384,IS-8,Southern Region,IS
+1385,IT-21,Piedmont,IT
+1386,IT-23,Valle d'Aosta,IT
+1387,IT-25,Lombardy,IT
+1388,IT-32,Trentino-Alto Adige,IT
+1389,IT-34,Veneto,IT
+1390,IT-36,Friuli-Venezia Giulia,IT
+1391,IT-42,Liguria,IT
+1392,IT-45,Emilia-Romagna,IT
+1393,IT-52,Tuscany,IT
+1394,IT-55,Umbria,IT
+1395,IT-57,Marche,IT
+1396,IT-62,Lazio,IT
+1397,IT-65,Abruzzi,IT
+1398,IT-67,Molise,IT
+1399,IT-72,Campania,IT
+1400,IT-75,Apulia,IT
+1401,IT-77,Basilicata,IT
+1402,IT-78,Calabria,IT
+1403,IT-82,Sicily,IT
+1404,IT-88,Sardinia,IT
+1405,JM-01,Kingston,JM
+1406,JM-02,Saint Andrew,JM
+1407,JM-03,Saint Thomea,JM
+1408,JM-04,Portland,JM
+1409,JM-05,Saint Mary,JM
+1410,JM-06,Saint Ann,JM
+1411,JM-07,Trelawny,JM
+1412,JM-08,Saint James,JM
+1413,JM-09,Hanover,JM
+1414,JM-10,Westmoreland,JM
+1415,JM-11,Saint Elizabeth,JM
+1416,JM-12,Manchester,JM
+1417,JM-13,Clarendon,JM
+1418,JM-14,Saint Catherine,JM
+1419,JO-AJ,Ajln Governorate,JO
+1420,JO-AM,Amman Governorate,JO
+1421,JO-AQ,Al 'Aqaba Governorate,JO
+1422,JO-AT,At Tafilah Governorate,JO
+1423,JO-AZ,Az Zarga Governorate,JO
+1424,JO-BA,Al Balqa' Governorate,JO
+1425,JO-JA,Jarash Governorate,JO
+1426,JO-JR,Irbid Governorate,JO
+1427,JO-KA,Al Karak Governorate,JO
+1428,JO-MA,Al Mafraq Governorate,JO
+1429,JO-MD,Madaba Governorate,JO
+1430,JO-MN,Ma'an Governorate,JO
+1431,JP-01,Hokkaidō Prefecture,JP
+1432,JP-02,Aomori Prefecture,JP
+1433,JP-03,Iwate Prefecture,JP
+1434,JP-04,Miyagi Prefecture,JP
+1435,JP-05,Akita Prefecture,JP
+1436,JP-06,Yamagata Prefecture,JP
+1437,JP-07,Fukusima Prefecture,JP
+1438,JP-08,Ibaraki Prefecture,JP
+1439,JP-09,Tochigi Prefecture,JP
+1440,JP-10,Gunma Prefecture,JP
+1441,JP-11,Saitama Prefecture,JP
+1442,JP-12,Chiba Prefecture,JP
+1443,JP-13,Tōkyō Prefecture,JP
+1444,JP-14,Kanagawa Prefecture,JP
+1445,JP-15,Niigata Prefecture,JP
+1446,JP-16,Toyama Prefecture,JP
+1447,JP-17,Ishikawa Prefecture,JP
+1448,JP-18,Fukui Prefecture,JP
+1449,JP-19,Yamanashi Prefecture,JP
+1450,JP-20,Nagano Prefecture,JP
+1451,JP-21,Gifu Prefecture,JP
+1452,JP-22,Shizuoka Prefecture,JP
+1453,JP-23,Aichi Prefecture,JP
+1454,JP-24,Mie Prefecture,JP
+1455,JP-25,Shiga Prefecture,JP
+1456,JP-26,Kyōto Prefecture,JP
+1457,JP-27,Ōsaka Prefecture,JP
+1458,JP-28,Hyōgo Prefecture,JP
+1459,JP-29,Nara Prefecture,JP
+1460,JP-30,Wakayama Prefecture,JP
+1461,JP-31,Tottori Prefecture,JP
+1462,JP-32,Shimane Prefecture,JP
+1463,JP-33,Okayama Prefecture,JP
+1464,JP-34,Hiroshima Prefecture,JP
+1465,JP-35,Yamaguchi Prefecture,JP
+1466,JP-36,Tokushima Prefecture,JP
+1467,JP-37,Kagawa Prefecture,JP
+1468,JP-38,Ehime Prefecture,JP
+1469,JP-39,Kōchi Prefecture,JP
+1470,JP-40,Fukuoka Prefecture,JP
+1471,JP-41,Saga Prefecture,JP
+1472,JP-42,Nagasaki Prefecture,JP
+1473,JP-43,Kumamoto Prefecture,JP
+1474,JP-44,Ōita Prefecture,JP
+1475,JP-45,Miyazaki Prefecture,JP
+1476,JP-46,Kagoshima Prefecture,JP
+1477,JP-47,Okinawa Prefecture,JP
+1478,KE-110,Nairobi Province,KE
+1479,KE-200,Central Province,KE
+1480,KE-300,Coast Province,KE
+1481,KE-400,Eastern Province,KE
+1482,KE-500,North-Eastern Province,KE
+1483,KE-600,Nyanza Province,KE
+1484,KE-700,Rift Valley Province,KE
+1485,KE-900,Western Province,KE
+1486,KG-B,Batken Region,KG
+1487,KG-C,Chuy Region,KG
+1488,KG-GB,Bishkek City,KG
+1489,KG-GO,Osh City,KG
+1490,KG-J,Jalal-Abad Region,KG
+1491,KG-N,Naryn Region,KG
+1492,KG-O,Osh Region,KG
+1493,KG-T,Talas Region,KG
+1494,KG-Y,Issyk Kul Region,KG
+1495,KH-1,Banteay Mean Chey,KH
+1496,KH-10,Krachoh,KH
+1497,KH-11,Mondol Kiri,KH
+1498,KH-12,Phnom Penh,KH
+1499,KH-13,Preah Vihear,KH
+1500,KH-14,Prey Veaeng,KH
+1501,KH-15,Pousaat,KH
+1502,KH-16,Rotanak Kiri,KH
+1503,KH-17,Siem Reab,KH
+1504,KH-18,Xrong Preah Sihanouk,KH
+1505,KH-19,Stueng Traeng,KH
+1506,KH-2,Baat Dambang,KH
+1507,KH-20,Svaay Rieng,KH
+1508,KH-21,Taakaev,KH
+1509,KH-22,Otdar Mean Chey,KH
+1510,KH-23,Krong Kaeb,KH
+1511,KH-24,Krong Pailin,KH
+1512,KH-3,Kampong Chaam,KH
+1513,KH-4,Kampong Chhnang,KH
+1514,KH-5,Kampong Spueu,KH
+1515,KH-6,Kampong Thum,KH
+1516,KH-7,Kampot,KH
+1517,KH-8,Kandaal,KH
+1518,KH-9,Kach Kong,KH
+1519,KI-G,Gilbert Islands,KI
+1520,KI-L,Line Islands,KI
+1521,KI-P,Phoenix Islands,KI
+1522,KM-A,Anjouan Ndzouani,KM
+1523,KM-G,Grande Comore Ngazidja,KM
+1524,KM-M,Moheli Moili,KM
+1525,KP-01,Pyongyang (capital city),KP
+1526,KP-02,South Pyongan Province,KP
+1527,KP-03,North Pyongan Province,KP
+1528,KP-04,Chagang Province,KP
+1529,KP-05,South Hwanghae Province,KP
+1530,KP-06,North Hwanghae Province,KP
+1531,KP-07,Kangwon Province,KP
+1532,KP-08,South Hamgyong Province,KP
+1533,KP-09,North Hamgyong Province,KP
+1534,KP-10,Ryanggang Province,KP
+1535,KP-13,Rason (special city),KP
+1536,KR-11,Seoul Teugbyeolsi,KR
+1537,KR-26,Busan Gwang'yeogsi,KR
+1538,KR-27,Daegu Gwang'yeogsi,KR
+1539,KR-28,Incheon Gwang'yeogsi,KR
+1540,KR-29,Gwangju Gwang'yeogsi,KR
+1541,KR-30,Daejeon Gwang'yeogsi,KR
+1542,KR-31,Ulsan Gwang'yeogsi,KR
+1543,KR-41,Gyeonggido,KR
+1544,KR-42,Gang'weondo,KR
+1545,KR-43,Chungcheongbugdo,KR
+1546,KR-44,Chungcheongnamdo,KR
+1547,KR-45,Jeonrabugdo,KR
+1548,KR-46,Jeonranamdo,KR
+1549,KR-47,Gyeongsangbugdo,KR
+1550,KR-48,Gyeongsangnamdo,KR
+1551,KR-49,Jejudo,KR
+1552,KW-AH,Al Ahmadi Governorate,KW
+1553,KW-FA,Al Farwaniyah Governorate,KW
+1554,KW-HA,Hawalli Governorate,KW
+1555,KW-JA,Al Jahra Governorate,KW
+1556,KW-KU,Al Asimah Governorate,KW
+1557,KW-MU,Mubarak Al-Kabeer Governorate,KW
+1558,KZ-AKM,Akmola Region,KZ
+1559,KZ-AKT,Aktobe Region,KZ
+1560,KZ-ALA,Almaty City,KZ
+1561,KZ-ALM,Almaty Region,KZ
+1562,KZ-AST,Astana City,KZ
+1563,KZ-ATY,Atyrau Region,KZ
+1564,KZ-BAY,Baikonur City,KZ
+1565,KZ-KAR,Karaganda Region,KZ
+1566,KZ-KUS,Kostanay Region,KZ
+1567,KZ-KZY,Kyzylorda Region,KZ
+1568,KZ-MAN,Mangystau Region,KZ
+1569,KZ-PAV,Pavlodar Region,KZ
+1570,KZ-SEV,North Kazakhstan Region,KZ
+1571,KZ-VOS,East Kazakhstan Region,KZ
+1572,KZ-YUZ,South Kazakhstan Region,KZ
+1573,KZ-ZAP,West Kazakhstan Region,KZ
+1574,KZ-ZHA,Jambyl Region,KZ
+1575,LA-AT,Attapu Province,LA
+1576,LA-BK,Bokeo Province,LA
+1577,LA-BL,Bolikhamxai Province,LA
+1578,LA-CH,Champasak Province,LA
+1579,LA-HO,Houaphan Province,LA
+1580,LA-KH,Khammouan Province,LA
+1581,LA-LM,Louang Namtha Province,LA
+1582,LA-LP,Louangphabang Province,LA
+1583,LA-OU,Oudomxai Province,LA
+1584,LA-PH,Phongsali Province,LA
+1585,LA-SL,Salavan Province,LA
+1586,LA-SV,Savannakhet Province,LA
+1587,LA-VI,Vientiane Province,LA
+1588,LA-VT,Vientiane Prefecture,LA
+1589,LA-XA,Xaignabouli Province,LA
+1590,LA-XE,Xekong Province,LA
+1591,LA-XI,Xiangkhoang Province,LA
+1592,LA-XN,Xiasomboun Province,LA
+1593,LB-AK,Aakkar Governorate,LB
+1594,LB-AS,North Governorate,LB
+1595,LB-BA,Beirut Governorate,LB
+1596,LB-BH,Baalbek-Hermel Governorate,LB
+1597,LB-BI,Beqaa Governorate,LB
+1598,LB-JA,South Governorate,LB
+1599,LB-JL,Mount Lebanon Governorate,LB
+1600,LB-NA,Nabatieh Governorate,LB
+1601,LC-01,Anse la Raye,LC
+1602,LC-02,Castries,LC
+1603,LC-03,Choiseul,LC
+1604,LC-04,Dauphin,LC
+1605,LC-05,Dennery,LC
+1606,LC-06,Gros Islet,LC
+1607,LC-07,Laborie,LC
+1608,LC-08,Micoud,LC
+1609,LC-09,Praslin,LC
+1610,LC-10,Soufrière,LC
+1611,LC-11,Vieux Fort,LC
+1612,LI-01,Balzers,LI
+1613,LI-02,Eschen,LI
+1614,LI-03,Gamprin,LI
+1615,LI-04,Mauren,LI
+1616,LI-05,Planken,LI
+1617,LI-06,Ruggell,LI
+1618,LI-07,Schaan,LI
+1619,LI-08,Schellenberg,LI
+1620,LI-09,Triesen,LI
+1621,LI-10,Triesenberg,LI
+1622,LI-11,Vaduz,LI
+1623,LK-1,Western Province,LK
+1624,LK-2,Central Province,LK
+1625,LK-3,Southern Province,LK
+1626,LK-4,Northern Province,LK
+1627,LK-5,Eastern Province,LK
+1628,LK-6,North Western Province,LK
+1629,LK-7,North Central Province,LK
+1630,LK-8,Uva Province,LK
+1631,LK-9,Sabaragamuwa Province,LK
+1632,LR-BG,Bong County,LR
+1633,LR-BM,Bomi County,LR
+1634,LR-CM,Grand Cape Mount County,LR
+1635,LR-GB,Grand Basaa County,LR
+1636,LR-GG,Grand Gedeh County,LR
+1637,LR-GK,Grand Kru County,LR
+1638,LR-LO,Lofa County,LR
+1639,LR-MG,Margibi County,LR
+1640,LR-MO,Montserrado County,LR
+1641,LR-MY,Maryland County,LR
+1642,LR-NI,Nimba County,LR
+1643,LR-RI,Rivercess County,LR
+1644,LR-SI,Sinoe County,LR
+1645,LS-A,Maseru,LS
+1646,LS-B,Butha-Buthe,LS
+1647,LS-C,Leribe,LS
+1648,LS-D,Berea,LS
+1649,LS-E,Mafeteng,LS
+1650,LS-F,Mohale's Hoek,LS
+1651,LS-G,Quthing,LS
+1652,LS-H,Qacha's Nek,LS
+1653,LS-J,Mokhotlong,LS
+1654,LS-K,Thaba-Tseka,LS
+1655,LT-AL,Alytus County,LT
+1656,LT-KL,Klaipėda County,LT
+1657,LT-KU,Kaunas County,LT
+1658,LT-MR,Marijampolė County,LT
+1659,LT-PN,Panevėžys County,LT
+1660,LT-SA,Šiauliai County,LT
+1661,LT-TA,Tauragė County,LT
+1662,LT-TE,Telšiai County,LT
+1663,LT-UT,Utena County,LT
+1664,LT-VL,Vilnius County,LT
+1665,LU-D,Diekirch,LU
+1666,LU-G,Grevenmacher,LU
+1667,LU-L,Luxembourg,LU
+1668,LV-AI,Aizkraukle District,LV
+1669,LV-AL,Alūksne District,LV
+1670,LV-BL,Balvi District,LV
+1671,LV-BU,Bauska District,LV
+1672,LV-CE,Cēsis District,LV
+1673,LV-DA,Daugavpils District,LV
+1674,LV-DGV,Daugavpils (city),LV
+1675,LV-DO,Dobele District,LV
+1676,LV-GU,Gulbene District,LV
+1677,LV-JEL,Jelgava (city),LV
+1678,LV-JK,Jēkabpils District,LV
+1679,LV-JL,Jelgava District,LV
+1680,LV-JUR,Jūrmala (city),LV
+1681,LV-KR,Krāslava District,LV
+1682,LV-KU,Kuldīga District,LV
+1683,LV-LE,Liepāja District,LV
+1684,LV-LM,Limbaži District,LV
+1685,LV-LPX,Liepāja (city),LV
+1686,LV-LU,Ludza District,LV
+1687,LV-MA,Madona District,LV
+1688,LV-OG,Ogre District,LV
+1689,LV-PR,Preiļi District,LV
+1690,LV-RE,Rēzekne District,LV
+1691,LV-REZ,Rēzekne (city),LV
+1692,LV-RI,Riga District,LV
+1693,LV-RIX,Riga (city),LV
+1694,LV-SA,Saldus District,LV
+1695,LV-TA,Talsi District,LV
+1696,LV-TU,Tukums District,LV
+1697,LV-VE,Ventspils,LV
+1698,LV-VEN,Ventspils (city),LV
+1699,LV-VK,Valka District,LV
+1700,LV-VM,Valmiera District,LV
+1701,LY-BA,Benghazi District,LY
+1702,LY-BU,Al Butnan District,LY
+1703,LY-DR,Darnah District,LY
+1704,LY-GT,Ghat District,LY
+1705,LY-JA,Al Jabal al Akhdar District,LY
+1706,LY-JG,Al Jabal al Gharbi District,LY
+1707,LY-JI,Al Jfara District,LY
+1708,LY-JU,Al Jufrah District,LY
+1709,LY-KF,Al Kufrah District,LY
+1710,LY-MB,Al Murgub District,LY
+1711,LY-MI,Misurata District,LY
+1712,LY-MJ,Al Marj District,LY
+1713,LY-MQ,Murzuq District,LY
+1714,LY-NL,Nalut District,LY
+1715,LY-NQ,An Nuqat al Khams District,LY
+1716,LY-SB,Sabha District,LY
+1717,LY-SH,Wadi Al Shatii District,LY
+1718,LY-SR,Surt District,LY
+1719,LY-TB,Tripoli District,LY
+1720,LY-WA,Al Wahat District,LY
+1721,LY-WD,Wadi Al Hayaa District,LY
+1722,LY-ZA,Az Zawiyah District,LY
+1723,MA-AGD,Agadir Province,MA
+1724,MA-ASZ,Assa-Zag Province,MA
+1725,MA-AZI,Azilal Province,MA
+1726,MA-BAH,Aït Baha Province,MA
+1727,MA-BEM,Beni Mellal Province,MA
+1728,MA-BER,Berkane Province,MA
+1729,MA-BES,Ben Sllmane Province,MA
+1730,MA-BOD,Boujdour Province,MA
+1731,MA-BOM,Boulemane Province,MA
+1732,MA-CAS,Casablanca Province,MA
+1733,MA-CHE,Chefchaouene Province,MA
+1734,MA-CHI,Chichaoua Province,MA
+1735,MA-ERR,Errachidia Province,MA
+1736,MA-ESI,Essaouira Province,MA
+1737,MA-ESM,Es Smara Province,MA
+1738,MA-FES,Fès Province,MA
+1739,MA-FIG,Figuig Province,MA
+1740,MA-GUE,Guelmim Province,MA
+1741,MA-HAJ,El Hajeb Province,MA
+1742,MA-HAO,Al Haouz Province,MA
+1743,MA-HOC,Al Hoceïma Province,MA
+1744,MA-IFR,Ifrane Province,MA
+1745,MA-JDI,El Jadida Province,MA
+1746,MA-JRA,Jerada Province,MA
+1747,MA-KEN,Kénitra Province,MA
+1748,MA-KES,Kelaat Sraghna Province,MA
+1749,MA-KHE,Khemisaet Province,MA
+1750,MA-KHN,Khenifra Province,MA
+1751,MA-KHO,Khouribga Province,MA
+1752,MA-LAA,Laâyoune (EH) Province,MA
+1753,MA-LAP,Larache Province,MA
+1754,MA-MAR,Marrakech Province,MA
+1755,MA-MEK,Meknsès Province,MA
+1756,MA-MEL,Aït Melloul Province,MA
+1757,MA-NAD,Nador Province,MA
+1758,MA-OUA,Ouarzazate Province,MA
+1759,MA-OUD,Oued ed Dahab (EH) Province,MA
+1760,MA-OUJ,Oujda Province,MA
+1761,MA-RBA,Rabat-Salé Province,MA
+1762,MA-SAF,Safi Province,MA
+1763,MA-SEF,Sefrou Province,MA
+1764,MA-SET,Settat Province,MA
+1765,MA-SIK,Sidl Kacem Province,MA
+1766,MA-TAO,Taounate Province,MA
+1767,MA-TAR,Taroudannt Province,MA
+1768,MA-TAT,Tata Province,MA
+1769,MA-TAZ,Taza Province,MA
+1770,MA-TET,Tétouan Province,MA
+1771,MA-TIZ,Tiznit Province,MA
+1772,MA-TNG,Tanger Province,MA
+1773,MA-TNT,Tan-Tan Province,MA
+1774,MD-AN,Anenii Noi,MD
+1775,MD-BE,Bender,MD
+1776,MD-BL,Bălţi,MD
+1777,MD-BR,Briceni,MD
+1778,MD-BS,Basarabeanca,MD
+1779,MD-C,Chişinău,MD
+1780,MD-CC,Cameanca,MD
+1781,MD-CG,Ceadîr-Lunga,MD
+1782,MD-CH,Cahul,MD
+1783,MD-CL,Călăraşi,MD
+1784,MD-CM,Cimişlia,MD
+1785,MD-CN,Cainari,MD
+1786,MD-CO,Comrat,MD
+1787,MD-CR,Criuleni,MD
+1788,MD-CS,Căuşeni/Căuşani,MD
+1789,MD-CT,Cantemir,MD
+1790,MD-DB,Dubăsari,MD
+1791,MD-DN,Donduşeni,MD
+1792,MD-DR,Drochia,MD
+1793,MD-ED,Edineţ,MD
+1794,MD-FL,Făleşti,MD
+1795,MD-FR,Floreşti,MD
+1796,MD-GL,Glodeni,MD
+1797,MD-HN,Hînceşti,MD
+1798,MD-IL,Ialoveni,MD
+1799,MD-LV,Leova,MD
+1800,MD-NS,Nisporeni,MD
+1801,MD-OC,Ocniţa,MD
+1802,MD-OR,Orhei,MD
+1803,MD-RB,Rîbniţa,MD
+1804,MD-RS,Rîşcani,MD
+1805,MD-RZ,Rezina,MD
+1806,MD-SG,Sîngerei,MD
+1807,MD-SL,Slobozia,MD
+1808,MD-SR,Soroca,MD
+1809,MD-ST,Străşeni,MD
+1810,MD-SV,Ştefan-Vodă,MD
+1811,MD-TA,Taraclia,MD
+1812,MD-TL,Teleneşti,MD
+1813,MD-TR,Tiraspol,MD
+1814,MD-UN,Ungheni,MD
+1815,MD-VL,Vulcăneşti,MD
+1816,ME-01,Andrijevica Municipality,ME
+1817,ME-02,Bar Municipality,ME
+1818,ME-03,Berane Municipality,ME
+1819,ME-04,Bijelo Polje Municipality,ME
+1820,ME-05,Budva Municipality,ME
+1821,ME-06,Cetinje Municipality,ME
+1822,ME-07,Danilovgrad Municipality,ME
+1823,ME-08,Herceg-Novi Municipality,ME
+1824,ME-09,Kolašin Municipality,ME
+1825,ME-10,Kotor Municipality,ME
+1826,ME-11,Mojkovac Municipality,ME
+1827,ME-12,Nikšić Municipality,ME
+1828,ME-13,Plav Municipality,ME
+1829,ME-14,Pljevlja Municipality,ME
+1830,ME-15,Plužine Municipality,ME
+1831,ME-16,Podgorica Municipality,ME
+1832,ME-17,Rožaje Municipality,ME
+1833,ME-18,Šavnik Municipality,ME
+1834,ME-19,Tivat Municipality,ME
+1835,ME-20,Ulcinj Municipality,ME
+1836,ME-21,Žabljak Municipality,ME
+1837,MG-A,Toamasina,MG
+1838,MG-D,Antsiranana,MG
+1839,MG-F,Fianarantsoa,MG
+1840,MG-M,Mahajanga,MG
+1841,MG-T,Antananarivo,MG
+1842,MG-U,Toliara,MG
+1843,MH-ALK,Ailuk,MH
+1844,MH-ALL,Ailinglapalap,MH
+1845,MH-ARN,Arno,MH
+1846,MH-AUR,Aur,MH
+1847,MH-BIK,Bikini,MH
+1848,MH-EBO,Ebon,MH
+1849,MH-ENI,Eniwetok,MH
+1850,MH-JAL,Jaluit,MH
+1851,MH-KIL,Kili,MH
+1852,MH-KWA,Kwajalein,MH
+1853,MH-LAE,Lae,MH
+1854,MH-LIB,Lib,MH
+1855,MH-LIK,Likiep,MH
+1856,MH-MAJ,Majuro,MH
+1857,MH-MAL,Maloelap,MH
+1858,MH-MEJ,Mejit,MH
+1859,MH-MIL,Mili,MH
+1860,MH-NMK,Namorik,MH
+1861,MH-NMU,Namu,MH
+1862,MH-RON,Rongelap,MH
+1863,MH-UJA,Ujae,MH
+1864,MH-UJL,Ujelang,MH
+1865,MH-UTI,Utirik,MH
+1866,MH-WTJ,Wotje,MH
+1867,MH-WTN,Wotho,MH
+1868,MK-001,Vardar Statistical Region,MK
+1869,MK-002,Eastern Statistical Region,MK
+1870,MK-003,Southwestern Statistical Region,MK
+1871,MK-004,Southeastern Statistical Region,MK
+1872,MK-005,Pelagonia Statistical Region,MK
+1873,MK-006,Polog Statistical Region,MK
+1874,MK-007,Northeastern Statistical Region,MK
+1875,MK-008,Skopje Statistical Region,MK
+1876,ML-1,Kayes Region,ML
+1877,ML-2,Koulikoro Region,ML
+1878,ML-3,Sikasso Region,ML
+1879,ML-4,Ségou Region,ML
+1880,ML-5,Mopti Region,ML
+1881,ML-6,Tombouctou Region,ML
+1882,ML-7,Gao Region,ML
+1883,ML-8,Kidal Region,ML
+1884,ML-BK0,Bamako Capital District,ML
+1885,MM-01,Sagaing Division,MM
+1886,MM-02,Bago Division,MM
+1887,MM-03,Magway Division,MM
+1888,MM-04,Mandalay Division,MM
+1889,MM-05,Tanintharyi Division,MM
+1890,MM-06,Yangon Division,MM
+1891,MM-07,Ayeyarwady Division,MM
+1892,MM-11,Kachin State,MM
+1893,MM-12,Kayah State,MM
+1894,MM-13,Kayin State,MM
+1895,MM-14,Chin State,MM
+1896,MM-15,Mon State,MM
+1897,MM-16,Rakhine State,MM
+1898,MM-17,Shan State,MM
+1899,MN-035,Orhon,MN
+1900,MN-037,Darhan uul,MN
+1901,MN-039,Hentiy,MN
+1902,MN-041,Khövsgöl,MN
+1903,MN-043,Khovd,MN
+1904,MN-046,Uvs,MN
+1905,MN-047,Tov,MN
+1906,MN-049,Selenge,MN
+1907,MN-051,Shbaatar,MN
+1908,MN-053,Ömnögovi,MN
+1909,MN-055,Övörkhangai,MN
+1910,MN-057,Dzavhan,MN
+1911,MN-059,DundgovL,MN
+1912,MN-061,Dornod,MN
+1913,MN-063,"Dornogov,",MN
+1914,MN-064,Govi-Smber,MN
+1915,MN-065,Govi-Altay,MN
+1916,MN-067,Bulgan,MN
+1917,MN-069,Bayanhongor,MN
+1918,MN-071,Bayan-Olgiy,MN
+1919,MN-073,Arhangay,MN
+1920,MN-1,Ulanbaatar,MN
+1921,MR-01,Hodh ech Chargui Region,MR
+1922,MR-02,Hodh el Charbi Region,MR
+1923,MR-03,Assaba Region,MR
+1924,MR-04,Gorgol Region,MR
+1925,MR-05,Brakna Region,MR
+1926,MR-06,Trarza Region,MR
+1927,MR-07,Adrar Region,MR
+1928,MR-08,Dakhlet Nouadhibou Region,MR
+1929,MR-09,Tagant Region,MR
+1930,MR-10,Guidimaka Region,MR
+1931,MR-11,Tiris Zemmour Region,MR
+1932,MR-12,Inchiri Region,MR
+1933,MR-NKC,Nouakchott Region,MR
+1934,MT-01,Attard,MT
+1935,MT-02,Balzan,MT
+1936,MT-03,Birgu,MT
+1937,MT-04,Birkirkara,MT
+1938,MT-05,Birżebbuġa,MT
+1939,MT-06,Bormla,MT
+1940,MT-07,Dingli,MT
+1941,MT-08,Fgura,MT
+1942,MT-09,Floriana,MT
+1943,MT-10,Fontana,MT
+1944,MT-11,Gudja,MT
+1945,MT-12,Gzira,MT
+1946,MT-13,Għajnsielem,MT
+1947,MT-14,Għarb,MT
+1948,MT-15,Għargħur,MT
+1949,MT-16,Għasri,MT
+1950,MT-17,Għaxaq,MT
+1951,MT-18,Ħamrun,MT
+1952,MT-19,Iklin,MT
+1953,MT-20,Isla,MT
+1954,MT-21,Kalkara,MT
+1955,MT-22,Kerċem,MT
+1956,MT-23,Kirkop,MT
+1957,MT-24,Lija,MT
+1958,MT-25,Luqa,MT
+1959,MT-26,Marsa,MT
+1960,MT-27,Marsaskala,MT
+1961,MT-28,Marsaxlokk,MT
+1962,MT-29,Mdina,MT
+1963,MT-30,Mellieħa,MT
+1964,MT-31,Mġarr,MT
+1965,MT-32,Mosta,MT
+1966,MT-33,Mqabba,MT
+1967,MT-34,Msida,MT
+1968,MT-35,Mtarfa,MT
+1969,MT-36,Munxar,MT
+1970,MT-37,Nadur,MT
+1971,MT-38,Naxxar,MT
+1972,MT-39,Paola,MT
+1973,MT-40,Pembroke,MT
+1974,MT-41,Pietà,MT
+1975,MT-42,Qala,MT
+1976,MT-43,Qormi,MT
+1977,MT-44,Qrendi,MT
+1978,MT-45,Rabat Gozo,MT
+1979,MT-46,Rabat Malta,MT
+1980,MT-47,Safi,MT
+1981,MT-48,Saint Julian's,MT
+1982,MT-49,Saint John,MT
+1983,MT-50,Saint Lawrence,MT
+1984,MT-51,Saint Paul's Bay,MT
+1985,MT-52,Sannat,MT
+1986,MT-53,Saint Lucia's,MT
+1987,MT-54,Santa Venera,MT
+1988,MT-55,Siġġiewi,MT
+1989,MT-56,Sliema,MT
+1990,MT-57,Swieqi,MT
+1991,MT-58,Ta' Xbiex,MT
+1992,MT-59,Tarxien,MT
+1993,MT-60,Valletta,MT
+1994,MT-61,Xagħra,MT
+1995,MT-62,Xewkija,MT
+1996,MT-63,Xgħajra,MT
+1997,MT-64,Żabbar,MT
+1998,MT-65,Żebbuġ Gozo,MT
+1999,MT-66,Żebbuġ Malta,MT
+2000,MT-67,Żejtun,MT
+2001,MT-68,Żurrieq,MT
+2002,MU-AG,Agalega Islands,MU
+2003,MU-BL,Black River,MU
+2004,MU-BR,Beau Bassin-Rose Hill,MU
+2005,MU-CC,Cargados Carajos Shoals,MU
+2006,MU-CU,Curepipe,MU
+2007,MU-FL,Flacq,MU
+2008,MU-GP,Grand Port,MU
+2009,MU-MO,Moka,MU
+2010,MU-PA,Pamplemousses,MU
+2011,MU-PL,Port Louis (district),MU
+2012,MU-PU,Port Louis,MU
+2013,MU-PW,Plaines Wilhems,MU
+2014,MU-QB,Quatre Bornes,MU
+2015,MU-RO,Rodrigues Island,MU
+2016,MU-RP,Riviere du Rempart,MU
+2017,MU-SA,Savanne,MU
+2018,MU-VP,Vacosa-Phoenix,MU
+2019,MV-01,Seenu Atoll,MV
+2020,MV-02,Alif Alif Atoll,MV
+2021,MV-03,Lhaviyani,MV
+2022,MV-04,Vaavu,MV
+2023,MV-05,Laamu Atoll,MV
+2024,MV-07,Haa Alif,MV
+2025,MV-08,Thaa,MV
+2026,MV-12,Meemu,MV
+2027,MV-13,Raa,MV
+2028,MV-14,Faafu,MV
+2029,MV-17,Dhaalu,MV
+2030,MV-20,Baa,MV
+2031,MV-23,Haa Dhaalu Atoll,MV
+2032,MV-24,Shaviyani,MV
+2033,MV-25,Noonu,MV
+2034,MV-26,Kaafu,MV
+2035,MV-27,Gaaf Alif,MV
+2036,MV-28,Gaafu Dhaalu Atoll,MV
+2037,MV-29,Gnaviyani,MV
+2038,MV-MLE,Malé Capital,MV
+2039,MW-BA,Balaka District,MW
+2040,MW-BL,Blantyre District,MW
+2041,MW-CK,Chikwawa District,MW
+2042,MW-CR,Chiradzulu District,MW
+2043,MW-CT,Chitipa District,MW
+2044,MW-DE,Dedza District,MW
+2045,MW-DO,Dowa District,MW
+2046,MW-KR,Karonga District,MW
+2047,MW-KS,Kasungu District,MW
+2048,MW-LI,Lilongwe District,MW
+2049,MW-LK,Likoma Island District,MW
+2050,MW-MC,Mchinji District,MW
+2051,MW-MG,Mangochi District,MW
+2052,MW-MH,Machinga District,MW
+2053,MW-MU,Mulanje District,MW
+2054,MW-MW,Mwanza District,MW
+2055,MW-MZ,Mzimba District,MW
+2056,MW-NB,Nkhata Bay District,MW
+2057,MW-NI,Ntchisi District,MW
+2058,MW-NK,Nkhotakota District,MW
+2059,MW-NS,Nsanje District,MW
+2060,MW-NU,Ntcheu District,MW
+2061,MW-PH,Phalomba District,MW
+2062,MW-RU,Rumphi District,MW
+2063,MW-SA,Salima District,MW
+2064,MW-TH,Thyolo District,MW
+2065,MW-ZO,Zomba District,MW
+2066,MX-AGU,Aguascalientes,MX
+2067,MX-BCN,Baja California,MX
+2068,MX-BCS,Baja California Sur,MX
+2069,MX-CAM,Campeche,MX
+2070,MX-CHH,Chihushua,MX
+2071,MX-CHP,Chiapas,MX
+2072,MX-COA,Coahuila,MX
+2073,MX-COL,Col ima,MX
+2074,MX-DIF,Distrito Federal,MX
+2075,MX-DUR,Durango,MX
+2076,MX-GRO,Guerrero,MX
+2077,MX-GUA,Guanajuato,MX
+2078,MX-HID,Hidalgo,MX
+2079,MX-JAL,Jalisco,MX
+2080,MX-MEX,Mexico,MX
+2081,MX-MIC,Michoacin,MX
+2082,MX-MOR,Moreloa,MX
+2083,MX-NAY,Nayarit,MX
+2084,MX-NLE,Nuevo Leon,MX
+2085,MX-OAX,Oaxaca,MX
+2086,MX-PUE,Puebla,MX
+2087,MX-QUE,Queretaro,MX
+2088,MX-ROO,Quintana Roo,MX
+2089,MX-SIN,Sinaloa,MX
+2090,MX-SLP,San Luis Potosi,MX
+2091,MX-SON,Sonora,MX
+2092,MX-TAB,Tabasco,MX
+2093,MX-TAM,Tamaulipas,MX
+2094,MX-TLA,Tlaxcala,MX
+2095,MX-VER,Veracruz,MX
+2096,MX-YUC,Yucatan,MX
+2097,MX-ZAC,Zacatecas,MX
+2098,MY-01,Johor,MY
+2099,MY-02,Kedah,MY
+2100,MY-03,Kelantan,MY
+2101,MY-04,Melaka,MY
+2102,MY-05,Negeri Sembilan,MY
+2103,MY-06,Pahang,MY
+2104,MY-07,Pulau Pinang,MY
+2105,MY-08,Perak,MY
+2106,MY-09,Perlis,MY
+2107,MY-10,Selangor,MY
+2108,MY-11,Terengganu,MY
+2109,MY-12,Sabah,MY
+2110,MY-13,Sarawak,MY
+2111,MY-14,Wilayah Persekutuan Kuala Lumpur,MY
+2112,MY-15,Wilayah Persekutuan Labuan,MY
+2113,MY-16,Wilayah Persekutuan Putrajaya,MY
+2114,MZ-A,Niassa Province,MZ
+2115,MZ-B,Manica Province,MZ
+2116,MZ-G,Gaza Province,MZ
+2117,MZ-I,Inhambane Province,MZ
+2118,MZ-L,Maputo Province,MZ
+2119,MZ-MPM,Maputo (city),MZ
+2120,MZ-N,Nampula Province,MZ
+2121,MZ-P,Cabo Delgado Province,MZ
+2122,MZ-Q,Zambezia Province,MZ
+2123,MZ-S,Sofala Province,MZ
+2124,MZ-T,Tete Province,MZ
+2125,NA-CA,Zambezi Region,NA
+2126,NA-ER,Erongo Region,NA
+2127,NA-HA,Hardap Region,NA
+2128,NA-KA,ǁKaras Region,NA
+2129,NA-KE,Kavango East Region,NA
+2130,NA-KH,Khomas Region,NA
+2131,NA-KU,Kunene Region,NA
+2132,NA-KW,Kavango West Region,NA
+2133,NA-OD,Otjozondjupa Region,NA
+2134,NA-OH,Omaheke Region,NA
+2135,NA-ON,Oshana Region,NA
+2136,NA-OS,Omusati Region,NA
+2137,NA-OT,Oshikoto Region,NA
+2138,NA-OW,Ohangwena Region,NA
+2139,NE-1,Agadez Region,NE
+2140,NE-2,Diffa Region,NE
+2141,NE-3,Dosso Region,NE
+2142,NE-4,Maradi Region,NE
+2143,NE-5,Tahoua Region,NE
+2144,NE-6,Tillabéri Region,NE
+2145,NE-7,Zinder Region,NE
+2146,NE-8,Niamey Capital District,NE
+2147,NG-AB,Abia,NG
+2148,NG-AD,Adamawa,NG
+2149,NG-AK,Akwa Ibom,NG
+2150,NG-AN,Anambra,NG
+2151,NG-BA,Bauchi,NG
+2152,NG-BE,Benue,NG
+2153,NG-BO,Borno,NG
+2154,NG-BY,Bayelsa,NG
+2155,NG-CR,Cross River,NG
+2156,NG-DE,Delta,NG
+2157,NG-EB,Ebonyi,NG
+2158,NG-ED,Edo,NG
+2159,NG-EK,Ekiti,NG
+2160,NG-EN,Enugu,NG
+2161,NG-FC,Abuja Capital Territory,NG
+2162,NG-GO,Gombe,NG
+2163,NG-IM,Imo,NG
+2164,NG-JI,Jigawa,NG
+2165,NG-KD,Kaduna,NG
+2166,NG-KE,Kebbi,NG
+2167,NG-KN,Kano,NG
+2168,NG-KO,Kogi,NG
+2169,NG-KT,Katsina,NG
+2170,NG-KW,Kwara,NG
+2171,NG-LA,Lagos,NG
+2172,NG-NA,Nassarawa,NG
+2173,NG-NI,Niger,NG
+2174,NG-OG,Ogun,NG
+2175,NG-ON,Ondo,NG
+2176,NG-OS,Osun,NG
+2177,NG-OY,Oyo,NG
+2178,NG-PL,Plateau,NG
+2179,NG-RI,Rivers,NG
+2180,NG-SO,Sokoto,NG
+2181,NG-TA,Taraba,NG
+2182,NG-YO,Yobe,NG
+2183,NG-ZA,Zamfara,NG
+2184,NI-AN,Atlantico Norte,NI
+2185,NI-AS,Atlantico Sur,NI
+2186,NI-BO,Boaco,NI
+2187,NI-CA,Carazo,NI
+2188,NI-CI,Chinandega,NI
+2189,NI-CO,Chontales,NI
+2190,NI-ES,Esteli,NI
+2191,NI-GR,Grenada,NI
+2192,NI-JI,Jinotega,NI
+2193,NI-LE,Leon,NI
+2194,NI-MD,Madriz,NI
+2195,NI-MN,Managua,NI
+2196,NI-MS,Masaya,NI
+2197,NI-MT,Matagalpa,NI
+2198,NI-NS,Nueva Segovia,NI
+2199,NI-RI,Rivas,NI
+2200,NI-SJ,Rio San Juan,NI
+2201,NL-DR,Drente,NL
+2202,NL-FL,Flevoland,NL
+2203,NL-FR,Friesland,NL
+2204,NL-GE,Gelderland,NL
+2205,NL-GR,Groningen,NL
+2206,NL-LI,Limburg,NL
+2207,NL-NB,Noord-Brabant,NL
+2208,NL-NH,Noord-Holland,NL
+2209,NL-OV,Overijssel,NL
+2210,NL-UT,Utrecht,NL
+2211,NL-ZH,Zuid-Holland,NL
+2212,NL-ZL,Zeeland,NL
+2213,NO-01,Østfold,NO
+2214,NO-02,Akershus,NO
+2215,NO-03,Oslo,NO
+2216,NO-04,Hedmark,NO
+2217,NO-05,Oppland,NO
+2218,NO-06,Buskerud,NO
+2219,NO-07,Vestfold,NO
+2220,NO-08,Telemark,NO
+2221,NO-09,Aust-Agder,NO
+2222,NO-10,Vest-Agder,NO
+2223,NO-11,Rogaland,NO
+2224,NO-12,Hordaland,NO
+2225,NO-14,Sogn og Fjordane,NO
+2226,NO-15,Møre og Romsdal,NO
+2227,NO-16,Sør-Trøndelag,NO
+2228,NO-17,Nord-Trøndelag,NO
+2229,NO-18,Nordland,NO
+2230,NO-19,Troms,NO
+2231,NO-20,Finnmark,NO
+2232,NO-21,Svalbard,NO
+2233,NO-22,Jan Mayen,NO
+2234,NP-BA,Bagmati,NP
+2235,NP-BH,Bheri,NP
+2236,NP-DH,Dhawalagiri,NP
+2237,NP-GA,Gandaki,NP
+2238,NP-JA,Janakpur,NP
+2239,NP-KA,Karnali,NP
+2240,NP-KO,Kosi,NP
+2241,NP-LU,Lumbini,NP
+2242,NP-MA,Mahakali,NP
+2243,NP-ME,Mechi,NP
+2244,NP-NA,Narayani,NP
+2245,NP-RA,Rapti,NP
+2246,NP-SA,Sagarmatha,NP
+2247,NP-SE,Seti,NP
+2248,NR-01,Aiwo,NR
+2249,NR-02,Anabar,NR
+2250,NR-03,Anetan,NR
+2251,NR-04,Anibare,NR
+2252,NR-05,Baiti,NR
+2253,NR-06,Boe,NR
+2254,NR-07,Buada,NR
+2255,NR-08,Denigomodu,NR
+2256,NR-09,Ewa,NR
+2257,NR-10,Ijuw,NR
+2258,NR-11,Meneng,NR
+2259,NR-12,Nibok,NR
+2260,NR-13,Uaboe,NR
+2261,NR-14,Yaren,NR
+2262,NZ-AUK,Auckland Region,NZ
+2263,NZ-BOP,Bay of Plenty Region,NZ
+2264,NZ-CAN,Canterbury Region,NZ
+2265,NZ-GIS,Gisborne Region,NZ
+2266,NZ-HKB,Hawke's Bay Region,NZ
+2267,NZ-MBH,Marlborough Region,NZ
+2268,NZ-MWT,Manawatu-Wanganui Region,NZ
+2269,NZ-NSN,Nelson Region,NZ
+2270,NZ-NTL,Northland Region,NZ
+2271,NZ-OTA,Otago Region,NZ
+2272,NZ-STL,Southland Region,NZ
+2273,NZ-TAS,Tasman Region,NZ
+2274,NZ-TKI,Taranaki Region,NZ
+2275,NZ-WGN,Wellington Region,NZ
+2276,NZ-WKO,Waikato Region,NZ
+2277,NZ-WTC,West Coast Region,NZ
+2278,OM-BA,Al Batinah Governorate,OM
+2279,OM-BU,Al Buraimi Governorate,OM
+2280,OM-DA,Ad Dakhillyah Governorate,OM
+2281,OM-MA,Masqat Governorate,OM
+2282,OM-MU,Musandam Governorate,OM
+2283,OM-SH,Ash Sharqlyah Governorate,OM
+2284,OM-WU,Al Wusta Governorate,OM
+2285,OM-ZA,Az Zahirah Governorate,OM
+2286,OM-ZU,Dhofar Governorate,OM
+2287,PA-1,Bocas del Toro Province,PA
+2288,PA-10,Panamá Oeste Province,PA
+2289,PA-2,Coclé Province,PA
+2290,PA-3,Colón Province,PA
+2291,PA-4,Chiriquí Province,PA
+2292,PA-5,Darién Province,PA
+2293,PA-6,Herrera Province,PA
+2294,PA-7,Los Santos Province,PA
+2295,PA-8,Panamá Province,PA
+2296,PA-9,Veraguas Province,PA
+2297,PA-EM,Emberá Indigenous Region,PA
+2298,PA-KY,Kuna Yala Indigenous Region,PA
+2299,PA-NB,Ngäbe-Buglé Indigenous Region,PA
+2300,PE-AMA,Amazonas Region,PE
+2301,PE-ANC,Ancash Region,PE
+2302,PE-APU,Apurímac Region,PE
+2303,PE-ARE,Arequipa Region,PE
+2304,PE-AYA,Ayacucho Region,PE
+2305,PE-CAJ,Cajamarca Region,PE
+2306,PE-CAL,El Callao Region,PE
+2307,PE-CUS,Cuzco Region,PE
+2308,PE-HUC,Huánuco Region,PE
+2309,PE-HUV,Huancavelica Region,PE
+2310,PE-ICA,Ica Region,PE
+2311,PE-JUN,Junín Region,PE
+2312,PE-LAL,La Libertad Region,PE
+2313,PE-LAM,Lambayeque Region,PE
+2314,PE-LIM,Lima Region,PE
+2315,PE-LOR,Loreto Region,PE
+2316,PE-MDD,Madre de Dios Region,PE
+2317,PE-MOQ,Moquegua Region,PE
+2318,PE-PAS,Pasco Region,PE
+2319,PE-PIU,Piura Region,PE
+2320,PE-PUN,Puno Region,PE
+2321,PE-SAM,San Martín Region,PE
+2322,PE-TAC,Tacna Region,PE
+2323,PE-TUM,Tumbes Region,PE
+2324,PE-UCA,Ucayali Region,PE
+2325,PG-CPK,Chimbu,PG
+2326,PG-CPM,Central,PG
+2327,PG-EBR,East New Britain,PG
+2328,PG-EHG,Eastern Highlands,PG
+2329,PG-EPW,Enga,PG
+2330,PG-ESW,East Sepik,PG
+2331,PG-GPK,Gulf,PG
+2332,PG-HE,Hela,PG
+2333,PG-JI,Jiwaka,PG
+2334,PG-MBA,Milne Bay,PG
+2335,PG-MPL,Morobe,PG
+2336,PG-MPM,Madang,PG
+2337,PG-MRL,Manus,PG
+2338,PG-NCD,National Capital District (Port Moresby),PG
+2339,PG-NIK,New Ireland,PG
+2340,PG-NPP,Northern (Oro),PG
+2341,PG-NSB,Bougainville (North Solomons),PG
+2342,PG-SAN,Sandaun (West Sepik),PG
+2343,PG-SHM,Southern Highlands,PG
+2344,PG-WBK,West New Britain,PG
+2345,PG-WHM,Western Highlands,PG
+2346,PG-WPD,Western (Fly River),PG
+2347,PH-ABR,Abra Province,PH
+2348,PH-AGN,Agusan del Norte Province,PH
+2349,PH-AGS,Agusan del Sur Province,PH
+2350,PH-AKL,Aklan Province,PH
+2351,PH-ALB,Albay Province,PH
+2352,PH-ANT,Antique Province,PH
+2353,PH-APA,Apayao Province,PH
+2354,PH-AUR,Aurora Province,PH
+2355,PH-BAN,Batasn Province,PH
+2356,PH-BAS,Basilan Province,PH
+2357,PH-BEN,Benguet Province,PH
+2358,PH-BIL,Biliran Province,PH
+2359,PH-BOH,Bohol Province,PH
+2360,PH-BTG,Batangas Province,PH
+2361,PH-BTN,Batanes Province,PH
+2362,PH-BUK,Bukidnon Province,PH
+2363,PH-BUL,Bulacan Province,PH
+2364,PH-CAG,Cagayan Province,PH
+2365,PH-CAM,Camiguin Province,PH
+2366,PH-CAN,Camarines Norte Province,PH
+2367,PH-CAP,Capiz Province,PH
+2368,PH-CAS,Camarines Sur Province,PH
+2369,PH-CAT,Catanduanes Province,PH
+2370,PH-CAV,Cavite Province,PH
+2371,PH-CEB,Cebu Province,PH
+2372,PH-COM,Compostela Valley Province,PH
+2373,PH-DAO,Davao Oriental Province,PH
+2374,PH-DAS,Davao del Sur Province,PH
+2375,PH-DAV,Davao Province,PH
+2376,PH-EAS,Eastern Samar Province,PH
+2377,PH-GUI,Guimaras Province,PH
+2378,PH-IFU,Ifugao Province,PH
+2379,PH-ILI,Iloilo Province,PH
+2380,PH-ILN,Ilocos Norte Province,PH
+2381,PH-ILS,Ilocos Sur Province,PH
+2382,PH-ISA,Isabela Province,PH
+2383,PH-KAL,Kalinga-Apayso Province,PH
+2384,PH-LAG,Laguna Province,PH
+2385,PH-LAN,Lanao del Norte Province,PH
+2386,PH-LAS,Lanao del Sur Province,PH
+2387,PH-LEY,Leyte Province,PH
+2388,PH-LUN,La Union Province,PH
+2389,PH-MAD,Marinduque Province,PH
+2390,PH-MAG,Maguindanao Province,PH
+2391,PH-MAS,Masbate Province,PH
+2392,PH-MDC,Mindoro Occidental Province,PH
+2393,PH-MDR,Mindoro Oriental Province,PH
+2394,PH-MOU,Mountain Province Province,PH
+2395,PH-MSC,Misamis Occidental Province,PH
+2396,PH-MSR,Misamis Oriental Province,PH
+2397,PH-NCO,North Cotabato Province,PH
+2398,PH-NEC,Negroe Occidental Province,PH
+2399,PH-NER,Negros Oriental Province,PH
+2400,PH-NSA,Northern Samar Province,PH
+2401,PH-NUE,Nueva Ecija Province,PH
+2402,PH-NUV,Nueva Vizcaya Province,PH
+2403,PH-PAM,Pampanga Province,PH
+2404,PH-PAN,Pangasinan Province,PH
+2405,PH-PLW,Palawan Province,PH
+2406,PH-QUE,Quezon Province,PH
+2407,PH-QUI,Quirino Province,PH
+2408,PH-RIZ,Rizal Province,PH
+2409,PH-ROM,Romblon Province,PH
+2410,PH-SAR,Sarangani Province,PH
+2411,PH-SCO,South Cotabato Province,PH
+2412,PH-SIG,Siquijor Province,PH
+2413,PH-SLE,Southern Leyte Province,PH
+2414,PH-SLU,Sulu Province,PH
+2415,PH-SOR,Sorsogon Province,PH
+2416,PH-SUK,Sultan Kudarat Province,PH
+2417,PH-SUN,Surigao del Norte Province,PH
+2418,PH-SUR,Surigao del Sur Province,PH
+2419,PH-TAR,Tarlac Province,PH
+2420,PH-TAW,Tawi-Tawi Province,PH
+2421,PH-WSA,Western Samar Province,PH
+2422,PH-ZAN,Zamboanga del Norte Province,PH
+2423,PH-ZAS,Zamboanga del Sur Province,PH
+2424,PH-ZMB,Zambales Province,PH
+2425,PH-ZSI,Zamboanga Sibiguey Province,PH
+2426,PK-BA,Balochistan,PK
+2427,PK-IS,Islamabad Capital Territory,PK
+2428,PK-JK,Azad Kashmir,PK
+2429,PK-NA,Northern Areas,PK
+2430,PK-NW,North-West Frontier,PK
+2431,PK-PB,Punjab,PK
+2432,PK-SD,Sindh,PK
+2433,PK-TA,Federally Administered Tribal Areas,PK
+2434,PL-DS,Lower Silesia,PL
+2435,PL-KP,Kuyavia-Pomerania,PL
+2436,PL-LB,Lubusz,PL
+2437,PL-LD,Lodz,PL
+2438,PL-LU,Lublin,PL
+2439,PL-MA,Lesser Poland,PL
+2440,PL-MZ,Masovia,PL
+2441,PL-OP,Opole,PL
+2442,PL-PD,Podlachia,PL
+2443,PL-PK,Subcarpathia,PL
+2444,PL-PM,Pomerania,PL
+2445,PL-SK,Swietokrzyskie,PL
+2446,PL-SL,Silesia,PL
+2447,PL-WN,Warmia-Masuria,PL
+2448,PL-WP,Greater Poland,PL
+2449,PL-ZP,West Pomerania,PL
+2450,PM-ML,Miquelon-Longlade,PM
+2451,PM-SP,Saint-Pierre,PM
+2452,PS-BTH,Bethlehem Governorate,PS
+2453,PS-DEB,Deir al-Balah Governorate,PS
+2454,PS-GZA,Gaza Governorate,PS
+2455,PS-JEM,Jerusalem Governorate,PS
+2456,PS-JEN,Jenin Governorate,PS
+2457,PS-JRH,Jerico Governorate,PS
+2458,PS-KYS,Khan Yunis Governorate,PS
+2459,PS-NBS,Nablus Governorate,PS
+2460,PS-NGZ,North Gaza Governorate,PS
+2461,PS-QQA,Qalqilya Governorate,PS
+2462,PS-RBH,Ramallah and al-Bireh Governorate,PS
+2463,PS-RFH,Rafah Governorate,PS
+2464,PS-SLT,Salfit Governorate,PS
+2465,PS-TBS,Tubas Governorate,PS
+2466,PS-TKM,Tulkarm Governorate,PS
+2467,PT-01,Aveiro District,PT
+2468,PT-02,Beja District,PT
+2469,PT-03,Braga District,PT
+2470,PT-04,Bragança District,PT
+2471,PT-05,Castelo Branco District,PT
+2472,PT-06,Coimbra District,PT
+2473,PT-07,Évora District,PT
+2474,PT-08,Faro District,PT
+2475,PT-09,Guarda District,PT
+2476,PT-10,Leiria District,PT
+2477,PT-11,Lisbon District,PT
+2478,PT-12,Portalegre District,PT
+2479,PT-13,Oporto District,PT
+2480,PT-14,Santarém District,PT
+2481,PT-15,Setúbal District,PT
+2482,PT-16,Viana do Castelo District,PT
+2483,PT-17,Vila Real District,PT
+2484,PT-18,Viseu District,PT
+2485,PT-20,Autonomous Region of Azores,PT
+2486,PT-30,Autonomous Region of Madeira,PT
+2487,PW-002,Aimeliik,PW
+2488,PW-004,Airai,PW
+2489,PW-010,Angaur,PW
+2490,PW-050,Hatobohei,PW
+2491,PW-100,Kayangel,PW
+2492,PW-150,Koror,PW
+2493,PW-212,Melekeok,PW
+2494,PW-214,Ngaraard,PW
+2495,PW-218,Ngarchelong,PW
+2496,PW-222,Ngardmau,PW
+2497,PW-224,Ngatpang,PW
+2498,PW-226,Ngchesar,PW
+2499,PW-227,Ngeremlengui,PW
+2500,PW-228,Ngiwal,PW
+2501,PW-350,Peleliu,PW
+2502,PW-370,Sonsorol,PW
+2503,PY-1,Concepción Department,PY
+2504,PY-10,Alto Paraná Department,PY
+2505,PY-11,Central Department,PY
+2506,PY-12,Ñeembucú Department,PY
+2507,PY-13,Amambay Department,PY
+2508,PY-14,Canindeyú Department,PY
+2509,PY-15,Presidente Hayes Department,PY
+2510,PY-16,Alto Paraguay Department,PY
+2511,PY-19,Boquerón Department,PY
+2512,PY-2,San Pedro Department,PY
+2513,PY-3,Cordillera Department,PY
+2514,PY-4,Guairá Department,PY
+2515,PY-5,Caaguazú Department,PY
+2516,PY-6,Caazapá Department,PY
+2517,PY-7,Itapúa Department,PY
+2518,PY-8,Misiones Department,PY
+2519,PY-9,Paraguarí Department,PY
+2520,PY-ASU,Asunción Capital District,PY
+2521,QA-DA,Ad Dawhah Municipality,QA
+2522,QA-GH,Al Ghuwayriyah Municipality,QA
+2523,QA-JB,Jariyan al Batnah Municipality,QA
+2524,QA-JU,Al Jumayliyah Municipality,QA
+2525,QA-KH,Al Khawr Municipality,QA
+2526,QA-MS,Madinat ash Shamal Municipality,QA
+2527,QA-RA,Ar Rayyan Municipality,QA
+2528,QA-US,Umm Salal Municipality,QA
+2529,QA-WA,Al Wakrah Municipality,QA
+2530,RO-AB,Alba,RO
+2531,RO-AG,Argeş,RO
+2532,RO-AR,Arad,RO
+2533,RO-B,Bucureşti,RO
+2534,RO-BC,Bacău,RO
+2535,RO-BH,Bihor,RO
+2536,RO-BN,Bistriţa-Năsăud,RO
+2537,RO-BR,Brăila,RO
+2538,RO-BT,Botoşani,RO
+2539,RO-BV,Braşov,RO
+2540,RO-BZ,Buzău,RO
+2541,RO-CJ,Cluj,RO
+2542,RO-CL,Călăraşi,RO
+2543,RO-CS,Caras-Severin,RO
+2544,RO-CT,Constanţa,RO
+2545,RO-CV,Covasna,RO
+2546,RO-DB,Dâmboviţa,RO
+2547,RO-DJ,Dolj,RO
+2548,RO-GJ,Gorj,RO
+2549,RO-GL,Galaţi,RO
+2550,RO-GR,Giurgiu,RO
+2551,RO-HD,Hunedoara,RO
+2552,RO-HR,Harghita,RO
+2553,RO-IF,Ilfov,RO
+2554,RO-IL,Ialomiţa,RO
+2555,RO-IS,Iaşi,RO
+2556,RO-MH,Mehedinţi,RO
+2557,RO-MM,Maramureş,RO
+2558,RO-MS,Mureş,RO
+2559,RO-NT,Neamţ,RO
+2560,RO-OT,Olt,RO
+2561,RO-PH,Prahova,RO
+2562,RO-SB,Sibiu,RO
+2563,RO-SJ,Sălaj,RO
+2564,RO-SM,Satu Mare,RO
+2565,RO-SV,Suceava,RO
+2566,RO-TL,Tulcea,RO
+2567,RO-TM,Timiş,RO
+2568,RO-TR,Teleorman,RO
+2569,RO-VL,Vâlcea,RO
+2570,RO-VN,Vrancea,RO
+2571,RO-VS,Vaslui,RO
+2572,RS-00,Beograd (city),RS
+2573,RS-01,Northern Bačka,RS
+2574,RS-02,Central Banat,RS
+2575,RS-03,North Banat,RS
+2576,RS-04,South Banat,RS
+2577,RS-05,West Bačka,RS
+2578,RS-06,South Bačka,RS
+2579,RS-07,Srem,RS
+2580,RS-08,Mačva,RS
+2581,RS-09,Kolubara,RS
+2582,RS-10,Podunavlje,RS
+2583,RS-11,Braničevo,RS
+2584,RS-12,Šumadija,RS
+2585,RS-13,Pomoravlje,RS
+2586,RS-14,Bor,RS
+2587,RS-15,Zaječar,RS
+2588,RS-16,Zlatibor,RS
+2589,RS-17,Moravica,RS
+2590,RS-18,Raška,RS
+2591,RS-19,Rasina,RS
+2592,RS-20,Nišava,RS
+2593,RS-21,Toplica,RS
+2594,RS-22,Pirot,RS
+2595,RS-23,Jablanica,RS
+2596,RS-24,Pčinja,RS
+2597,RS-25,Kosovo,RS
+2598,RS-26,Peć,RS
+2599,RS-27,Prizren,RS
+2600,RS-28,Kosovska Mitrovica,RS
+2601,RS-29,Kosovo-Pomoravlje,RS
+2602,RU-AD,Republic of Adygea,RU
+2603,RU-AL,Altai Republic,RU
+2604,RU-ALT,Altai Krai,RU
+2605,RU-AMU,Amur Oblast,RU
+2606,RU-ARK,Arkhangelsk Oblast,RU
+2607,RU-AST,Astrakhan Oblast,RU
+2608,RU-BA,Republic of Bashkortostan,RU
+2609,RU-BEL,Belgorod Oblast,RU
+2610,RU-BRY,Bryansk Oblast,RU
+2611,RU-BU,Republic of Buryat,RU
+2612,RU-CE,Chechen Republic,RU
+2613,RU-CHE,Chelyabinsk Oblast,RU
+2614,RU-CHI,Zabaykalsky Krai,RU
+2615,RU-CHU,Chukotka Autonomous Okrug,RU
+2616,RU-CU,Chuvash Republic,RU
+2617,RU-DA,Republic of Dagestan,RU
+2618,RU-IN,Republic of Ingushetia,RU
+2619,RU-IRK,Irkutsk Oblast,RU
+2620,RU-IVA,Ivanovo Oblast,RU
+2621,RU-KAM,Kamchatka Krai,RU
+2622,RU-KB,Kabardino-Balkar Republic,RU
+2623,RU-KC,Karachay-Cherkess Republic,RU
+2624,RU-KDA,Krasnodar Krai,RU
+2625,RU-KEM,Kemerovo Oblast,RU
+2626,RU-KGD,Kaliningrad Oblast,RU
+2627,RU-KGN,Kurgan Oblast,RU
+2628,RU-KHA,Khabarovsk Krai,RU
+2629,RU-KHM,Khanty-Mansi Autonomous Okrug,RU
+2630,RU-KIR,Kirov Oblast,RU
+2631,RU-KK,Republic of Khakassia,RU
+2632,RU-KL,Republic of Kalmykia,RU
+2633,RU-KLU,Kaluga Oblast,RU
+2634,RU-KO,Komi Republic,RU
+2635,RU-KOS,Kostroma Oblast,RU
+2636,RU-KR,Republic of Karelia,RU
+2637,RU-KRS,Kursk Oblast,RU
+2638,RU-KYA,Krasnoyarsk Krai,RU
+2639,RU-LEN,Leningrad Oblast,RU
+2640,RU-LIP,Lipetsk Oblast,RU
+2641,RU-MAG,Magadan Oblast,RU
+2642,RU-ME,Mari El Republic,RU
+2643,RU-MO,Republic of Mordovia,RU
+2644,RU-MOS,Moscow Oblast,RU
+2645,RU-MOW,Moscow (city),RU
+2646,RU-MUR,Murmansk Oblast,RU
+2647,RU-NEN,Nenets Autonomous Okrug,RU
+2648,RU-NGR,Novgorod Oblast,RU
+2649,RU-NIZ,Nizhny Novgorod Oblast,RU
+2650,RU-NVS,Novosibirsk Oblast,RU
+2651,RU-OMS,Omsk Oblast,RU
+2652,RU-ORE,Orenburg Oblast,RU
+2653,RU-ORL,Oryol Oblast,RU
+2654,RU-PER,Perm Krai,RU
+2655,RU-PNZ,Penza Oblast,RU
+2656,RU-PRI,Primorsky Krai,RU
+2657,RU-PSK,Pskov Oblast,RU
+2658,RU-ROS,Rostov Oblast,RU
+2659,RU-RYA,Ryazan Oblast,RU
+2660,RU-SA,Sakha (Yakutia) Republic,RU
+2661,RU-SAK,Sakhalin Oblast,RU
+2662,RU-SAM,Samara Oblast,RU
+2663,RU-SAR,Saratov Oblast,RU
+2664,RU-SE,Republic of North Ossetia-Alania,RU
+2665,RU-SMO,Smolensk Oblast,RU
+2666,RU-SPE,Saint Petersburg (city),RU
+2667,RU-STA,Stavropol Krai,RU
+2668,RU-SVE,Sverdlovsk Oblast,RU
+2669,RU-TA,Republic of Tatarstan,RU
+2670,RU-TAM,Tambov Oblast,RU
+2671,RU-TOM,Tomsk Oblast,RU
+2672,RU-TUL,Tula Oblast,RU
+2673,RU-TVE,Tver Oblast,RU
+2674,RU-TY,Tuva Republic,RU
+2675,RU-TYU,Tyumen Oblast,RU
+2676,RU-UD,Udmurt Republic,RU
+2677,RU-ULY,Ulyanovsk Oblast,RU
+2678,RU-UOB,Ust-Orda Buryat Autonomous Okrug,RU
+2679,RU-VGG,Volgograd Oblast,RU
+2680,RU-VLA,Vladimir Oblast,RU
+2681,RU-VLG,Vologda Oblast,RU
+2682,RU-VOR,Voronezh Oblast,RU
+2683,RU-YAN,Yamalo-Nenets Autonomous Okrug,RU
+2684,RU-YAR,Yaroslavl Oblast,RU
+2685,RU-YEV,Jewish Autonomous Oblast,RU
+2686,RW-01,Ville de Kigali,RW
+2687,RW-02,East,RW
+2688,RW-03,North,RW
+2689,RW-04,West,RW
+2690,RW-05,South,RW
+2691,RW-B,Gitarama,RW
+2692,RW-C,Butare,RW
+2693,RW-D,Gikongoro,RW
+2694,RW-E,Cyangugu,RW
+2695,RW-F,Kibuye,RW
+2696,RW-G,Gisenyi,RW
+2697,RW-H,Ruhengeri,RW
+2698,RW-I,Byumba,RW
+2699,RW-J,Kibungo,RW
+2700,RW-K,Kigali-Rural Kigali y' Icyaro,RW
+2701,RW-L,Kigali-Ville Kigali Ngari,RW
+2702,RW-M,Mutara,RW
+2703,SA-01,Riyadh Region,SA
+2704,SA-02,Makkah Region,SA
+2705,SA-03,Al Madinah Region,SA
+2706,SA-04,Ash Sharqiyah Region,SA
+2707,SA-05,Al Qasim Region,SA
+2708,SA-06,Ha'il Region,SA
+2709,SA-07,Tabuk Region,SA
+2710,SA-08,The Northern Border Region,SA
+2711,SA-09,Jlzan Region,SA
+2712,SA-10,Najran Region,SA
+2713,SA-11,Al Batah Region,SA
+2714,SA-12,Al Jawf Region,SA
+2715,SA-14,Asir Region,SA
+2716,SB-CE,Central,SB
+2717,SB-CH,Choiseul,SB
+2718,SB-CT,Capital Territory (Honiara),SB
+2719,SB-GU,Guadalcanal,SB
+2720,SB-IS,Isabel,SB
+2721,SB-MK,Makira,SB
+2722,SB-ML,Malaita,SB
+2723,SB-RB,Rennell and Bellona,SB
+2724,SB-TE,Temotu,SB
+2725,SB-WE,Western,SB
+2726,SC-01,Anse aux Pins,SC
+2727,SC-02,Anse Boileau,SC
+2728,SC-03,Anse Étoile,SC
+2729,SC-04,Anse Louis,SC
+2730,SC-05,Anse Royale,SC
+2731,SC-06,Baie Lazare,SC
+2732,SC-07,Baie Sainte Anne,SC
+2733,SC-08,Beau Vallon,SC
+2734,SC-09,Bel Air,SC
+2735,SC-10,Bel Ombre,SC
+2736,SC-11,Cascade,SC
+2737,SC-12,Glacis,SC
+2738,SC-13,Grand' Anse (Mahé),SC
+2739,SC-14,Grand' Anse (Praslin),SC
+2740,SC-15,La Digue,SC
+2741,SC-16,La Rivière Anglaise,SC
+2742,SC-17,Mont Buxton,SC
+2743,SC-18,Mont Fleuri,SC
+2744,SC-19,Plaisance,SC
+2745,SC-20,Pointe La Rue,SC
+2746,SC-21,Port Glaud,SC
+2747,SC-22,Saint Louis,SC
+2748,SC-23,Takamaka,SC
+2749,SD-01,Northern State,SD
+2750,SD-02,North Darfur State,SD
+2751,SD-03,Khartoum State,SD
+2752,SD-04,River Nile State,SD
+2753,SD-05,Kassala State,SD
+2754,SD-06,Al Qadarif State,SD
+2755,SD-07,Al Jazirah State,SD
+2756,SD-08,White Nile State,SD
+2757,SD-09,North Kurdufan State,SD
+2758,SD-10,West Kurdufan State,SD
+2759,SD-11,South Darfur State,SD
+2760,SD-12,West Darfur State,SD
+2761,SD-13,South Kurdufan State,SD
+2762,SD-24,Blue Nile State,SD
+2763,SD-25,Sennar State,SD
+2764,SD-26,Red Sea State,SD
+2765,SD-DC,Central Darfur State,SD
+2766,SD-DE,East Darfur State,SD
+2767,SE-AB,Stockholms län,SE
+2768,SE-AC,Västerbottens län,SE
+2769,SE-BD,Norrbottena län,SE
+2770,SE-C,Uppsala län,SE
+2771,SE-D,Södermanlands län,SE
+2772,SE-E,Östergötlands län,SE
+2773,SE-F,Jönköpings län,SE
+2774,SE-G,Kronoberge län,SE
+2775,SE-H,Kalmar län,SE
+2776,SE-I,Gotlands län,SE
+2777,SE-K,Blekinge län,SE
+2778,SE-M,Skåne län,SE
+2779,SE-N,Hallands län,SE
+2780,SE-Q,Västra Götalands län,SE
+2781,SE-S,Värmlanda län,SE
+2782,SE-T,Örebro län,SE
+2783,SE-U,Västmanlanda län,SE
+2784,SE-W,Dalarnas län,SE
+2785,SE-X,Gävleborge län,SE
+2786,SE-Y,Västernorrlands län,SE
+2787,SE-Z,Jämtlande län,SE
+2788,SG-01,Central Singapore,SG
+2789,SG-02,North East,SG
+2790,SG-03,North West,SG
+2791,SG-04,South East,SG
+2792,SG-05,South West,SG
+2793,SH-AC,Ascension,SH
+2794,SH-SH,Saint Helena,SH
+2795,SH-TA,Tristan da Cunha,SH
+2796,SI-001,Ajdovscina,SI
+2797,SI-002,Beltinci,SI
+2798,SI-003,Bled,SI
+2799,SI-004,Bohinj,SI
+2800,SI-005,Borovnica,SI
+2801,SI-006,Bovec,SI
+2802,SI-007,Brda,SI
+2803,SI-008,Brezovica,SI
+2804,SI-009,Brezica,SI
+2805,SI-010,Tisina,SI
+2806,SI-011,Celje,SI
+2807,SI-012,Cerklje na Gorenjskem,SI
+2808,SI-013,Cerknica,SI
+2809,SI-014,Cerkno,SI
+2810,SI-015,Crensovci,SI
+2811,SI-016,Crna na Koroskem,SI
+2812,SI-017,Crnomelj,SI
+2813,SI-018,Destrnik,SI
+2814,SI-019,Divaca,SI
+2815,SI-020,Dobrepolje,SI
+2816,SI-021,Dobrova-Polhov Gradec,SI
+2817,SI-022,Dol pri Ljubljani,SI
+2818,SI-023,Domzale,SI
+2819,SI-024,Dornava,SI
+2820,SI-025,Dravograd,SI
+2821,SI-026,Duplek,SI
+2822,SI-027,Gorenja vas-Poljane,SI
+2823,SI-028,Gorsnica,SI
+2824,SI-029,Gornja Radgona,SI
+2825,SI-030,Gornji Grad,SI
+2826,SI-031,Gornji Petrovci,SI
+2827,SI-032,Grosuplje,SI
+2828,SI-033,Salovci,SI
+2829,SI-034,Hrastnik,SI
+2830,SI-035,Hrpelje-Kozina,SI
+2831,SI-036,Idrija,SI
+2832,SI-037,Ig,SI
+2833,SI-038,IIrska Bistrica,SI
+2834,SI-039,Ivancna Gorica,SI
+2835,SI-040,Izola,SI
+2836,SI-041,Jesenice,SI
+2837,SI-042,Jursinci,SI
+2838,SI-043,Kamnik,SI
+2839,SI-044,Kanal,SI
+2840,SI-045,Kidricevo,SI
+2841,SI-046,Kobarid,SI
+2842,SI-047,Kobilje,SI
+2843,SI-048,Jovevje,SI
+2844,SI-049,Komen,SI
+2845,SI-050,Koper,SI
+2846,SI-051,Kozje,SI
+2847,SI-052,Kranj,SI
+2848,SI-053,Kranjska Gora,SI
+2849,SI-054,Krsko,SI
+2850,SI-055,Kungota,SI
+2851,SI-056,Kuzma,SI
+2852,SI-057,Lasko,SI
+2853,SI-058,Lenart,SI
+2854,SI-059,Lendava,SI
+2855,SI-060,Litija,SI
+2856,SI-061,Ljubljana,SI
+2857,SI-062,Ljubno,SI
+2858,SI-063,Ljutomer,SI
+2859,SI-064,Logatec,SI
+2860,SI-065,Loska dolina,SI
+2861,SI-066,Loski Potok,SI
+2862,SI-067,Luce,SI
+2863,SI-068,Lukovica,SI
+2864,SI-069,Majsperk,SI
+2865,SI-070,Maribor,SI
+2866,SI-071,Medvode,SI
+2867,SI-072,Menges,SI
+2868,SI-073,Metlika,SI
+2869,SI-074,Mezica,SI
+2870,SI-075,Miren-Kostanjevica,SI
+2871,SI-076,Mislinja,SI
+2872,SI-077,Moravce,SI
+2873,SI-078,Moravske Toplice,SI
+2874,SI-079,Mozirje,SI
+2875,SI-080,Murska Sobota,SI
+2876,SI-081,Muta,SI
+2877,SI-082,Naklo,SI
+2878,SI-083,Nazarje,SI
+2879,SI-084,Nova Gorica,SI
+2880,SI-085,Nova mesto,SI
+2881,SI-086,Odranci,SI
+2882,SI-087,Ormo,SI
+2883,SI-088,Osilnica,SI
+2884,SI-089,Pesnica,SI
+2885,SI-090,Piran,SI
+2886,SI-091,Pivka,SI
+2887,SI-092,Podčetrtek,SI
+2888,SI-093,Podvelka,SI
+2889,SI-094,Postojna,SI
+2890,SI-095,Preddvor,SI
+2891,SI-096,Ptuj,SI
+2892,SI-097,Puconci,SI
+2893,SI-098,Rače-Fram,SI
+2894,SI-099,Radeče,SI
+2895,SI-100,Radenci,SI
+2896,SI-101,Radlje ob Dravi,SI
+2897,SI-102,Radovljica,SI
+2898,SI-103,Ravne na Koroškem,SI
+2899,SI-104,Ribnica,SI
+2900,SI-105,Rogašovci,SI
+2901,SI-106,Rogaška Slatina,SI
+2902,SI-107,Rogatec,SI
+2903,SI-108,Ruše,SI
+2904,SI-109,Semič,SI
+2905,SI-110,Sevnica,SI
+2906,SI-111,Seana,SI
+2907,SI-112,Slovenj Gradec,SI
+2908,SI-113,Slovenska Bistrica,SI
+2909,SI-114,Slovenske Konjice,SI
+2910,SI-115,Starše,SI
+2911,SI-116,Sveti Jurij,SI
+2912,SI-117,Sencur,SI
+2913,SI-118,Sentilj,SI
+2914,SI-119,Sentjernej,SI
+2915,SI-120,Sentjur pri Celju,SI
+2916,SI-121,Skocjan,SI
+2917,SI-122,Skofja Loka,SI
+2918,SI-123,Skoftjica,SI
+2919,SI-124,Smarje pri Jelsah,SI
+2920,SI-125,Smartno ob Paki,SI
+2921,SI-126,Sostanj,SI
+2922,SI-127,Store,SI
+2923,SI-128,Tolmin,SI
+2924,SI-129,Trbovje,SI
+2925,SI-130,Trebnje,SI
+2926,SI-131,Trzic,SI
+2927,SI-132,Turnisce,SI
+2928,SI-133,Velenje,SI
+2929,SI-134,Velika Lasce,SI
+2930,SI-135,Videm,SI
+2931,SI-136,Vipava,SI
+2932,SI-137,Vitanje,SI
+2933,SI-138,Vojnik,SI
+2934,SI-139,Vojnik,SI
+2935,SI-140,Vrhnika,SI
+2936,SI-141,Vuzenica,SI
+2937,SI-142,Zagorje ob Savi,SI
+2938,SI-143,Zavrc,SI
+2939,SI-144,Zrece,SI
+2940,SI-146,Zelezniki,SI
+2941,SI-147,Ziri,SI
+2942,SI-148,Benedikt,SI
+2943,SI-149,Bistrica ob Sotli,SI
+2944,SI-150,Bloke,SI
+2945,SI-151,Braslovce,SI
+2946,SI-152,Cankova,SI
+2947,SI-153,Cerkvenjak,SI
+2948,SI-154,Dobje,SI
+2949,SI-155,Dobrna,SI
+2950,SI-156,Dobrovnik,SI
+2951,SI-157,Dolenjske Toplice,SI
+2952,SI-158,Grad,SI
+2953,SI-159,Hajdina,SI
+2954,SI-160,Hoce-Slivnica,SI
+2955,SI-161,Hodos,SI
+2956,SI-162,Jorjul,SI
+2957,SI-163,Jezersko,SI
+2958,SI-164,Komenda,SI
+2959,SI-165,Kostel,SI
+2960,SI-166,Krizevci,SI
+2961,SI-167,Lovrenc na Pohorju,SI
+2962,SI-168,Markovci,SI
+2963,SI-169,Miklavz na Dravskern polju,SI
+2964,SI-170,Mirna Pec,SI
+2965,SI-171,Oplotnica,SI
+2966,SI-172,Podlehnik,SI
+2967,SI-173,Polzela,SI
+2968,SI-174,Prebold,SI
+2969,SI-175,Prevalje,SI
+2970,SI-176,Razkrije,SI
+2971,SI-177,Ribnica na Pohorju,SI
+2972,SI-178,Selnica ob Dravi,SI
+2973,SI-179,Sodraica,SI
+2974,SI-180,Solčava,SI
+2975,SI-181,Sveta Ana,SI
+2976,SI-182,Sveti Andraz v Slovenskih goricah,SI
+2977,SI-183,Sempeter-Vrtojba,SI
+2978,SI-184,Tabor,SI
+2979,SI-185,Trnovska vas,SI
+2980,SI-186,Trzin,SI
+2981,SI-187,Velika Polana,SI
+2982,SI-188,Verzej,SI
+2983,SI-189,Vransko,SI
+2984,SI-190,Zalec,SI
+2985,SI-191,Zetale,SI
+2986,SI-192,Zirovnica,SI
+2987,SI-193,Zuzemberk,SI
+2988,SI-194,Smartno pri Litiji,SI
+2989,SK-BC,Banská Bystrica,SK
+2990,SK-BL,Bratislava,SK
+2991,SK-KI,Košice,SK
+2992,SK-NJ,Nitra,SK
+2993,SK-PV,Prešov,SK
+2994,SK-TA,Trnava,SK
+2995,SK-TC,Trenčín,SK
+2996,SK-ZI,Žilina,SK
+2997,SL-E,Eastern Province,SL
+2998,SL-N,Northern Province,SL
+2999,SL-S,Southern Province,SL
+3000,SL-W,Western Area,SL
+3001,SM-01,Acquaviva,SM
+3002,SM-02,Chiesanuova,SM
+3003,SM-03,Domagnano,SM
+3004,SM-04,Faetano,SM
+3005,SM-05,Fiorentino,SM
+3006,SM-06,Borgo Maggiore,SM
+3007,SM-07,San Marino,SM
+3008,SM-08,Montegiardino,SM
+3009,SM-09,Serravalle,SM
+3010,SN-DB,Diourbel Region,SN
+3011,SN-DK,Dakar Region,SN
+3012,SN-FK,Fatick Region,SN
+3013,SN-KD,Kolda Region,SN
+3014,SN-KL,Kaolack Region,SN
+3015,SN-LG,Louga Region,SN
+3016,SN-MT,Matam Region,SN
+3017,SN-SL,Saint-Louis Region,SN
+3018,SN-TC,Tambacounda Region,SN
+3019,SN-TH,Thiès Region,SN
+3020,SN-ZG,Ziguinchor Region,SN
+3021,SO-AW,Awdal,SO
+3022,SO-BK,Bakool,SO
+3023,SO-BN,Banaadir,SO
+3024,SO-BR,Bari,SO
+3025,SO-BY,Bay,SO
+3026,SO-GA,Galguduud,SO
+3027,SO-GE,Gedo,SO
+3028,SO-HI,Hiirsan,SO
+3029,SO-JD,Jubbada Dhexe,SO
+3030,SO-JH,Jubbada Hoose,SO
+3031,SO-MU,Mudug,SO
+3032,SO-NU,Nugaal,SO
+3033,SO-SA,Saneag,SO
+3034,SO-SD,Shabeellaha Dhexe,SO
+3035,SO-SH,Shabeellaha Hoose,SO
+3036,SO-SO,Sool,SO
+3037,SO-TO,Togdheer,SO
+3038,SO-WO,Woqooyi Galbeed,SO
+3039,SR-BR,Brokopondo,SR
+3040,SR-CM,Commewijne,SR
+3041,SR-CR,Coronie,SR
+3042,SR-MA,Marowijne,SR
+3043,SR-NI,Nickerie,SR
+3044,SR-PM,Paramaribo,SR
+3045,SR-PR,Para,SR
+3046,SR-SA,Saramacca,SR
+3047,SR-SI,Sipaliwini,SR
+3048,SR-WA,Wanica,SR
+3049,SS-14,Western Bahr el Ghazal State,SS
+3050,SS-15,Northern Bahr el Ghazal State,SS
+3051,SS-16,Western Equatoria State,SS
+3052,SS-17,Central Equatoria State,SS
+3053,SS-18,Lakes State,SS
+3054,SS-19,Eastern Equatoria State,SS
+3055,SS-20,Jonglei State,SS
+3056,SS-21,Warrap State,SS
+3057,SS-22,Unity State,SS
+3058,SS-23,Upper Nile State,SS
+3059,ST-P,Principe,ST
+3060,ST-S,São Tomé,ST
+3061,SV-AH,Ahuachapan,SV
+3062,SV-CA,Cabanas,SV
+3063,SV-CH,Chalatenango,SV
+3064,SV-CU,Cuscatlan,SV
+3065,SV-LI,La Libertad,SV
+3066,SV-MO,Morazan,SV
+3067,SV-PA,La Paz,SV
+3068,SV-SA,Santa Ana,SV
+3069,SV-SM,San Miguel,SV
+3070,SV-SO,Sonsonate,SV
+3071,SV-SS,San Salvador,SV
+3072,SV-SV,San Vicente,SV
+3073,SV-UN,La Unión,SV
+3074,SV-US,Usulutan,SV
+3075,SY-DI,Damascus Governorate,SY
+3076,SY-DR,Daraa Governorate,SY
+3077,SY-DY,Deir ez-Zor Governorate,SY
+3078,SY-HA,Al-Hasakah Governorate,SY
+3079,SY-HI,Homs Governorate,SY
+3080,SY-HL,Aleppo Governorate,SY
+3081,SY-HM,Hama Governorate,SY
+3082,SY-ID,Idlib Governorate,SY
+3083,SY-LA,Latakia Governorate,SY
+3084,SY-QU,Quneitra Governorate,SY
+3085,SY-RA,Ar-Raqqah Governorate,SY
+3086,SY-RD,Rif Dimashq Governorate,SY
+3087,SY-SU,As-Suwayda Governorate,SY
+3088,SY-TA,Tartus Governorate,SY
+3089,SZ-HH,Hhohho,SZ
+3090,SZ-LU,Lubombo,SZ
+3091,SZ-MA,Manzini,SZ
+3092,SZ-SH,Shiselweni,SZ
+3093,TC-AC,Ambergris Cays,TC
+3094,TC-DC,Dellis Cay,TC
+3095,TC-EC,East Caicos,TC
+3096,TC-FC,French Cay,TC
+3097,TC-GT,Grand Turk,TC
+3098,TC-LW,Little Water Cay,TC
+3099,TC-MC,Middle Caicos,TC
+3100,TC-NC,North Caicos,TC
+3101,TC-PN,Pine Cay,TC
+3102,TC-PR,Providenciales,TC
+3103,TC-RC,Parrot Cay,TC
+3104,TC-SC,South Caicos,TC
+3105,TC-SL,Salt Cay,TC
+3106,TC-WC,West Caicos,TC
+3107,TD-BA,Batha,TD
+3108,TD-BET,Borkou-Ennedi-Tibesti,TD
+3109,TD-BI,Biltine,TD
+3110,TD-CB,Chari-Baguirmi,TD
+3111,TD-GR,Guera,TD
+3112,TD-KA,Kanem,TD
+3113,TD-LC,Lac,TD
+3114,TD-LO,Logone-Occidental,TD
+3115,TD-LR,Logone-Oriental,TD
+3116,TD-MC,Moyen-Chari,TD
+3117,TD-MK,Mayo-Kebbi,TD
+3118,TD-OD,Ouaddai,TD
+3119,TD-SA,Salamat,TD
+3120,TD-TA,Tandjile,TD
+3121,TG-C,Centrale Region,TG
+3122,TG-K,Kara Region,TG
+3123,TG-M,Maritime Region,TG
+3124,TG-P,Plateaux Region,TG
+3125,TG-S,Savanes Region,TG
+3126,TH-10,Bangkok Province,TH
+3127,TH-11,Samut Prakan Province,TH
+3128,TH-12,Nonthaburi Province,TH
+3129,TH-13,Pathum Thani Province,TH
+3130,TH-14,Phra Nakhon Si Ayutthaya Province,TH
+3131,TH-15,Ang Thong Province,TH
+3132,TH-16,Lop Buri Province,TH
+3133,TH-17,Sing Buri Province,TH
+3134,TH-18,Chai Nat Province,TH
+3135,TH-19,Saraburi Province,TH
+3136,TH-20,Chon Buri Province,TH
+3137,TH-21,Rayong Province,TH
+3138,TH-22,Chanthaburi Province,TH
+3139,TH-23,Trat Province,TH
+3140,TH-24,Chachoengsao Province,TH
+3141,TH-25,Prachin Buri Province,TH
+3142,TH-26,Nakhon Nayok Province,TH
+3143,TH-27,Sa Kaeo Province,TH
+3144,TH-30,Nakhon Ratchasima Province,TH
+3145,TH-31,Buri Ram Province,TH
+3146,TH-32,Surin Province,TH
+3147,TH-33,Si Sa Ket Province,TH
+3148,TH-34,Ubon Ratchathani Province,TH
+3149,TH-35,Yasothon Province,TH
+3150,TH-36,Chaiyaphum Province,TH
+3151,TH-37,Amnat Charoen Province,TH
+3152,TH-39,Nong Bua Lam Phu Province,TH
+3153,TH-40,Khon Kaen Province,TH
+3154,TH-41,Udon Thani Province,TH
+3155,TH-42,Loei Province,TH
+3156,TH-43,Nong Khai Province,TH
+3157,TH-44,Maha Sarakham Province,TH
+3158,TH-45,Roi Et Province,TH
+3159,TH-46,Kalasin Province,TH
+3160,TH-47,Sakon Nakhon Province,TH
+3161,TH-48,Nakhon Phanom Province,TH
+3162,TH-49,Mukdahan Province,TH
+3163,TH-50,Chiang Mai Province,TH
+3164,TH-51,Lamphun Province,TH
+3165,TH-52,Lampang Province,TH
+3166,TH-53,Uttaradit Province,TH
+3167,TH-54,Phrae Province,TH
+3168,TH-55,Nan Province,TH
+3169,TH-56,Phayao Province,TH
+3170,TH-57,Chiang Rai Province,TH
+3171,TH-58,Mae Hong Son Province,TH
+3172,TH-60,Nakhon Sawan Province,TH
+3173,TH-61,Uthai Thani Province,TH
+3174,TH-62,Kamphaeng Phet Province,TH
+3175,TH-63,Tak Province,TH
+3176,TH-64,Sukhothai Province,TH
+3177,TH-65,Phitsanulok Province,TH
+3178,TH-66,Phichit Province,TH
+3179,TH-67,Phetchabun Province,TH
+3180,TH-70,Ratchaburi Province,TH
+3181,TH-71,Kanchanaburi Province,TH
+3182,TH-72,Suphan Buri Province,TH
+3183,TH-73,Nakhon Pathom Province,TH
+3184,TH-74,Samut Sakhon Province,TH
+3185,TH-75,Samut Songkhram Province,TH
+3186,TH-76,Phetchaburi Province,TH
+3187,TH-77,Prachuap Khiri Khan Province,TH
+3188,TH-80,Nakhon Si Thammarat Province,TH
+3189,TH-81,Krabi Province,TH
+3190,TH-82,Phang Nga Province,TH
+3191,TH-83,Phuket Province,TH
+3192,TH-84,Surat Thani Province,TH
+3193,TH-85,Ranong Province,TH
+3194,TH-86,Chumphon Province,TH
+3195,TH-90,Songkhla Province,TH
+3196,TH-91,Satun Province,TH
+3197,TH-92,Trang Province,TH
+3198,TH-93,Phattalung Province,TH
+3199,TH-94,Pattani Province,TH
+3200,TH-95,Yala Province,TH
+3201,TH-96,Narathiwat Province,TH
+3202,TH-S,Pattaya Province,TH
+3203,TJ-DU,Dushanbe,TJ
+3204,TJ-GB,Gorno-Badakhshan Autonomous Region,TJ
+3205,TJ-KT,Khatlon Region,TJ
+3206,TJ-RR,Districts of Republican Subordination,TJ
+3207,TJ-SU,Sughd Region,TJ
+3208,TL-AL,Aileu,TL
+3209,TL-AN,Ainaro,TL
+3210,TL-BA,Baucau,TL
+3211,TL-BO,Bobonaro,TL
+3212,TL-CO,Cova Lima,TL
+3213,TL-DI,Dili,TL
+3214,TL-ER,Ermera,TL
+3215,TL-LA,Lautém,TL
+3216,TL-LI,Liquica,TL
+3217,TL-MF,Manafahi,TL
+3218,TL-MT,Manatuto,TL
+3219,TL-OE,Oecussi,TL
+3220,TL-VI,Viqueque,TL
+3221,TM-A,Ahal,TM
+3222,TM-B,Balkan,TM
+3223,TM-D,Daşoguz,TM
+3224,TM-L,Lebap,TM
+3225,TM-M,Mary,TM
+3226,TN-11,Tunis Governorate,TN
+3227,TN-12,Ariana Governorate,TN
+3228,TN-13,Ben Arous Governorate,TN
+3229,TN-14,Manouba Governorate,TN
+3230,TN-21,Nabeul Governorate,TN
+3231,TN-22,Zaghouan Governorate,TN
+3232,TN-23,Bizerte Governorate,TN
+3233,TN-31,Béja Governorate,TN
+3234,TN-32,Jendouba Governorate,TN
+3235,TN-33,Kef Governorate,TN
+3236,TN-34,Siliana Governorate,TN
+3237,TN-41,Kairouan Governorate,TN
+3238,TN-42,Kasserine Governorate,TN
+3239,TN-43,Sidi Bou Zid Governorate,TN
+3240,TN-51,Sousse Governorate,TN
+3241,TN-52,Monastir Governorate,TN
+3242,TN-53,Mahdia Governorate,TN
+3243,TN-61,Sfax Governorate,TN
+3244,TN-71,Gafsa Governorate,TN
+3245,TN-72,Tozeur Governorate,TN
+3246,TN-73,Kebili Governorate,TN
+3247,TN-81,Gabès Governorate,TN
+3248,TN-82,Medenine Governorate,TN
+3249,TN-83,Tataouine Governorate,TN
+3250,TO-01,Eua,TO
+3251,TO-02,Ha'apai,TO
+3252,TO-03,Niuas,TO
+3253,TO-04,Tongatapu,TO
+3254,TO-05,Vava',TO
+3255,TR-01,Adana Province,TR
+3256,TR-02,Adıyaman Province,TR
+3257,TR-03,Afyonkarahisar Province,TR
+3258,TR-04,Ağrı Province,TR
+3259,TR-05,Amasya Province,TR
+3260,TR-06,Ankara Province,TR
+3261,TR-07,Antalya Province,TR
+3262,TR-08,Artvin Province,TR
+3263,TR-09,Aydin Province,TR
+3264,TR-10,Balıkesir Province,TR
+3265,TR-11,Bilecik Province,TR
+3266,TR-12,Bingöl Province,TR
+3267,TR-13,Bitlis Province,TR
+3268,TR-14,Bolu Province,TR
+3269,TR-15,Burdur Province,TR
+3270,TR-16,Bursa Province,TR
+3271,TR-17,Çanakkale Province,TR
+3272,TR-18,Çankırı Province,TR
+3273,TR-19,Çorum Province,TR
+3274,TR-20,Denizli Province,TR
+3275,TR-21,Diyarbakir Province,TR
+3276,TR-22,Edirne Province,TR
+3277,TR-23,Elazığ Province,TR
+3278,TR-24,Erzincan Province,TR
+3279,TR-25,Erzurum Province,TR
+3280,TR-26,Eskişehir Province,TR
+3281,TR-27,Gaziantep Province,TR
+3282,TR-28,Giresun Province,TR
+3283,TR-29,Gümüşhane Province,TR
+3284,TR-30,Hakkâri Province,TR
+3285,TR-31,Hatay Province,TR
+3286,TR-32,Isparta Province,TR
+3287,TR-33,Icel Province,TR
+3288,TR-34,İstanbul Province,TR
+3289,TR-35,İzmir Province,TR
+3290,TR-36,Kars Province,TR
+3291,TR-37,Kastamonu Province,TR
+3292,TR-38,Kayseri Province,TR
+3293,TR-39,Kirklareli Province,TR
+3294,TR-40,Kırşehir Province,TR
+3295,TR-41,Kocaeli Province,TR
+3296,TR-42,Konya Province,TR
+3297,TR-43,Kütahya Province,TR
+3298,TR-44,Malatya Province,TR
+3299,TR-45,Manisa Province,TR
+3300,TR-46,Kahramanmaraş Province,TR
+3301,TR-47,Mardin Province,TR
+3302,TR-48,Muğla Province,TR
+3303,TR-49,Muş Province,TR
+3304,TR-50,Nevşehir Province,TR
+3305,TR-51,Niğde Province,TR
+3306,TR-52,Ordu Province,TR
+3307,TR-53,Rize Province,TR
+3308,TR-54,Sakarya Province,TR
+3309,TR-55,Samsun Province,TR
+3310,TR-56,Siirt Province,TR
+3311,TR-57,Sinop Province,TR
+3312,TR-58,Sivas Province,TR
+3313,TR-59,Tekirdağ Province,TR
+3314,TR-60,Tokat Province,TR
+3315,TR-61,Trabzon Province,TR
+3316,TR-62,Tunceli Province,TR
+3317,TR-63,Şanlıurfa Province,TR
+3318,TR-64,Uşak Province,TR
+3319,TR-65,Van Province,TR
+3320,TR-66,Yozgat Province,TR
+3321,TR-67,Zonguldak Province,TR
+3322,TR-68,Aksaray Province,TR
+3323,TR-69,Bayburt Province,TR
+3324,TR-70,Karaman Province,TR
+3325,TR-71,Kirikkale Province,TR
+3326,TR-72,Batman Province,TR
+3327,TR-73,Şırnak Province,TR
+3328,TR-74,Bartin Province,TR
+3329,TR-75,Ardahan Province,TR
+3330,TR-76,Iğdır Province,TR
+3331,TR-77,Yalova Province,TR
+3332,TR-78,Karabük Province,TR
+3333,TR-79,Kilis Province,TR
+3334,TR-80,Osmaniye Province,TR
+3335,TR-81,Düzce Province,TR
+3336,TT-ARI,Arima,TT
+3337,TT-CHA,Chaguanas,TT
+3338,TT-CTT,Couva-Tabaquite-Talparo,TT
+3339,TT-DMN,Diego Martin,TT
+3340,TT-ETO,Eastern Tobago,TT
+3341,TT-PED,Penal-Debe,TT
+3342,TT-POS,Port of Spain,TT
+3343,TT-PRT,Princes Town,TT
+3344,TT-PTF,Point Fortin,TT
+3345,TT-RCM,Rio Claro-Mayaro,TT
+3346,TT-SFO,San Fernando,TT
+3347,TT-SGE,Sangre Grande,TT
+3348,TT-SIP,Siparia,TT
+3349,TT-SJL,San Juan-Laventille,TT
+3350,TT-TUP,Tunapuna-Piarco,TT
+3351,TT-WTO,Western Tobago,TT
+3352,TV-FUN,Funafuti,TV
+3353,TV-NIT,Niutao,TV
+3354,TV-NIU,Nui,TV
+3355,TV-NKF,Nukufetau,TV
+3356,TV-NKL,Nukulaelae,TV
+3357,TV-NMA,Nanumea,TV
+3358,TV-NMG,Nanumanga,TV
+3359,TV-VAI,Vaitupu,TV
+3360,TW-CHA,Changhua County,TW
+3361,TW-CYI,Chiayi (city),TW
+3362,TW-CYQ,Chiayi County,TW
+3363,TW-HSQ,Hsinchu County,TW
+3364,TW-HSZ,Hsinchu (city),TW
+3365,TW-HUA,Hualien County,TW
+3366,TW-ILA,Ilan County,TW
+3367,TW-KEE,Keelung (city),TW
+3368,TW-KHH,Kaohsiung (municipality),TW
+3369,TW-KHQ,Kaohsiung County,TW
+3370,TW-MIA,Miaoli County,TW
+3371,TW-NAN,Nantou County,TW
+3372,TW-PEN,Penghu County,TW
+3373,TW-PIF,Pingtung County,TW
+3374,TW-TAO,Taoyuan County,TW
+3375,TW-TNN,Tainan City,TW
+3376,TW-TNQ,Tainan County,TW
+3377,TW-TPE,Taipei (municipality),TW
+3378,TW-TPQ,Taipei County,TW
+3379,TW-TTT,Taitung County,TW
+3380,TW-TXG,Taichung (city),TW
+3381,TW-TXQ,Taichung County,TW
+3382,TW-X-KM,Kinmen County,TW
+3383,TW-X-LK,Lienchiang County,TW
+3384,TW-YUN,Yunlin County,TW
+3385,TZ-01,Arusha Region,TZ
+3386,TZ-02,Dar-es-Salaam Region,TZ
+3387,TZ-03,Dodoma Region,TZ
+3388,TZ-04,Iringa Region,TZ
+3389,TZ-05,Kagera Region,TZ
+3390,TZ-06,Kaskazini Pemba Region,TZ
+3391,TZ-07,Kaskazini Unguja Region,TZ
+3392,TZ-08,Xigoma Region,TZ
+3393,TZ-09,Kilimanjaro Region,TZ
+3394,TZ-10,Rusini Pemba Region,TZ
+3395,TZ-11,Kusini Unguja Region,TZ
+3396,TZ-12,Lindi Region,TZ
+3397,TZ-13,Mara Region,TZ
+3398,TZ-14,Mbeya Region,TZ
+3399,TZ-15,Mjini Magharibi Region,TZ
+3400,TZ-16,Morogoro Region,TZ
+3401,TZ-17,Mtwara Region,TZ
+3402,TZ-18,Mwanza Region,TZ
+3403,TZ-19,Pwani Region,TZ
+3404,TZ-20,Rukwa Region,TZ
+3405,TZ-21,Ruvuma Region,TZ
+3406,TZ-22,Shinyanga Region,TZ
+3407,TZ-23,Singida Region,TZ
+3408,TZ-24,Tabora Region,TZ
+3409,TZ-25,Tanga Region,TZ
+3410,TZ-26,Manyara Region,TZ
+3411,UA-05,Vinnytsia,UA
+3412,UA-07,Volyn,UA
+3413,UA-09,Luhansk,UA
+3414,UA-12,Dnipropetrovsk,UA
+3415,UA-14,Donetsk,UA
+3416,UA-18,Zhytomyr,UA
+3417,UA-19,Rivne,UA
+3418,UA-21,Zakarpattia,UA
+3419,UA-23,Zaporizhia,UA
+3420,UA-26,Ivano-Frankivsk,UA
+3421,UA-30,Kiev (city),UA
+3422,UA-32,Kiev,UA
+3423,UA-35,Kirovohrad,UA
+3424,UA-40,Sevastopol (city),UA
+3425,UA-43,Crimea,UA
+3426,UA-46,Lviv,UA
+3427,UA-48,Mykolaiv,UA
+3428,UA-51,Odessa,UA
+3429,UA-53,Poltava,UA
+3430,UA-56,Rivnens'ka Oblast',UA
+3431,UA-59,Sumy,UA
+3432,UA-61,Ternopil,UA
+3433,UA-63,Kharkiv,UA
+3434,UA-65,Kherson,UA
+3435,UA-68,Khmelnytskyi,UA
+3436,UA-71,Cherkasy,UA
+3437,UA-74,Chernihiv,UA
+3438,UA-77,Chernivtsi,UA
+3439,UG-101,Kalangala District,UG
+3440,UG-102,Kampala District,UG
+3441,UG-103,Kiboga District,UG
+3442,UG-104,Luwero District,UG
+3443,UG-105,Masaka District,UG
+3444,UG-106,Mpigi District,UG
+3445,UG-107,Mubende District,UG
+3446,UG-108,Mukono District,UG
+3447,UG-109,Nakasongola District,UG
+3448,UG-110,Rakai District,UG
+3449,UG-111,Sembabule District,UG
+3450,UG-112,Kayunga District,UG
+3451,UG-113,Wakiso District,UG
+3452,UG-201,Bugiri District,UG
+3453,UG-202,Busia District,UG
+3454,UG-203,Iganga District,UG
+3455,UG-204,Jinja District,UG
+3456,UG-205,Kamuli District,UG
+3457,UG-206,Kapchorwa District,UG
+3458,UG-207,Katakwi District,UG
+3459,UG-208,Kumi District,UG
+3460,UG-209,Mbale District,UG
+3461,UG-210,Pallisa District,UG
+3462,UG-211,Soroti District,UG
+3463,UG-212,Tororo District,UG
+3464,UG-213,Kaberamaido District,UG
+3465,UG-214,Mayuge District,UG
+3466,UG-215,Sironko District,UG
+3467,UG-301,Adjumani District,UG
+3468,UG-302,Apac District,UG
+3469,UG-303,Arua District,UG
+3470,UG-304,Gulu District,UG
+3471,UG-305,Kitgum District,UG
+3472,UG-306,Kotido District,UG
+3473,UG-307,Lira District,UG
+3474,UG-308,Moroto District,UG
+3475,UG-309,Moyo District,UG
+3476,UG-310,Nebbi District,UG
+3477,UG-311,Nakapiripirit District,UG
+3478,UG-312,Pader District,UG
+3479,UG-313,Yumbe District,UG
+3480,UG-401,Bundibugyo District,UG
+3481,UG-402,Bushenyi District,UG
+3482,UG-403,Hoima District,UG
+3483,UG-404,Kabale District,UG
+3484,UG-405,Kabarole District,UG
+3485,UG-406,Kasese District,UG
+3486,UG-407,Kibaale District,UG
+3487,UG-408,Kisoro District,UG
+3488,UG-409,Masindi District,UG
+3489,UG-410,Mbarara District,UG
+3490,UG-411,Ntungamo District,UG
+3491,UG-412,Rukungiri District,UG
+3492,UG-413,Kamwenge District,UG
+3493,UG-414,Kanungu District,UG
+3494,UG-415,Kyenjojo District,UG
+3495,UM-67,Johnston Atoll,UM
+3496,UM-71,Midway Islands,UM
+3497,UM-76,Navassa Island,UM
+3498,UM-79,Wake Island,UM
+3499,UM-81,Baker Island,UM
+3500,UM-84,Howland Island,UM
+3501,UM-86,Jarvis Island,UM
+3502,UM-89,Kingman Reef,UM
+3503,UM-95,Palmyra Atoll,UM
+3504,US-AK,Alaska,US
+3505,US-AL,Alabama,US
+3506,US-AR,Arkansas,US
+3507,US-AZ,Arizona,US
+3508,US-CA,California,US
+3509,US-CO,Colorado,US
+3510,US-CT,Connecticut,US
+3511,US-DC,District of Columbia,US
+3512,US-DE,Delaware,US
+3513,US-FL,Florida,US
+3514,US-GA,Georgia,US
+3515,US-HI,Hawaii,US
+3516,US-IA,Iowa,US
+3517,US-ID,Idaho,US
+3518,US-IL,Illinois,US
+3519,US-IN,Indiana,US
+3520,US-KS,Kansas,US
+3521,US-KY,Kentucky,US
+3522,US-LA,Louisiana,US
+3523,US-MA,Massachusetts,US
+3524,US-MD,Maryland,US
+3525,US-ME,Maine,US
+3526,US-MI,Michigan,US
+3527,US-MN,Minnesota,US
+3528,US-MO,Missouri,US
+3529,US-MS,Mississippi,US
+3530,US-MT,Montana,US
+3531,US-NC,North Carolina,US
+3532,US-ND,North Dakota,US
+3533,US-NE,Nebraska,US
+3534,US-NH,New Hampshire,US
+3535,US-NJ,New Jersey,US
+3536,US-NM,New Mexico,US
+3537,US-NV,Nevada,US
+3538,US-NY,New York,US
+3539,US-OH,Ohio,US
+3540,US-OK,Oklahoma,US
+3541,US-OR,Oregon,US
+3542,US-PA,Pennsylvania,US
+3543,US-RI,Rhode Island,US
+3544,US-SC,South Carolina,US
+3545,US-SD,South Dakota,US
+3546,US-TN,Tennessee,US
+3547,US-TX,Texas,US
+3548,US-UT,Utah,US
+3549,US-VA,Virginia,US
+3550,US-VT,Vermont,US
+3551,US-WA,Washington,US
+3552,US-WI,Wisconsin,US
+3553,US-WV,West Virginia,US
+3554,US-WY,Wyoming,US
+3555,UY-AR,Artigas Department,UY
+3556,UY-CA,Canelones Department,UY
+3557,UY-CL,Cerro Largo Department,UY
+3558,UY-CO,Colonia Department,UY
+3559,UY-DU,Durazno Department,UY
+3560,UY-FD,Florida Department,UY
+3561,UY-FS,Flores Department,UY
+3562,UY-LA,Lavalleja Department,UY
+3563,UY-MA,Maldonado Department,UY
+3564,UY-MO,Montevideo Department,UY
+3565,UY-PA,Paysandu Department,UY
+3566,UY-RN,Río Negro Department,UY
+3567,UY-RO,Rocha Department,UY
+3568,UY-RV,Rivera Department,UY
+3569,UY-SA,Salto Department,UY
+3570,UY-SJ,San José Department,UY
+3571,UY-SO,Soriano Department,UY
+3572,UY-TA,Tacuarembo Department,UY
+3573,UY-TT,Treinta y Tres Department,UY
+3574,UZ-AN,Andijon,UZ
+3575,UZ-BU,Buxoro,UZ
+3576,UZ-FA,Farg'ona,UZ
+3577,UZ-JI,Jizzax,UZ
+3578,UZ-KH,Khorazm,UZ
+3579,UZ-NG,Namangan,UZ
+3580,UZ-NW,Navoiy,UZ
+3581,UZ-QA,Qashqadaryo,UZ
+3582,UZ-QR,Qoraqalpogiston Respublikasi,UZ
+3583,UZ-SA,Samarqand,UZ
+3584,UZ-SI,Sirdaryo,UZ
+3585,UZ-SU,Surxondaryo,UZ
+3586,UZ-TK,Toshkent,UZ
+3587,UZ-TO,Toshkent,UZ
+3588,UZ-XO,Xorazm,UZ
+3589,VC-01,Charlotte,VC
+3590,VC-02,Saint Andrew,VC
+3591,VC-03,Saint David,VC
+3592,VC-04,Saint George,VC
+3593,VC-05,Saint Patrick,VC
+3594,VC-06,Grenadines,VC
+3595,VE-A,Distrito Federal,VE
+3596,VE-B,Anzoategui,VE
+3597,VE-C,Apure,VE
+3598,VE-D,Aragua,VE
+3599,VE-E,Barinas,VE
+3600,VE-F,Bolívar,VE
+3601,VE-G,Carabobo,VE
+3602,VE-H,Cojedes,VE
+3603,VE-I,Falcon,VE
+3604,VE-J,Guarico,VE
+3605,VE-K,Lara,VE
+3606,VE-L,Merida,VE
+3607,VE-M,Miranda,VE
+3608,VE-N,Monagas,VE
+3609,VE-O,Nueva Esparta,VE
+3610,VE-P,Portuguesa,VE
+3611,VE-R,Sucre,VE
+3612,VE-S,Tachira,VE
+3613,VE-T,Trujillo,VE
+3614,VE-U,Yaracuy,VE
+3615,VE-V,Zulia,VE
+3616,VE-W,Dependencias Federales,VE
+3617,VE-X,Vargas,VE
+3618,VE-Y,Delta Amacuro,VE
+3619,VE-Z,Amazonas,VE
+3620,VN-01,Lai Chau Province,VN
+3621,VN-02,Lao Cai Province,VN
+3622,VN-03,Ha Giang Province,VN
+3623,VN-04,Cao Bang Province,VN
+3624,VN-05,Son La Province,VN
+3625,VN-06,Yen Bai Province,VN
+3626,VN-07,Tuyen Quang Province,VN
+3627,VN-09,Lang Son Province,VN
+3628,VN-13,Quang Ninh Province,VN
+3629,VN-14,Hoa Binh Province,VN
+3630,VN-15,Ha Tay Province,VN
+3631,VN-18,Ninh Binh Province,VN
+3632,VN-20,Thai Binh Province,VN
+3633,VN-21,Thanh Hoa Province,VN
+3634,VN-22,Nghe An Province,VN
+3635,VN-23,Ha Tinh Province,VN
+3636,VN-24,Quang Binh Province,VN
+3637,VN-25,Quang Tri Province,VN
+3638,VN-26,Thua Thien-Hue Province,VN
+3639,VN-27,Quang Nam Province,VN
+3640,VN-28,Kon Tum Province,VN
+3641,VN-29,Quang Ngai Province,VN
+3642,VN-30,Gia Lai Province,VN
+3643,VN-31,Binh Dinh Province,VN
+3644,VN-32,Phu Yen Province,VN
+3645,VN-33,Dac Lac Province,VN
+3646,VN-34,Khanh Hoa Province,VN
+3647,VN-35,Lam Dong Province,VN
+3648,VN-36,Ninh Thuan Province,VN
+3649,VN-37,Tay Ninh Province,VN
+3650,VN-39,Dong Nai Province,VN
+3651,VN-40,Binh Thuan Province,VN
+3652,VN-41,Long An Province,VN
+3653,VN-43,Ba Ria - Vung Tau Province,VN
+3654,VN-44,An Giang Province,VN
+3655,VN-45,Dong Thap Province,VN
+3656,VN-46,Tien Giang Province,VN
+3657,VN-47,Kien Giang Province,VN
+3658,VN-48,Cần Thơ Municipality,VN
+3659,VN-49,Vinh Long Province,VN
+3660,VN-50,Ben Tre Province,VN
+3661,VN-51,Tra Vinh Province,VN
+3662,VN-52,Soc Trang Province,VN
+3663,VN-53,Bac Can Province,VN
+3664,VN-54,Bac Giang Province,VN
+3665,VN-55,Bac Lieu Province,VN
+3666,VN-56,Bac Ninh Province,VN
+3667,VN-57,Binh Duong Province,VN
+3668,VN-58,Binh Phuoc Province,VN
+3669,VN-59,Ca Mau Province,VN
+3670,VN-60,Da Nang Municipality,VN
+3671,VN-61,Hai Duong Province,VN
+3672,VN-62,Haiphong Municipality,VN
+3673,VN-63,Hà Nam Province,VN
+3674,VN-64,Ha Noi Municipality,VN
+3675,VN-65,Ho Chi Minh Municipality,VN
+3676,VN-66,Hung Yen Province,VN
+3677,VN-67,Nam Dinh Province,VN
+3678,VN-68,Phu Tho Province,VN
+3679,VN-69,Thai Nguyen Province,VN
+3680,VN-70,Vinh Phuc Province,VN
+3681,VU-MAP,Malampa,VU
+3682,VU-PAM,Penama,VU
+3683,VU-SAM,Sanma,VU
+3684,VU-SEE,Shefa,VU
+3685,VU-TAE,Tafea,VU
+3686,VU-TOB,Torba,VU
+3687,WS-AA,A'ana District,WS
+3688,WS-AL,Aiga-i-le-Tai District,WS
+3689,WS-AT,Atua District,WS
+3690,WS-FA,Fa'aaaleleaga District,WS
+3691,WS-GE,Gaga'emauga District,WS
+3692,WS-GI,Gagaifomauga District,WS
+3693,WS-PA,Palauli District,WS
+3694,WS-SA,Satupa'itea District,WS
+3695,WS-TU,Tuamasaga District,WS
+3696,WS-VF,Va'a-o-Fonoti District,WS
+3697,WS-VS,Vaisigano District,WS
+3698,XK-01,Pristina District,XK
+3699,XK-02,Mitrovica District,XK
+3700,XK-03,Peć District,XK
+3701,XK-04,Prizren District,XK
+3702,XK-05,Ferizaj District,XK
+3703,XK-06,Gjilan District,XK
+3704,XK-07,Gjakova District,XK
+3705,YE-AB,Abyan Governorate,YE
+3706,YE-AD,Adan Governorate,YE
+3707,YE-AM,Amran Governorate,YE
+3708,YE-BA,Al Bayda' Governorate,YE
+3709,YE-DA,Ad Dali Governorate,YE
+3710,YE-DH,Dhamar Governorate,YE
+3711,YE-HD,Hadramawt Governorate,YE
+3712,YE-HJ,Hajjah Governorate,YE
+3713,YE-HU,Al Hydaydah Governorate,YE
+3714,YE-IB,Ibb Governorate,YE
+3715,YE-JA,Al Jawf Governorate,YE
+3716,YE-LA,Lahij Governorate,YE
+3717,YE-MA,Ma'rib Governorate,YE
+3718,YE-MR,Al Mahrah Governorate,YE
+3719,YE-MU,Al Hudaydah Governorate,YE
+3720,YE-MW,Al Mahwit Governorate,YE
+3721,YE-SD,Sa'dah Governorate,YE
+3722,YE-SH,Shabwah Governorate,YE
+3723,YE-SN,San'a' Governorate,YE
+3724,YE-TA,Ta'izz Governorate,YE
+3725,ZA-EC,Eastern Cape,ZA
+3726,ZA-FS,Free State,ZA
+3727,ZA-GT,Gauteng,ZA
+3728,ZA-MP,Mpumalanga,ZA
+3729,ZA-NC,Northern Cape,ZA
+3730,ZA-NL,Kwazulu-Natal,ZA
+3731,ZA-NP,Limpopo,ZA
+3732,ZA-NW,North-West,ZA
+3733,ZA-WC,Western Cape,ZA
+3734,ZM-01,Western Province,ZM
+3735,ZM-02,Central Province,ZM
+3736,ZM-03,Eastern Province,ZM
+3737,ZM-04,Luapula Province,ZM
+3738,ZM-05,Northern Province,ZM
+3739,ZM-06,North-Western Province,ZM
+3740,ZM-07,Southern Province,ZM
+3741,ZM-08,Copperbelt Province,ZM
+3742,ZM-09,Lusaka Province,ZM
+3743,ZW-BU,Bulawayo Metropolitan Province,ZW
+3744,ZW-HA,Harare Metropolitan Province,ZW
+3745,ZW-MA,Manicaland Province,ZW
+3746,ZW-MC,Mashonaland Central Province,ZW
+3747,ZW-ME,Mashonaland East Province,ZW
+3748,ZW-MI,Midlands Province,ZW
+3749,ZW-MN,Matabeleland North Province,ZW
+3750,ZW-MS,Matabeleland South Province,ZW
+3751,ZW-MV,Masvingo Province,ZW
+3752,ZW-MW,Mashonaland West Province,ZW
