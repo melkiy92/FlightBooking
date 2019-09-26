@@ -126,6 +126,12 @@
 
 	<build>
 		<plugins>
+
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+
 			<plugin>
 				<groupId>org.liquibase</groupId>
 				<artifactId>liquibase-maven-plugin</artifactId>
@@ -139,7 +145,6 @@
 					<logging>info</logging>
 				</configuration>
 			</plugin>
-
 		</plugins>
 		<finalName>flight-booking</finalName>
 	</build>
