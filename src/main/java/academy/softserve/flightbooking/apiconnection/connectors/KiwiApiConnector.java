@@ -12,6 +12,7 @@ import academy.softserve.flightbooking.dto.SearchCriterionDTO;
 import academy.softserve.flightbooking.dto.TicketDTO;
 import academy.softserve.flightbooking.exceptions.NoTicketsException;
 import com.mashape.unirest.http.HttpResponse;
+import com.mashape.unirest.http.JsonNode;
 import com.mashape.unirest.http.Unirest;
 import com.mashape.unirest.http.exceptions.UnirestException;
 import lombok.AllArgsConstructor;
@@ -57,15 +58,17 @@ public class KiwiApiConnector {
         String requestParameters = converter.convertIntoRequestString(multiCitySearchCriterionDTO);
         String requestBody = converter.convertIntoRequestJson(multiCitySearchCriterionDTO);
 
-        log.info("Sending request to Kiwi API endpoint : " + ApiConnectionConstants.KIWI_FLIGHTS_ENDPOINT + requestParameters);
-        HttpResponse<String> response = Unirest.post(ApiConnectionConstants.KIWI_FLIGHTS_ENDPOINT + requestParameters)
+        log.info("Sending request to Kiwi API endpoint : " + ApiConnectionConstants.KIWI_MULTICITY_ENDPOINT + requestParameters);
+        HttpResponse<JsonNode> response = Unirest.post(ApiConnectionConstants.KIWI_MULTICITY_ENDPOINT + requestParameters)
+                .header("Content-Type", "application/json")
                 .body(requestBody)
-                .asString();
+                .asJson();
         log.info("Kiwi API response status : " + response.getStatus());
 
         if (response.getStatus() < 300) {
             log.info("Received data from Kiwi API endpoint");
-            result = deserializer.deserializeFlightsData(response.getBody(), multiCitySearchCriterionDTO.getTicketType());
+            log.info("response : " + response.getBody().toString());
+            result = deserializer.deserializeFlightsData(response.getBody().toString(), multiCitySearchCriterionDTO.getTicketType());
         } else {
             log.error("Kiwi API connection error : " + response.getBody());
             throw new ApiErrorException("Kiwi API connection error : " + response.getBody());

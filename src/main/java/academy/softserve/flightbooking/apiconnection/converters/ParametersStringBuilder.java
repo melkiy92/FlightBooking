@@ -26,28 +26,19 @@ public class ParametersStringBuilder {
                 : resultString;
     }
 
-    public String getParamsJsonBody(Map<String, String> params) throws UnsupportedEncodingException {
-        StringBuilder result = new StringBuilder();
+    public String convertIntoJsonParameter(String key, Object value) {
+        return "\"" + key + "\": " + stringifyParameter(value) + ",";
+    }
 
-        for (Map.Entry<String, String> entry : params.entrySet()) {
-            result.append("\"");
-            result.append(URLEncoder.encode(entry.getKey(), "UTF-8"));
-            result.append("\"");
-            result.append(" : ");
-            if (entry.getValue().getClass().equals(String.class)) {
-                result.append("\"");
-                result.append(URLEncoder.encode(entry.getValue(), "UTF-8"));
-                result.append("\"");
-            } else {
-                result.append(URLEncoder.encode(entry.getValue(), "UTF-8"));
-            }
-            result.append(",");
+    public String stringifyParameter (Object parameter) {
+        String result = "";
+
+        if(parameter.getClass().equals(String.class)) {
+            result = "\"" + parameter + "\"";
+        } else {
+            result = "" + parameter;
         }
 
-        String resultString = result.toString();
-
-        return resultString.length() > 0
-                ? resultString.substring(0, resultString.length() - 1)
-                : resultString;
+        return result;
     }
 }

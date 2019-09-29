@@ -32,9 +32,17 @@ public class KiwiApiResponseDeserializer {
 
     public List<TicketDTO> deserializeFlightsData(String json, TicketType ticketType) throws DeserializationException, NoTicketsException {
         List<TicketDTO> tickets = new ArrayList<>();
+        log.info("ticket type : " + ticketType.toString());
 
         try {
-            JsonNode data = new ObjectMapper().readTree(json).get("data");
+            JsonNode data;
+            if(ticketType.equals(TicketType.MULTICITY)) {
+                log.info("json : " + json);
+                data = new ObjectMapper().readTree(json);
+            } else {
+                data = new ObjectMapper().readTree(json).get("data");
+            }
+            log.info("data : " + data.asText());
             log.info("Start deserialization");
             for (JsonNode node : data) {
                 try {
