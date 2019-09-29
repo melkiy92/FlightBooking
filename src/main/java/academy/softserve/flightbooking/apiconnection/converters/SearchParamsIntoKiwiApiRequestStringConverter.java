@@ -1,6 +1,8 @@
 package academy.softserve.flightbooking.apiconnection.converters;
 
 import academy.softserve.flightbooking.apiconnection.connectors.Providers;
+import academy.softserve.flightbooking.dto.LegDTO;
+import academy.softserve.flightbooking.dto.MultiCitySearchCriterionDTO;
 import academy.softserve.flightbooking.exceptions.IllegalCabinClassException;
 import academy.softserve.flightbooking.exceptions.IllegalDateException;
 import academy.softserve.flightbooking.constants.ApiConnectionConstants;
@@ -49,6 +51,49 @@ public class SearchParamsIntoKiwiApiRequestStringConverter {
         }
         log.info("KiwiSearchCriteria : " + requestParamsMap.toString());
         result = parametersStringBuilder.getParamsString(requestParamsMap);
+
+        return result;
+    }
+
+    public String convertIntoRequestString(MultiCitySearchCriterionDTO multiCitySearchCriterionDTO)
+            throws IllegalDateException, IllegalCabinClassException, UnsupportedEncodingException{
+        String result;
+        Map<String, String> requestParamsMap = new TreeMap<>();
+
+        requestParamsMap.put("currency", multiCitySearchCriterionDTO.getCurrencyCode());
+        requestParamsMap.put("locale", "en");
+        requestParamsMap.put("partner", "picky");
+
+        log.info("KiwiSearchCriteria : " + requestParamsMap.toString());
+        result = parametersStringBuilder.getParamsString(requestParamsMap);
+
+        return result;
+    }
+
+    public String convertIntoRequestJson(MultiCitySearchCriterionDTO multiCitySearchCriterionDTO) throws UnsupportedEncodingException {
+        String result = "{\"requests\": [";
+
+        for (LegDTO leg : multiCitySearchCriterionDTO.getLegs()) {
+            String itinerary = "{";
+            Map<String, String> requestParamsMap = new TreeMap<>();
+
+            requestParamsMap.put("fly_from", leg.getFromLocation());
+            requestParamsMap.put("fly_to", leg.getToLocation());
+            requestParamsMap.put("date_from", "" + leg.getDepartDate());
+            requestParamsMap.put("date_to", "" + leg.getDepartDate());
+            requestParamsMap.put("direct_flights", "" + 0);
+            requestParamsMap.put("passengers", "" + (multiCitySearchCriterionDTO.getAdults() + multiCitySearchCriterionDTO.getChildren()));
+            requestParamsMap.put("adults", "" + multiCitySearchCriterionDTO.getAdults());
+            requestParamsMap.put("children", "" + multiCitySearchCriterionDTO.getChildren());
+            requestParamsMap.put("infants", "" + 0);
+            itinerary = itinerary + parametersStringBuilder.getParamsJsonBody(requestParamsMap);
+
+            itinerary = itinerary + "},";
+            result = result + itinerary;
+        }
+
+        result.substring(0, result.length() - 1);
+        result = result + "]}";
 
         return result;
     }

@@ -2,6 +2,7 @@ package academy.softserve.flightbooking.apiconnection.connectors;
 
 import academy.softserve.flightbooking.apiconnection.converters.SearchParamsIntoKiwiApiRequestStringConverter;
 import academy.softserve.flightbooking.apiconnection.desrializers.KiwiApiResponseDeserializer;
+import academy.softserve.flightbooking.dto.MultiCitySearchCriterionDTO;
 import academy.softserve.flightbooking.exceptions.ApiErrorException;
 import academy.softserve.flightbooking.exceptions.DeserializationException;
 import academy.softserve.flightbooking.exceptions.IllegalCabinClassException;
@@ -48,5 +49,13 @@ public class KiwiApiConnector {
         log.info("Tickets list ready");
 
         return result;
+    }
+
+    public List<TicketDTO> getMultiCityTickets (MultiCitySearchCriterionDTO multiCitySearchCriterionDTO) {
+        List<TicketDTO> result;
+
+
+
+        return null;
     }
 }
