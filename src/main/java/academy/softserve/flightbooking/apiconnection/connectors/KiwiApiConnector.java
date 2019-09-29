@@ -51,11 +51,27 @@ public class KiwiApiConnector {
         return result;
     }
 
-    public List<TicketDTO> getMultiCityTickets (MultiCitySearchCriterionDTO multiCitySearchCriterionDTO) {
+    public List<TicketDTO> getMultiCityTickets (MultiCitySearchCriterionDTO multiCitySearchCriterionDTO) throws UnsupportedEncodingException, IllegalDateException, IllegalCabinClassException, UnirestException, ApiErrorException, DeserializationException, NoTicketsException {
         List<TicketDTO> result;
 
+        String requestParameters = converter.convertIntoRequestString(multiCitySearchCriterionDTO);
+        String requestBody = converter.convertIntoRequestJson(multiCitySearchCriterionDTO);
 
+        log.info("Sending request to Kiwi API endpoint : " + ApiConnectionConstants.KIWI_FLIGHTS_ENDPOINT + requestParameters);
+        HttpResponse<String> response = Unirest.post(ApiConnectionConstants.KIWI_FLIGHTS_ENDPOINT + requestParameters)
+                .body(requestBody)
+                .asString();
+        log.info("Kiwi API response status : " + response.getStatus());
 
-        return null;
+        if (response.getStatus() < 300) {
+            log.info("Received data from Kiwi API endpoint");
+            result = deserializer.deserializeFlightsData(response.getBody(), multiCitySearchCriterionDTO.getTicketType());
+        } else {
+            log.error("Kiwi API connection error : " + response.getBody());
+            throw new ApiErrorException("Kiwi API connection error : " + response.getBody());
+        }
+        log.info("Tickets list ready");
+
+        return result;
     }
 }
