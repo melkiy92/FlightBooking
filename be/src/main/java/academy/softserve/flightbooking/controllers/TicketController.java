@@ -1,17 +1,11 @@
 package academy.softserve.flightbooking.controllers;
 
-import academy.softserve.flightbooking.exceptions.ApiErrorException;
-import academy.softserve.flightbooking.exceptions.DeserializationException;
-import academy.softserve.flightbooking.exceptions.IllegalCabinClassException;
-import academy.softserve.flightbooking.exceptions.IllegalDateException;
-import academy.softserve.flightbooking.exceptions.InvalidResponseJsonException;
 import academy.softserve.flightbooking.dto.SearchCriterionDTO;
 import academy.softserve.flightbooking.dto.TicketDTO;
 import academy.softserve.flightbooking.exceptions.NoTicketsException;
 import academy.softserve.flightbooking.exceptions.RequestException;
 import academy.softserve.flightbooking.exceptions.ResponseException;
 import academy.softserve.flightbooking.services.TicketService;
-import com.mashape.unirest.http.exceptions.UnirestException;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
@@ -21,7 +15,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.io.IOException;
 import java.util.List;
 
 
