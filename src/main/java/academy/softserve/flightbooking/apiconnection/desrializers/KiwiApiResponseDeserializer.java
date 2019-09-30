@@ -37,12 +37,10 @@ public class KiwiApiResponseDeserializer {
         try {
             JsonNode data;
             if(ticketType.equals(TicketType.MULTICITY)) {
-                log.info("json : " + json);
                 data = new ObjectMapper().readTree(json);
             } else {
                 data = new ObjectMapper().readTree(json).get("data");
             }
-            log.info("data : " + data);
             log.info("Start deserialization");
             for (JsonNode node : data) {
                 try {
@@ -74,7 +72,6 @@ public class KiwiApiResponseDeserializer {
         ticket.setBookingToken(dataNode.get("deep_link").asText());
 
         JsonNode route = dataNode.findValue("route");
-        log.info("route : " + route);
         if(ticketType.equals(TicketType.MULTICITY)) {
             for(JsonNode n : route) {
                 RouteDTO r = parseMultiCityRoute(n);
@@ -100,9 +97,7 @@ public class KiwiApiResponseDeserializer {
         RouteDTO route = new RouteDTO();
         List<FlightDTO> flights = new ArrayList<>();
 
-        log.info("node : " + routeNode);
         JsonNode inRoute = routeNode.findValue("route");
-        log.info("inRout : " + inRoute);
         for(JsonNode n : inRoute) {
             FlightDTO flight = parseFlight(n);
             flights.add(flight);
