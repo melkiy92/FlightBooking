@@ -25,4 +25,20 @@ public class ParametersStringBuilder {
                 ? resultString.substring(0, resultString.length() - 1)
                 : resultString;
     }
+
+    public String convertIntoJsonParameter(String key, Object value) {
+        return "\"" + key + "\": " + stringifyParameter(value) + ",";
+    }
+
+    public String stringifyParameter (Object parameter) {
+        String result = "";
+
+        if(parameter.getClass().equals(String.class)) {
+            result = "\"" + parameter + "\"";
+        } else {
+            result = "" + parameter;
+        }
+
+        return result;
+    }
 }

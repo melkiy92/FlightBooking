@@ -1,5 +1,6 @@
 package academy.softserve.flightbooking.controllers;
 
+import academy.softserve.flightbooking.dto.MultiCitySearchCriterionDTO;
 import academy.softserve.flightbooking.exceptions.ApiErrorException;
 import academy.softserve.flightbooking.exceptions.DeserializationException;
 import academy.softserve.flightbooking.exceptions.IllegalCabinClassException;
@@ -48,6 +49,16 @@ public class TicketController {
             ticketDTO = modelMapper.map(ticket, TicketDTO.class);
             ticketDTOs.add(ticketDTO);
         }*/
+        return new ResponseEntity<>(tickets, HttpStatus.OK);
+    }
+
+    @PostMapping("/flights/multi")
+    public ResponseEntity<List<TicketDTO>> getMultiCityTickets(@RequestBody MultiCitySearchCriterionDTO multiCitySearchCriterionDTO)
+            throws ResponseException, RequestException, NoTicketsException {
+        log.info("Received search criteria from UI : " + multiCitySearchCriterionDTO.toString());
+        List<TicketDTO> tickets = ticketService.getMultiCityTickets(multiCitySearchCriterionDTO);
+        log.info("Received tickets list from service");
+
         return new ResponseEntity<>(tickets, HttpStatus.OK);
     }
 }
