@@ -42,7 +42,7 @@ public class KiwiApiResponseDeserializer {
             } else {
                 data = new ObjectMapper().readTree(json).get("data");
             }
-            log.info("data : " + data.asText());
+            log.info("data : " + data);
             log.info("Start deserialization");
             for (JsonNode node : data) {
                 try {
@@ -74,17 +74,45 @@ public class KiwiApiResponseDeserializer {
         ticket.setBookingToken(dataNode.get("deep_link").asText());
 
         JsonNode route = dataNode.findValue("route");
-        RouteDTO straightRoute = parseRoute(route, KIWI_RESPONSE_JSON_STRAIGHT_FLIGHT_INDEX);
-        straightRoute.setDuration(dataNode.findValue("duration").get("departure").asLong());
-        routes.add(straightRoute);
-        if(ticketType.equals(TicketType.ROUNDTRIP)) {
-            RouteDTO returnRoute = parseRoute(route, KIWI_RESPONSE_JSON_RETURN_FLIGHT_INDEX);
-            returnRoute.setDuration(dataNode.findValue("duration").get("return").asLong());
-            routes.add(returnRoute);
+        log.info("route : " + route);
+        if(ticketType.equals(TicketType.MULTICITY)) {
+            for(JsonNode n : route) {
+                RouteDTO r = parseMultiCityRoute(n);
+                r.setDuration(n.findValue("duration").get("departure").asLong());
+                routes.add(r);
+            }
+        } else {
+            RouteDTO straightRoute = parseRoute(route, KIWI_RESPONSE_JSON_STRAIGHT_FLIGHT_INDEX);
+            straightRoute.setDuration(dataNode.findValue("duration").get("departure").asLong());
+            routes.add(straightRoute);
+            if (ticketType.equals(TicketType.ROUNDTRIP)) {
+                RouteDTO returnRoute = parseRoute(route, KIWI_RESPONSE_JSON_RETURN_FLIGHT_INDEX);
+                returnRoute.setDuration(dataNode.findValue("duration").get("return").asLong());
+                routes.add(returnRoute);
+            }
         }
         ticket.setRoutes(routes);
 
         return ticket;
+    }
+
+    private RouteDTO parseMultiCityRoute(JsonNode routeNode) throws IllegalCabinClassException {
+        RouteDTO route = new RouteDTO();
+        List<FlightDTO> flights = new ArrayList<>();
+
+        log.info("node : " + routeNode);
+        JsonNode inRoute = routeNode.findValue("route");
+        log.info("inRout : " + inRoute);
+        for(JsonNode n : inRoute) {
+            FlightDTO flight = parseFlight(n);
+            flights.add(flight);
+        }
+        route.setCityNameFrom(flights.get(0).getDepartCityName());
+        route.setCityNameTo(flights.get(flights.size() - 1).getArrivalCityName());
+        route.setFlights(flights);
+        route.setStops(flightStopsCalculationService.calculateStopsBetweenFlights(flights));
+
+        return route;
     }
 
     private RouteDTO parseRoute(JsonNode routeNode, Integer directionFlightIndex) throws IllegalCabinClassException {
