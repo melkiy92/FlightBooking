@@ -11,11 +11,11 @@ services:
       - POSTGRE_USERNAME=${POSTGRE_USERNAME}
       - POSTGRE_USER_PASSWORD=${POSTGRE_USER_PASSWORD}
 
-#  ui:
-#    build: ./DockerUI
-#    ports:
-#      - 3000:3000
-#    depends_on:
-#      - api
-#    restart: always
+  ui:
+    build: ./ui/
+    ports:
+      - 3000:3000
+    depends_on:
+      - api
+    restart: always
 
