@@ -3,7 +3,7 @@ version: '3.1'
 services:
 
   api:
-    build: ./
+    build: ./be/
     restart: always
     ports:
       - 8085:8080
