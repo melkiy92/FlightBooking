@@ -1,10 +1,14 @@
 package academy.softserve.flightbooking.repositories;
 
 import academy.softserve.flightbooking.models.tickets.Ticket;
-import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.stereotype.Repository;
 
-@Repository
-public interface TicketRepository extends JpaRepository<Ticket, Long> {
+import java.util.List;
 
+@Repository
+public interface TicketRepository extends PagingAndSortingRepository<Ticket, Long> {
+
+//    List<Ticket> findAllByPrice(double price, Pageable pageable);
 }

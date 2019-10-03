@@ -94,7 +94,7 @@ public class TicketServiceImpl implements TicketService {
             success = true;
         } catch (NoTicketsException e) {
             log.info("No tickets available");
-            responseExceptionMessage = "Kiwi API : " + e.getMessage();
+            noTicketsMessage = "Kiwi API : " + e.getMessage();
         } catch (UnsupportedEncodingException | IllegalDateException | IllegalCabinClassException e) {
             log.error("Unable to get response due to bad request parameters : " + e.getMessage());
             requestExceptionMessage = "Unable to send request to Kiwi API server due to bad request parameters : " + e.getMessage();

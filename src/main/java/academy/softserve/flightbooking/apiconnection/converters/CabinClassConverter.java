@@ -54,17 +54,20 @@ public class CabinClassConverter {
     }
 
     private static CabinClass convertStringIntoCabinClassForKiwi(String cabinClassName) throws IllegalCabinClassException {
-        if (cabinClassName.equals("F")) {
-            return CabinClass.FIRSTCLASS;
-        } else if (cabinClassName.equals("W")) {
-            return CabinClass.PREMIUMECONOMY;
-        } else if (cabinClassName.equals("C")) {
-            return CabinClass.BUSINESSCLASS;
-        } else if (cabinClassName.equals("M")) {
-            return CabinClass.ECONOMY;
-        } else {
-            throw new IllegalCabinClassException();
-        }
+        CabinClass c =  CabinClass.valueOf(cabinClassName);
+        System.out.println(c.getDescription());
+        return c;
+//        if (cabinClassName.equals("F")) {
+//            return CabinClass.FIRSTCLASS;
+//        } else if (cabinClassName.equals("W")) {
+//            return CabinClass.PREMIUMECONOMY;
+//        } else if (cabinClassName.equals("C")) {
+//            return CabinClass.BUSINESSCLASS;
+//        } else if (cabinClassName.equals("M")) {
+//            return CabinClass.ECONOMY;
+//        } else {
+//            throw new IllegalCabinClassException();
+//        }
     }
 
     private static CabinClass convertStringIntoCabinClassForRapid(String cabinClassName) throws IllegalCabinClassException {
