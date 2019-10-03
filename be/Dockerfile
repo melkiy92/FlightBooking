@@ -11,7 +11,7 @@ ADD target/flight-booking.jar flight-booking.jar
 ADD Json.json Json.json
 
 #add script to run proxy and API's .jar
-ADD script.sh script.sh
+ADD ../script.sh script.sh
 
 #DB username
 #ENV POSTGRE_USERNAME = ${POSTGRE_USERNAME}
