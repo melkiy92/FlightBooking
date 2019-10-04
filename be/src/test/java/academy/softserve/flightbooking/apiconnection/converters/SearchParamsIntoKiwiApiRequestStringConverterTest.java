@@ -1,8 +1,6 @@
 package academy.softserve.flightbooking.apiconnection.converters;
 
 
-import academy.softserve.flightbooking.apiconnection.converters.ParametersStringBuilder;
-import academy.softserve.flightbooking.apiconnection.converters.SearchParamsIntoKiwiApiRequestStringConverter;
 import academy.softserve.flightbooking.exceptions.IllegalCabinClassException;
 import academy.softserve.flightbooking.exceptions.IllegalDateException;
 import academy.softserve.flightbooking.dto.SearchCriterionDTO;

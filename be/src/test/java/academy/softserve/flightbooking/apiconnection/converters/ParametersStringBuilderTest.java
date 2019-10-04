@@ -1,6 +1,5 @@
 package academy.softserve.flightbooking.apiconnection.converters;
 
-import academy.softserve.flightbooking.apiconnection.converters.ParametersStringBuilder;
 import org.junit.Assert;
 import org.junit.Test;
 import org.springframework.boot.test.context.SpringBootTest;
