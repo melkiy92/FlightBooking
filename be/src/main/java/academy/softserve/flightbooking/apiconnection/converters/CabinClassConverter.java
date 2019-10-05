@@ -56,13 +56,6 @@ public class CabinClassConverter {
     }
 
     private static CabinClass convertStringIntoCabinClassForKiwi(String cabinClassName) throws IllegalCabinClassException {
-//        try {
-//            CabinClass c = CabinClass.valueOf(cabinClassName);
-//            log.info(c.getDescription());
-//            return c;
-//        } catch (IllegalArgumentException e) {
-//            throw new IllegalCabinClassException();
-//        }
         if (cabinClassName.equals("F")) {
             return CabinClass.FIRSTCLASS;
         } else if (cabinClassName.equals("W")) {
