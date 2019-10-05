@@ -15,6 +15,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
+import org.springframework.data.web.PageableDefault;
+import org.springframework.data.web.SortDefault;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -67,17 +70,21 @@ public class TicketController {
 //    }
 
     @PostMapping("/flights")
-    public ResponseEntity<Page<TicketDTO>> getTickets(@RequestBody SearchCriterionDTO searchCriterionDTO, Pageable pageable)
+    public ResponseEntity<Page<TicketDTO>> getTickets(@RequestBody SearchCriterionDTO searchCriterionDTO,
+                                                      @PageableDefault(page = 0, size = 2)
+                                                      @SortDefault.SortDefaults({
+                                                              @SortDefault(sort = "name", direction = Sort.Direction.DESC),
+                                                              @SortDefault(sort = "id", direction = Sort.Direction.ASC)
+                                                      })Pageable pageable)
             throws ResponseException, RequestException, NoTicketsException {
         log.info("Received search criteria from UI : " + searchCriterionDTO.toString());
 
+        //TODO Service
         List<TicketDTO> tickets = ticketService.getTickets(searchCriterionDTO);
         int start = (int) pageable.getOffset();
         int end = Math.min((start + pageable.getPageSize()), tickets.size());
 
         Page<TicketDTO> page = new PageImpl<>(tickets.subList(start, end), pageable, tickets.size());
-
-
 
         log.info("Received tickets list from service");
         return new ResponseEntity<>(page, HttpStatus.OK);

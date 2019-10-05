@@ -14,7 +14,7 @@ public class ParametersStringBuilderTest {
     @Test
     public void getParamsStringSuccess() throws UnsupportedEncodingException {
         //Given
-        Map<String, String> params = new TreeMap();
+        Map<String, String> params = new TreeMap<>();
         params.put("adults", "1");
         params.put("currency", "USD");
         params.put("departure_date", "18/11/2019");

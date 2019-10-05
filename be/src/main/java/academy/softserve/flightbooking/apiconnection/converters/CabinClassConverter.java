@@ -3,7 +3,9 @@ package academy.softserve.flightbooking.apiconnection.converters;
 import academy.softserve.flightbooking.apiconnection.connectors.Providers;
 import academy.softserve.flightbooking.exceptions.IllegalCabinClassException;
 import academy.softserve.flightbooking.models.components.CabinClass;
+import lombok.extern.slf4j.Slf4j;
 
+@Slf4j
 public class CabinClassConverter {
     public static String convertCabinClassIntoString(CabinClass cabinClass, Providers providerName) throws IllegalCabinClassException {
         if(providerName.equals(Providers.KIWI)) {
@@ -54,20 +56,24 @@ public class CabinClassConverter {
     }
 
     private static CabinClass convertStringIntoCabinClassForKiwi(String cabinClassName) throws IllegalCabinClassException {
-        CabinClass c =  CabinClass.valueOf(cabinClassName);
-        System.out.println(c.getDescription());
-        return c;
-//        if (cabinClassName.equals("F")) {
-//            return CabinClass.FIRSTCLASS;
-//        } else if (cabinClassName.equals("W")) {
-//            return CabinClass.PREMIUMECONOMY;
-//        } else if (cabinClassName.equals("C")) {
-//            return CabinClass.BUSINESSCLASS;
-//        } else if (cabinClassName.equals("M")) {
-//            return CabinClass.ECONOMY;
-//        } else {
+//        try {
+//            CabinClass c = CabinClass.valueOf(cabinClassName);
+//            log.info(c.getDescription());
+//            return c;
+//        } catch (IllegalArgumentException e) {
 //            throw new IllegalCabinClassException();
 //        }
+        if (cabinClassName.equals("F")) {
+            return CabinClass.FIRSTCLASS;
+        } else if (cabinClassName.equals("W")) {
+            return CabinClass.PREMIUMECONOMY;
+        } else if (cabinClassName.equals("C")) {
+            return CabinClass.BUSINESSCLASS;
+        } else if (cabinClassName.equals("M")) {
+            return CabinClass.ECONOMY;
+        } else {
+            throw new IllegalCabinClassException();
+        }
     }
 
     private static CabinClass convertStringIntoCabinClassForRapid(String cabinClassName) throws IllegalCabinClassException {
