@@ -13,9 +13,6 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
-import org.springframework.data.domain.Sort;
-import org.springframework.data.web.PageableDefault;
-import org.springframework.data.web.SortDefault;
 import org.springframework.stereotype.Service;
 
 import java.io.UnsupportedEncodingException;
@@ -43,7 +40,7 @@ public class TicketServiceImpl implements TicketService {
 
     @Override
     public Page<TicketDTO> getMultiCityTicketsPage(MultiCitySearchCriterionDTO multiCitySearchCriterionDTO, Pageable pageable)
-         throws RequestException, ResponseException, NoTicketsException {
+            throws RequestException, ResponseException, NoTicketsException {
         List<TicketDTO> tickets = getMultiCityTickets(multiCitySearchCriterionDTO);
         log.info("Received tickets list from service");
         int start = (int) pageable.getOffset();

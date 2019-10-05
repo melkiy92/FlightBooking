@@ -23,8 +23,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.List;
-
 
 @Slf4j
 @RequiredArgsConstructor(onConstructor = @__(@Autowired))
@@ -33,21 +31,6 @@ public class TicketController {
     private static final ModelMapper MODEL_MAPPER = new ModelMapper();
     private final TicketService ticketService;
     private final TicketRepository ticketRepo;
-
-
-//    @GetMapping(params = { "page", "size" })
-//    public List<TicketDTO> findPaginated(@RequestParam("page") int page,
-//                                   @RequestParam("size") int size, UriComponentsBuilder uriBuilder,
-//                                   HttpServletResponse response) {
-//        Page<TicketDTO> resultPage = service.findPaginated(page, size);
-//        if (page > resultPage.getTotalPages()) {
-//            throw new MyResourceNotFoundException();
-//        }
-//        eventPublisher.publishEvent(new PaginatedResultsRetrievedEvent<Foo>(
-//                Foo.class, uriBuilder, response, page, resultPage.getTotalPages(), size));
-//
-//        return resultPage.getContent();
-//    }
 
     /*
      * DON'T DELETE COMMENTED CODE
