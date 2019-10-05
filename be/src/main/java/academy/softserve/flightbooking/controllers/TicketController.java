@@ -6,52 +6,79 @@ import academy.softserve.flightbooking.dto.TicketDTO;
 import academy.softserve.flightbooking.exceptions.NoTicketsException;
 import academy.softserve.flightbooking.exceptions.RequestException;
 import academy.softserve.flightbooking.exceptions.ResponseException;
+import academy.softserve.flightbooking.repositories.TicketRepository;
 import academy.softserve.flightbooking.services.TicketService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
+import org.springframework.data.web.PageableDefault;
+import org.springframework.data.web.SortDefault;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.List;
-
 
 @Slf4j
-@RequiredArgsConstructor
+@RequiredArgsConstructor(onConstructor = @__(@Autowired))
 @RestController
 public class TicketController {
+    private static final ModelMapper MODEL_MAPPER = new ModelMapper();
     private final TicketService ticketService;
-    private static final ModelMapper modelMapper = new ModelMapper();
+    private final TicketRepository ticketRepo;
 
     /*
      * DON'T DELETE COMMENTED CODE
      */
+//    @PostMapping("/flights")
+//    public ResponseEntity<List<TicketDTO>> getTickets(@RequestBody SearchCriterionDTO searchCriterionDTO, Pageable pageable)
+//            throws ResponseException, RequestException, NoTicketsException {
+//        //SearchCriterion searchCriterion = modelMapper.map(searchCriterionDTO, SearchCriterion.class);
+//        log.info("Received search criteria from UI : " + searchCriterionDTO.toString());
+//        List<TicketDTO> tickets = ticketService.getTickets(searchCriterionDTO);
+//        log.info("Received tickets list from service");
+//        /*TicketDTO ticketDTO;
+//        List<TicketDTO> ticketDTOs = Collections.EMPTY_LIST;
+//        for( Ticket ticket : tickets ) {
+//            ticketDTO = modelMapper.map(ticket, TicketDTO.class);
+//            ticketDTOs.add(ticketDTO);
+//        }*/
+//        return new ResponseEntity<>(tickets, HttpStatus.OK);
+//    }
+
     @PostMapping("/flights")
-    public ResponseEntity<List<TicketDTO>> getTickets(@RequestBody SearchCriterionDTO searchCriterionDTO)
+    public ResponseEntity<Page<TicketDTO>> getTickets(@RequestBody SearchCriterionDTO searchCriterionDTO,
+                                                      @PageableDefault(page = 0, size = 2)
+                                                      @SortDefault.SortDefaults({
+                                                              @SortDefault(sort = "name", direction = Sort.Direction.DESC),
+                                                              @SortDefault(sort = "id", direction = Sort.Direction.ASC)
+                                                      }) Pageable pageable)
             throws ResponseException, RequestException, NoTicketsException {
-        //SearchCriterion searchCriterion = modelMapper.map(searchCriterionDTO, SearchCriterion.class);
         log.info("Received search criteria from UI : " + searchCriterionDTO.toString());
-        List<TicketDTO> tickets = ticketService.getTickets(searchCriterionDTO);
-        log.info("Received tickets list from service");
-        /*TicketDTO ticketDTO;
-        List<TicketDTO> ticketDTOs = Collections.EMPTY_LIST;
-        for( Ticket ticket : tickets ) {
-            ticketDTO = modelMapper.map(ticket, TicketDTO.class);
-            ticketDTOs.add(ticketDTO);
-        }*/
-        return new ResponseEntity<>(tickets, HttpStatus.OK);
+
+        Page<TicketDTO> page = ticketService.getTicketsPage(searchCriterionDTO, pageable);
+        log.info("Received page of tickets from service");
+
+        return new ResponseEntity<>(page, HttpStatus.OK);
     }
 
     @PostMapping("/flights/multi")
-    public ResponseEntity<List<TicketDTO>> getMultiCityTickets(@RequestBody MultiCitySearchCriterionDTO multiCitySearchCriterionDTO)
+    public ResponseEntity<Page<TicketDTO>> getMultiCityTickets(@RequestBody MultiCitySearchCriterionDTO multiCitySearchCriterionDTO,
+                                                               @PageableDefault(page = 0, size = 2)
+                                                               @SortDefault.SortDefaults({
+                                                                       @SortDefault(sort = "name", direction = Sort.Direction.DESC),
+                                                                       @SortDefault(sort = "id", direction = Sort.Direction.ASC)
+                                                               }) Pageable pageable)
             throws ResponseException, RequestException, NoTicketsException {
         log.info("Received search criteria from UI : " + multiCitySearchCriterionDTO.toString());
-        List<TicketDTO> tickets = ticketService.getMultiCityTickets(multiCitySearchCriterionDTO);
-        log.info("Received tickets list from service");
+        Page<TicketDTO> page = ticketService.getMultiCityTicketsPage(multiCitySearchCriterionDTO, pageable);
+        log.info("Received page of multiCity tickets from service");
 
-        return new ResponseEntity<>(tickets, HttpStatus.OK);
+        return new ResponseEntity<>(page, HttpStatus.OK);
     }
 }

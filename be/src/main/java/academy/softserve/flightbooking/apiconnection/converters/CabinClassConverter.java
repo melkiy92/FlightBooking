@@ -3,7 +3,9 @@ package academy.softserve.flightbooking.apiconnection.converters;
 import academy.softserve.flightbooking.apiconnection.connectors.Providers;
 import academy.softserve.flightbooking.exceptions.IllegalCabinClassException;
 import academy.softserve.flightbooking.models.components.CabinClass;
+import lombok.extern.slf4j.Slf4j;
 
+@Slf4j
 public class CabinClassConverter {
     public static String convertCabinClassIntoString(CabinClass cabinClass, Providers providerName) throws IllegalCabinClassException {
         if(providerName.equals(Providers.KIWI)) {
