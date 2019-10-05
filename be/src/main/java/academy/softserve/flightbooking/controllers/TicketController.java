@@ -13,7 +13,6 @@ import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.web.PageableDefault;
@@ -75,28 +74,28 @@ public class TicketController {
                                                       @SortDefault.SortDefaults({
                                                               @SortDefault(sort = "name", direction = Sort.Direction.DESC),
                                                               @SortDefault(sort = "id", direction = Sort.Direction.ASC)
-                                                      })Pageable pageable)
+                                                      }) Pageable pageable)
             throws ResponseException, RequestException, NoTicketsException {
         log.info("Received search criteria from UI : " + searchCriterionDTO.toString());
 
-        //TODO Service
-        List<TicketDTO> tickets = ticketService.getTickets(searchCriterionDTO);
-        int start = (int) pageable.getOffset();
-        int end = Math.min((start + pageable.getPageSize()), tickets.size());
+        Page<TicketDTO> page = ticketService.getTicketsPage(searchCriterionDTO, pageable);
+        log.info("Received page of tickets from service");
 
-        Page<TicketDTO> page = new PageImpl<>(tickets.subList(start, end), pageable, tickets.size());
-
-        log.info("Received tickets list from service");
         return new ResponseEntity<>(page, HttpStatus.OK);
     }
 
     @PostMapping("/flights/multi")
-    public ResponseEntity<List<TicketDTO>> getMultiCityTickets(@RequestBody MultiCitySearchCriterionDTO multiCitySearchCriterionDTO)
+    public ResponseEntity<Page<TicketDTO>> getMultiCityTickets(@RequestBody MultiCitySearchCriterionDTO multiCitySearchCriterionDTO,
+                                                               @PageableDefault(page = 0, size = 2)
+                                                               @SortDefault.SortDefaults({
+                                                                       @SortDefault(sort = "name", direction = Sort.Direction.DESC),
+                                                                       @SortDefault(sort = "id", direction = Sort.Direction.ASC)
+                                                               }) Pageable pageable)
             throws ResponseException, RequestException, NoTicketsException {
         log.info("Received search criteria from UI : " + multiCitySearchCriterionDTO.toString());
-        List<TicketDTO> tickets = ticketService.getMultiCityTickets(multiCitySearchCriterionDTO);
-        log.info("Received tickets list from service");
+        Page<TicketDTO> page = ticketService.getMultiCityTicketsPage(multiCitySearchCriterionDTO, pageable);
+        log.info("Received page of multiCity tickets from service");
 
-        return new ResponseEntity<>(tickets, HttpStatus.OK);
+        return new ResponseEntity<>(page, HttpStatus.OK);
     }
 }
