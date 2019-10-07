@@ -19,5 +19,5 @@ public interface TicketService {
     Page<TicketDTO> getTicketsPage(SearchCriterionDTO searchCriterionDTO, Pageable pageable)
             throws RequestException, ResponseException, NoTicketsException;
     Page<TicketDTO> getMultiCityTicketsPage(MultiCitySearchCriterionDTO multiCitySearchCriterionDTO, Pageable pageable)
-                throws RequestException, ResponseException, NoTicketsException;
+            throws RequestException, ResponseException, NoTicketsException;
 }
