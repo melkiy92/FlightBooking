@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-class FormByTicketType extends Component {
+class MultiCityForm extends Component {
 
     render() {
         const now = new Date();
@@ -22,16 +22,10 @@ class FormByTicketType extends Component {
                     <label>Depart Date:</label>
                     <input type="date" placeholder="Depart Date" name="departDate" className="form-control"  onChange={this.props.onChange} min={ymdFormat}/>
                 </div>
-
-
-                <div className="form-group">
-                    <label>Return Date:</label>
-                    <input type="date" placeholder="Return Date" name="returnDate" className="form-control"  onChange={this.props.onChange} min={this.props.departDate} />
-                </div>
-
+                <button className="btn btn-success" onClick={this.getTickets}>Add destination</button>
             </div>
         );
     }
 }
 
-export default FormByTicketType;
+export default MultiCityForm;

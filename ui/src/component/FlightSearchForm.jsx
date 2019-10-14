@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import TicketTypeChooser from './TicketTypeChooser';
-import FormByTicketType from './FormByTicketType';
+import FormOneWay from './FormOneWay';
+import FormRoundTrip from './FormRoundTrip';
+import FormMultiCity from './FormMultiCity';
 
 class FlightSearchForm extends Component {
 
@@ -12,14 +14,31 @@ class FlightSearchForm extends Component {
                         onChange={this.props.onChange} 
                         getInitialState={ this.props.getInitialState}
                     />
-                    <FormByTicketType 
+                    { (this.props.ticketType) === "ONEWAY" ? (
+                       <FormOneWay 
+                       fromLocation={this.props.fromLocation}
+                       toLocation={this.props.toLocation}
+                       departDate={this.props.departDate}
+                       onChange={this.props.onChange}
+
+                   /> 
+                     ) : (this.props.ticketType === "ROUNDTRIP") ? (
+                        <FormRoundTrip 
                         fromLocation={this.props.fromLocation}
                         toLocation={this.props.toLocation}
                         departDate={this.props.departDate}
                         returnDate={this.props.returnDate}
                         onChange={this.props.onChange}
 
-                    />
+                     />
+                     ) : (
+                        <FormMultiCity 
+                        fromLocation={this.props.fromLocation}
+                        toLocation={this.props.toLocation}
+                        departDate={this.props.departDate}
+                        onChange={this.props.onChange}
+                   /> 
+                    )}
                 </div>
         );
     }
