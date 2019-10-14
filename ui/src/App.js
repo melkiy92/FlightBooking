@@ -19,7 +19,7 @@ function App() {
 }
 
 const style = {
-    color: 'red',
+    color: 'grey',
     margin: '10px'
 }
 
@@ -53,4 +53,5 @@ function App() {
 }
 
 export default App;
-*/
+
+<Route exact path='/' component={Home}/>*/

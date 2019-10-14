@@ -1,8 +1,9 @@
-import React, { Component } from 'react'
+/*import React, { Component } from 'react'
 import SearchCriterionComponent from "./component/SearchCriterionComponent";
 import ApiService from "../service/ApiService";
 
 class FlightBookingApp extends Component{
+
     render() {
         return(
             <div>
@@ -13,4 +14,4 @@ class FlightBookingApp extends Component{
     }
 }
 
-export default FlightBookingApp;
+export default FlightBookingApp;*/
