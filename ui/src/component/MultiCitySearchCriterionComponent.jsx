@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+/*import React, { Component } from 'react'
 import ApiService from "../service/ApiService";
 import FlightSearchForm from './FlightSearchForm';
 import GeneralSearchForm from './GeneralSearchForm';
@@ -15,22 +15,15 @@ class SearchCriterionComponent extends Component{
             adults: '1',
             children: '0',
             fromLocation: '',
-            legs: [{toLocation: '', departDate: '', departDateLong: ''}],
+            legs: [{toLocation: '', departDate: '', departDateLong: ''}]
         }
-        this.getTickets = this.getTickets.bind(this);
+        this.getMultiCityTickets = this.getMultiCityTickets.bind(this);
         this.onChange = this.onChange.bind(this);
         this.getInitialState = this.getInitialState.bind(this);
+        this.addLeg = this.addLeg.bind(this);
     }
-/*
-    "legs": [
-        {
-          "departDate": 0,
-          "fromLocation": "string",
-          "toLocation": "string"
-        }
-      ],
-*/
-    getTickets = (e) => {
+
+getMultiCityTickets = (e) => {
         e.preventDefault();
         let legs = [{fromLocation: this.state.fromLocation, toLocation: this.state.toLocation, departDate: this.state.departDateLong}];
         let MultiCitySearchCriterion = {currencyCode: this.state.currencyCode, ticketType: this.state.ticketType,
@@ -69,6 +62,7 @@ class SearchCriterionComponent extends Component{
                         departDate={this.state.departDate}
                         onChange={this.onChange}
                         getInitialState={this.getInitialState}
+                        addLeg={runInThisContext.props.addLeg}
                    /> 
                     <GeneralSearchForm 
                         currencyCode={this.state.currencyCode}
@@ -77,11 +71,12 @@ class SearchCriterionComponent extends Component{
                         children={this.state.children}
                         onChange={this.onChange}
                     />
-                    <button className="btn btn-success" onClick={this.getTickets}>Search</button>
+
+                    <button className="btn btn-success" onClick={this.getMultiCityTickets}>Search</button>
                 </form>
             </div>
         );
     }
 }
 
-export default SearchCriterionComponent;
+export default SearchCriterionComponent;*/

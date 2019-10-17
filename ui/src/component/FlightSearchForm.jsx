@@ -4,6 +4,7 @@ import FormOneWay from './FormOneWay';
 import FormRoundTrip from './FormRoundTrip';
 import FormMultiCity from './FormMultiCity';
 
+
 class FlightSearchForm extends Component {
 
     render() {
@@ -36,7 +37,11 @@ class FlightSearchForm extends Component {
                         fromLocation={this.props.fromLocation}
                         toLocation={this.props.toLocation}
                         departDate={this.props.departDate}
-                        onChange={this.props.onChange}
+                        onChangeMultiType={this.props.onChangeMultiType}
+                        handleAddLeg={this.props.handleAddLeg}
+                        handleRemoveLeg={this.props.handleRemoveLeg}
+                        legs={this.props.legs}
+                        legHide={this.props.legHide}
                    /> 
                     )}
                 </div>
